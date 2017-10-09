@@ -22,16 +22,22 @@
 package org.pentaho.hadoop.shim.common.format.avro;
 
 import java.util.List;
+import java.util.stream.Collectors;
 
 import org.apache.avro.Schema;
 import org.apache.avro.file.DataFileStream;
 import org.apache.avro.generic.GenericDatumReader;
 import org.apache.avro.generic.GenericRecord;
 import org.apache.avro.io.DatumReader;
+import org.apache.avro.mapreduce.AvroKeyValueInputFormat;
+import org.apache.hadoop.mapreduce.InputSplit;
+import org.apache.hadoop.mapreduce.Job;
 import org.apache.log4j.Logger;
 import org.pentaho.di.core.vfs.KettleVFS;
 import org.pentaho.hadoop.shim.api.format.IPentahoAvroInputFormat;
 import org.pentaho.hadoop.shim.api.format.SchemaDescription;
+import org.pentaho.hadoop.shim.common.ConfigurationProxy;
+import org.pentaho.hadoop.shim.common.format.parquet.PentahoInputSplitImpl;
 
 /**
  * @author Alexander Buloichik
@@ -40,16 +46,23 @@ import org.pentaho.hadoop.shim.api.format.SchemaDescription;
 public class PentahoAvroInputFormat implements IPentahoAvroInputFormat {
 
   private static final Logger logger = Logger.getLogger( PentahoAvroInputFormat.class );
-
   private long splitSize;
   private String file;
   private String schemaFile;
   private SchemaDescription schema;
+  private AvroKeyValueInputFormat avroInputFormat;
+  private Job job;
+
+  public PentahoAvroInputFormat() throws Exception {
+    avroInputFormat = new AvroKeyValueInputFormat();
+    ConfigurationProxy conf = new ConfigurationProxy();
+    job = Job.getInstance( conf );
+  }
 
   @Override
   public List<IPentahoInputSplit> getSplits() throws Exception {
-    // TODO Auto-generated method stub
-    return null;
+    List<InputSplit> splits = avroInputFormat.getSplits( job );
+    return splits.stream().map( PentahoInputSplitImpl::new ).collect( Collectors.toList() );
   }
 
   @Override
@@ -63,10 +76,10 @@ public class PentahoAvroInputFormat implements IPentahoAvroInputFormat {
     if ( schemaFile != null && schemaFile.length() > 0 ) {
       return AvroSchemaConverter.createSchemaDescription( readAvroSchema( schemaFile ) );
     } else if ( file != null && file.length() > 0 ) {
-      DataFileStream<GenericRecord> dataFileStream = createDataFileStream( schemaFile, file );
-      SchemaDescription schemaDescription = AvroSchemaConverter.createSchemaDescription( dataFileStream.getSchema() );
-      dataFileStream.close();
-      return  schemaDescription;
+        DataFileStream<GenericRecord> dataFileStream = createDataFileStream( schemaFile, file );
+        SchemaDescription schemaDescription = AvroSchemaConverter.createSchemaDescription( dataFileStream.getSchema() );
+        dataFileStream.close();
+        return  schemaDescription;
     } else {
       throw new Exception( "Data file and schema file cannot be null" );
     }
