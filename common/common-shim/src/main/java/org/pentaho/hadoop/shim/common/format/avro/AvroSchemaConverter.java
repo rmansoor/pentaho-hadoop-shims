@@ -32,6 +32,7 @@ import com.fasterxml.jackson.databind.node.ObjectNode;
 import java.io.IOException;
 
 import com.google.common.annotations.VisibleForTesting;
+import org.apache.avro.LogicalTypes;
 import org.apache.avro.Schema;
 import org.pentaho.di.core.exception.KettleFileException;
 import org.pentaho.di.core.row.ValueMetaInterface;
@@ -91,6 +92,12 @@ public class AvroSchemaConverter {
     return avroSchema == null ? null : new Schema.Parser().parse( avroSchema.toString() );
   }
 
+  public static SchemaDescription createSchemaDescription( Schema schema ) {
+    SchemaDescription sd = new SchemaDescription();
+    schema.getFields().forEach( f -> sd.addField( convertField( sd, f ) ) );
+    return sd;
+  }
+
   @VisibleForTesting
   ObjectNode convertField( SchemaDescription.Field f ) {
     switch ( f.pentahoValueMetaType ) {
@@ -119,6 +126,43 @@ public class AvroSchemaConverter {
     }
   }
 
+
+  @VisibleForTesting
+  private static SchemaDescription.Field convertField( SchemaDescription schema, Schema.Field f ) {
+    boolean allowNull = f.defaultVal() == null;
+    switch ( f.schema().getType() ) {
+      case DOUBLE:
+      case FLOAT:
+        return schema.new Field( f.name(), f.name(), ValueMetaInterface.TYPE_NUMBER, allowNull );
+      case LONG:
+        if( f.schema().getLogicalType() != null ) {
+          String logicalType = f.schema().getLogicalType().getName();
+          if( logicalType.equals( LogicalTypes.timeMillis() )) {
+            return schema.new Field( f.name(), f.name(), ValueMetaInterface.TYPE_TIMESTAMP, allowNull );
+          }
+        } else {
+          return schema.new Field( f.name(), f.name(), ValueMetaInterface.TYPE_INTEGER, allowNull );
+        }
+      case BOOLEAN:
+        return schema.new Field( f.name(), f.name(), ValueMetaInterface.TYPE_BOOLEAN, allowNull );
+      case BYTES:
+        return schema.new Field( f.name(), f.name(), ValueMetaInterface.TYPE_STRING, allowNull );
+      case INT:
+        if( f.schema().getLogicalType() != null ) {
+          String logicalType = f.schema().getLogicalType().getName();
+          if( logicalType.equals( LogicalTypes.date() )) {
+            return schema.new Field( f.name(), f.name(), ValueMetaInterface.TYPE_DATE, allowNull );
+          }
+        }
+        break;
+      case STRING:
+        return schema.new Field( f.name(), f.name(), ValueMetaInterface.TYPE_STRING, allowNull );
+      default:
+        throw new RuntimeException( "Field: " + f.name() + "  Undefined type: " + f.schema().getType() );
+    }
+    return null;
+  }
+
   private ObjectNode convertPrimitive( String type, SchemaDescription.Field f ) {
     ObjectNode fieldNode = mapper.createObjectNode();
 
@@ -139,5 +183,4 @@ public class AvroSchemaConverter {
     }
     return fieldNode;
   }
-
 }
