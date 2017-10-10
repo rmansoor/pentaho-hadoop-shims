@@ -21,6 +21,7 @@
  ******************************************************************************/
 package org.pentaho.hadoop.shim.common.format.avro;
 
+import java.io.IOException;
 import java.util.List;
 import java.util.stream.Collectors;
 
@@ -33,6 +34,7 @@ import org.apache.avro.mapreduce.AvroKeyValueInputFormat;
 import org.apache.hadoop.mapreduce.InputSplit;
 import org.apache.hadoop.mapreduce.Job;
 import org.apache.log4j.Logger;
+import org.pentaho.di.core.exception.KettleFileException;
 import org.pentaho.di.core.vfs.KettleVFS;
 import org.pentaho.hadoop.shim.api.format.IPentahoAvroInputFormat;
 import org.pentaho.hadoop.shim.api.format.SchemaDescription;
@@ -85,8 +87,8 @@ public class PentahoAvroInputFormat implements IPentahoAvroInputFormat {
     }
   }
 
-  private Schema readAvroSchema( String file ) {
-    return new Schema.Parser().parse( file );
+  private Schema readAvroSchema( String file ) throws KettleFileException, IOException{
+      return new Schema.Parser().parse( KettleVFS.getInputStream( file ) );
   }
 
   @Override

@@ -30,6 +30,7 @@ import com.fasterxml.jackson.databind.node.ArrayNode;
 import com.fasterxml.jackson.databind.node.ObjectNode;
 
 import java.io.IOException;
+import java.util.List;
 
 import com.google.common.annotations.VisibleForTesting;
 import org.apache.avro.LogicalTypes;
@@ -130,7 +131,25 @@ public class AvroSchemaConverter {
   @VisibleForTesting
   private static SchemaDescription.Field convertField( SchemaDescription schema, Schema.Field f ) {
     boolean allowNull = f.defaultVal() == null;
-    switch ( f.schema().getType() ) {
+    String defaultValue = null;
+    if( !allowNull ) {
+      defaultValue = f.defaultVal().toString();
+    }
+
+    Schema.Type schemaType = null;
+    if( f.schema().getType().equals( Schema.Type.UNION ) ) {
+        List<Schema> schemas = f.schema().getTypes();
+        for ( Schema s: schemas ) {
+          if( !s.getName().equalsIgnoreCase( "null" )) {
+            schemaType = s.getType();
+            break;
+          }
+        }
+    } else {
+      schemaType = f.schema().getType();
+    }
+
+    switch ( schemaType ) {
       case DOUBLE:
       case FLOAT:
         return schema.new Field( f.name(), f.name(), ValueMetaInterface.TYPE_NUMBER, allowNull );
@@ -138,25 +157,25 @@ public class AvroSchemaConverter {
         if( f.schema().getLogicalType() != null ) {
           String logicalType = f.schema().getLogicalType().getName();
           if( logicalType.equals( LogicalTypes.timeMillis() )) {
-            return schema.new Field( f.name(), f.name(), ValueMetaInterface.TYPE_TIMESTAMP, allowNull );
+            return schema.new Field( f.name(), f.name(), ValueMetaInterface.TYPE_TIMESTAMP, defaultValue, allowNull );
           }
         } else {
-          return schema.new Field( f.name(), f.name(), ValueMetaInterface.TYPE_INTEGER, allowNull );
+          return schema.new Field( f.name(), f.name(), ValueMetaInterface.TYPE_INTEGER, defaultValue, allowNull );
         }
       case BOOLEAN:
-        return schema.new Field( f.name(), f.name(), ValueMetaInterface.TYPE_BOOLEAN, allowNull );
+        return schema.new Field( f.name(), f.name(), ValueMetaInterface.TYPE_BOOLEAN, defaultValue, allowNull );
       case BYTES:
-        return schema.new Field( f.name(), f.name(), ValueMetaInterface.TYPE_STRING, allowNull );
+        return schema.new Field( f.name(), f.name(), ValueMetaInterface.TYPE_STRING, defaultValue, allowNull );
       case INT:
         if( f.schema().getLogicalType() != null ) {
           String logicalType = f.schema().getLogicalType().getName();
           if( logicalType.equals( LogicalTypes.date() )) {
-            return schema.new Field( f.name(), f.name(), ValueMetaInterface.TYPE_DATE, allowNull );
+            return schema.new Field( f.name(), f.name(), ValueMetaInterface.TYPE_DATE, defaultValue, allowNull );
           }
         }
         break;
       case STRING:
-        return schema.new Field( f.name(), f.name(), ValueMetaInterface.TYPE_STRING, allowNull );
+        return schema.new Field( f.name(), f.name(), ValueMetaInterface.TYPE_STRING, defaultValue, allowNull );
       default:
         throw new RuntimeException( "Field: " + f.name() + "  Undefined type: " + f.schema().getType() );
     }
