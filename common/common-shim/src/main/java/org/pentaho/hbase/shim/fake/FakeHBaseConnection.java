@@ -67,7 +67,7 @@ public class FakeHBaseConnection extends HBaseConnection {
      * @return 0 if equal, < 0 if left is less than right, etc.
      */
     public int compareTo( byte[] buffer1, int offset1, int length1,
-                          byte[] buffer2, int offset2, int length2 ) {
+        byte[] buffer2, int offset2, int length2 ) {
       int end1 = offset1 + length1;
       int end2 = offset2 + length2;
       for ( int i = offset1, j = offset2; i < end1 && j < end2; i++, j++ ) {
@@ -108,7 +108,7 @@ public class FakeHBaseConnection extends HBaseConnection {
 
     public FakeTable( List<String> families ) {
       m_table = new TreeMap<byte[], NavigableMap<byte[], NavigableMap<byte[], NavigableMap<Long, byte[]>>>>(
-        new BytesComparator() );
+          new BytesComparator() );
 
       for ( String fam : families ) {
         m_families.add( fam );
@@ -147,7 +147,7 @@ public class FakeHBaseConnection extends HBaseConnection {
 
     public Result get( byte[] rowKey ) {
       NavigableMap<byte[], NavigableMap<byte[], NavigableMap<Long, byte[]>>> row = m_table
-        .get( rowKey );
+          .get( rowKey );
 
       if ( row == null ) {
         return null;
@@ -161,19 +161,19 @@ public class FakeHBaseConnection extends HBaseConnection {
       List<Col> colsToPut = toPut.getColumns();
 
       NavigableMap<byte[], NavigableMap<byte[], NavigableMap<Long, byte[]>>> row = m_table
-        .get( key );
+          .get( key );
       if ( row == null ) {
         row = new TreeMap<byte[], NavigableMap<byte[], NavigableMap<Long, byte[]>>>(
-          new BytesComparator() );
+            new BytesComparator() );
         m_table.put( key, row );
       }
 
       for ( Col c : colsToPut ) {
         NavigableMap<byte[], NavigableMap<Long, byte[]>> colsForFam = row
-          .get( c.m_colFamName );
+            .get( c.m_colFamName );
         if ( colsForFam == null ) {
           colsForFam = new TreeMap<byte[], NavigableMap<Long, byte[]>>(
-            new BytesComparator() );
+              new BytesComparator() );
           row.put( c.m_colFamName, colsForFam );
         }
 
@@ -189,7 +189,7 @@ public class FakeHBaseConnection extends HBaseConnection {
     }
 
     public SortedMap<byte[], NavigableMap<byte[], NavigableMap<byte[], NavigableMap<Long, byte[]>>>> getRows(
-      byte[] startKey, byte[] stopKey ) {
+        byte[] startKey, byte[] stopKey ) {
       SortedMap<byte[], NavigableMap<byte[], NavigableMap<byte[], NavigableMap<Long, byte[]>>>> subMap = null;
       if ( startKey == null && stopKey == null ) {
         return m_table; // full table
@@ -197,7 +197,7 @@ public class FakeHBaseConnection extends HBaseConnection {
 
       if ( stopKey == null ) {
         Map.Entry<byte[], NavigableMap<byte[], NavigableMap<byte[], NavigableMap<Long, byte[]>>>> lastE = m_table
-          .lastEntry();
+            .lastEntry();
         byte[] upperKey = lastE.getKey();
 
         // with no stop key specified we return the last row inclusive
@@ -222,16 +222,25 @@ public class FakeHBaseConnection extends HBaseConnection {
   protected class Col {
     protected byte[] m_colFamName;
     protected byte[] m_colName;
+    protected long m_timestamp;
     protected byte[] m_value;
+
+    public Col( byte[] colFamName, byte[] colName, long timestamp, byte[] value ) {
+      m_colFamName = colFamName;
+      m_colName = colName;
+      m_timestamp = timestamp;
+      m_value = value;
+    }
 
     public Col( byte[] colFamName, byte[] colName, byte[] value ) {
       m_colFamName = colFamName;
       m_colName = colName;
+      m_timestamp = 0;
       m_value = value;
     }
 
     public Col( byte[] colFamName, byte[] colName ) {
-      this( colFamName, colName, null );
+      this( colFamName, colName, 0,  null );
     }
   }
 
@@ -246,6 +255,14 @@ public class FakeHBaseConnection extends HBaseConnection {
 
     public void addColumn( byte[] colFamName, byte[] colName, byte[] colVal ) {
       m_cols.add( new Col( colFamName, colName, colVal ) );
+    }
+
+    public void addColumn( byte[] colFamName, byte[] colName, long timestamp, byte[] colVal ) {
+      m_cols.add( new Col( colFamName, colName, timestamp, colVal ) );
+    }
+
+    public void setAcl( Map<String, String[]> userPermissions ) {
+
     }
 
     public byte[] getKey() {
@@ -291,7 +308,7 @@ public class FakeHBaseConnection extends HBaseConnection {
       }
 
       SortedMap<byte[], NavigableMap<byte[], NavigableMap<byte[], NavigableMap<Long, byte[]>>>> subMap = table
-        .getRows( m_startKey, m_stopKey );
+          .getRows( m_startKey, m_stopKey );
 
       return new ResultScanner( this, subMap );
     }
@@ -305,21 +322,21 @@ public class FakeHBaseConnection extends HBaseConnection {
      * @return
      */
     public Result columnLimitedRow(
-      byte[] rowKey,
-      NavigableMap<byte[], NavigableMap<byte[], NavigableMap<Long, byte[]>>> fullRow ) {
+        byte[] rowKey,
+        NavigableMap<byte[], NavigableMap<byte[], NavigableMap<Long, byte[]>>> fullRow ) {
 
       if ( getColumns() == null || getColumns().size() == 0 ) {
         return new Result( rowKey, fullRow );
       }
 
       NavigableMap<byte[], NavigableMap<byte[], NavigableMap<Long, byte[]>>> colLimited =
-        new TreeMap<byte[], NavigableMap<byte[], NavigableMap<Long, byte[]>>>(
-          new BytesComparator() );
+          new TreeMap<byte[], NavigableMap<byte[], NavigableMap<Long, byte[]>>>(
+              new BytesComparator() );
 
       for ( Col col : m_cols ) {
         // family first - look for this in the full row
         NavigableMap<byte[], NavigableMap<Long, byte[]>> colsForFam = fullRow
-          .get( col.m_colFamName );
+            .get( col.m_colFamName );
 
         if ( colsForFam != null ) {
           // now look for the column
@@ -328,10 +345,10 @@ public class FakeHBaseConnection extends HBaseConnection {
           if ( theCol != null ) {
             // now add it
             NavigableMap<byte[], NavigableMap<Long, byte[]>> resultCols = colLimited
-              .get( col.m_colFamName );
+                .get( col.m_colFamName );
             if ( resultCols == null ) {
               resultCols = new TreeMap<byte[], NavigableMap<Long, byte[]>>(
-                new BytesComparator() );
+                  new BytesComparator() );
               // store this new map of columns in the family map
               colLimited.put( col.m_colFamName, resultCols );
             }
@@ -351,8 +368,8 @@ public class FakeHBaseConnection extends HBaseConnection {
     protected NavigableMap<byte[], NavigableMap<byte[], NavigableMap<Long, byte[]>>> m_row;
 
     public Result(
-      byte[] rowKey,
-      NavigableMap<byte[], NavigableMap<byte[], NavigableMap<Long, byte[]>>> row ) {
+        byte[] rowKey,
+        NavigableMap<byte[], NavigableMap<byte[], NavigableMap<Long, byte[]>>> row ) {
       m_rowKey = rowKey;
       m_row = row;
     }
@@ -368,7 +385,7 @@ public class FakeHBaseConnection extends HBaseConnection {
 
     public byte[] getValue( byte[] colFam, byte[] colName ) {
       NavigableMap<byte[], NavigableMap<Long, byte[]>> colMapForFam = m_row
-        .get( colFam );
+          .get( colFam );
       if ( colMapForFam == null ) {
         return null;
       }
@@ -387,14 +404,14 @@ public class FakeHBaseConnection extends HBaseConnection {
 
     public NavigableMap<byte[], byte[]> getFamilyMap( byte[] colFamily ) {
       NavigableMap<byte[], NavigableMap<Long, byte[]>> famMap = m_row
-        .get( colFamily );
+          .get( colFamily );
 
       if ( famMap == null ) {
         return null;
       }
 
       TreeMap<byte[], byte[]> famMapLatestVals = new TreeMap<byte[], byte[]>(
-        new BytesComparator() );
+          new BytesComparator() );
       Set<Map.Entry<byte[], NavigableMap<Long, byte[]>>> es = famMap.entrySet();
       for ( Map.Entry<byte[], NavigableMap<Long, byte[]>> e : es ) {
         famMapLatestVals.put( e.getKey(), e.getValue().lastEntry().getValue() );
@@ -408,11 +425,11 @@ public class FakeHBaseConnection extends HBaseConnection {
     protected Scan m_scan;
     protected SortedMap<byte[], NavigableMap<byte[], NavigableMap<byte[], NavigableMap<Long, byte[]>>>> m_rows;
     protected Iterator<Entry<byte[], NavigableMap<byte[], NavigableMap<byte[], NavigableMap<Long, byte[]>>>>>
-    m_rowIterator;
+        m_rowIterator;
 
     public ResultScanner(
-      Scan scan,
-      SortedMap<byte[], NavigableMap<byte[], NavigableMap<byte[], NavigableMap<Long, byte[]>>>> rows ) {
+        Scan scan,
+        SortedMap<byte[], NavigableMap<byte[], NavigableMap<byte[], NavigableMap<Long, byte[]>>>> rows ) {
       m_scan = scan;
       m_rows = rows;
       m_rowIterator = m_rows.entrySet().iterator();
@@ -424,7 +441,7 @@ public class FakeHBaseConnection extends HBaseConnection {
       }
 
       Entry<byte[], NavigableMap<byte[], NavigableMap<byte[], NavigableMap<Long, byte[]>>>> nextR = m_rowIterator
-        .next();
+          .next();
 
       if ( nextR == null ) {
         return null;
@@ -468,31 +485,46 @@ public class FakeHBaseConnection extends HBaseConnection {
 
   @Override
   public void addColumnFilterToScan( ColumnFilter arg0, HBaseValueMeta arg1,
-                                     VariableSpace arg2, boolean arg3 ) throws Exception {
+      VariableSpace arg2, boolean arg3 ) throws Exception {
     // TODO Auto-generated method stub
 
   }
 
   @Override
   public void addColumnToScan( String colFamilyName, String colName,
-                               boolean colNameIsBinary ) throws Exception {
+      boolean colNameIsBinary ) throws Exception {
     checkSourceScan();
 
     m_sourceScan.addColumn(
-      m_bytesUtil.toBytes( colFamilyName ),
-      ( colNameIsBinary ) ? m_bytesUtil.toBytesBinary( colName ) : m_bytesUtil
-        .toBytes( colName ) );
+        m_bytesUtil.toBytes( colFamilyName ),
+        ( colNameIsBinary ) ? m_bytesUtil.toBytesBinary( colName ) : m_bytesUtil
+            .toBytes( colName ) );
   }
 
   @Override
   public void addColumnToTargetPut( String columnFamily, String columnName,
-                                    boolean colNameIsBinary, byte[] colValue ) throws Exception {
+      boolean colNameIsBinary, byte[] colValue ) throws Exception {
     checkTargetTable();
     checkTargetPut();
     m_currentTargetPut.addColumn(
-      m_bytesUtil.toBytes( columnFamily ),
-      colNameIsBinary ? m_bytesUtil.toBytesBinary( columnName ) : m_bytesUtil
-        .toBytes( columnName ), colValue );
+        m_bytesUtil.toBytes( columnFamily ),
+        colNameIsBinary ? m_bytesUtil.toBytesBinary( columnName ) : m_bytesUtil
+            .toBytes( columnName ), colValue );
+  }
+
+  @Override
+  public void addColumnToTargetPut( String columnFamily, String columnName,
+      boolean colNameIsBinary, long timestamp, byte[] colValue ) throws Exception {
+    checkTargetTable();
+    checkTargetPut();
+    m_currentTargetPut.addColumn(
+        m_bytesUtil.toBytes( columnFamily ),
+        colNameIsBinary ? m_bytesUtil.toBytesBinary( columnName ) : m_bytesUtil
+            .toBytes( columnName ), timestamp, colValue );
+  }
+
+  @Override public void setAclOfTargetPut( Map<String, String[]> userPermissions ) throws Exception {
+    m_currentTargetPut.setAcl( userPermissions );
   }
 
   @Override
@@ -529,7 +561,7 @@ public class FakeHBaseConnection extends HBaseConnection {
 
   @Override
   public void configureConnection( Properties connProps, List<String> logMessages )
-    throws Exception {
+      throws Exception {
     String defaultConfig = connProps.getProperty( DEFAULTS_KEY );
     String siteConfig = connProps.getProperty( SITE_KEY );
     String zookeeperQuorum = connProps.getProperty( ZOOKEEPER_QUORUM_KEY );
@@ -560,7 +592,7 @@ public class FakeHBaseConnection extends HBaseConnection {
 
   @Override
   public void createTable( String tableName, List<String> colFamilyNames,
-                           Properties creationProps ) throws Exception {
+      Properties creationProps ) throws Exception {
 
     if ( m_db.containsKey( tableName ) ) {
       throw new Exception( "Table already exists!" );
@@ -632,17 +664,17 @@ public class FakeHBaseConnection extends HBaseConnection {
 
   @Override
   public byte[] getResultSetCurrentRowColumnLatest( String colFamilyName,
-                                                    String colName, boolean colNameIsBinary ) throws Exception {
+      String colName, boolean colNameIsBinary ) throws Exception {
 
     return m_currentResultSetRow.getValue(
-      m_bytesUtil.toBytes( colFamilyName ),
-      colNameIsBinary ? m_bytesUtil.toBytesBinary( colName ) : m_bytesUtil
-        .toBytes( colName ) );
+        m_bytesUtil.toBytes( colFamilyName ),
+        colNameIsBinary ? m_bytesUtil.toBytesBinary( colName ) : m_bytesUtil
+            .toBytes( colName ) );
   }
 
   @Override
   public NavigableMap<byte[], byte[]> getResultSetCurrentRowFamilyMap(
-    String familyName ) throws Exception {
+      String familyName ) throws Exception {
     return m_currentResultSetRow.getFamilyMap( m_bytesUtil.toBytes( familyName ) );
   }
 
@@ -657,20 +689,20 @@ public class FakeHBaseConnection extends HBaseConnection {
 
   @Override
   public NavigableMap<byte[], NavigableMap<byte[], NavigableMap<Long, byte[]>>> getResultSetCurrentRowMap()
-    throws Exception {
+      throws Exception {
     return m_currentResultSetRow.getMap();
   }
 
   @Override
   public byte[] getRowColumnLatest( Object arg0, String arg1, String arg2,
-                                    boolean arg3 ) throws Exception {
+      boolean arg3 ) throws Exception {
     // TODO Auto-generated method stub
     return null;
   }
 
   @Override
   public NavigableMap<byte[], byte[]> getRowFamilyMap( Object aRow, String family )
-    throws Exception {
+      throws Exception {
     // TODO Auto-generated method stub
     return null;
   }
@@ -683,7 +715,7 @@ public class FakeHBaseConnection extends HBaseConnection {
 
   @Override
   public NavigableMap<byte[], NavigableMap<byte[], NavigableMap<Long, byte[]>>> getRowMap(
-    Object arg0 ) throws Exception {
+      Object arg0 ) throws Exception {
     // TODO Auto-generated method stub
     return null;
   }
@@ -746,7 +778,7 @@ public class FakeHBaseConnection extends HBaseConnection {
 
   @Override
   public void newSourceTableScan( byte[] keyLowerBound, byte[] keyUpperBound,
-                                  int cacheSize ) throws Exception {
+      int cacheSize ) throws Exception {
     checkSourceTable();
     // checkSourceResultSet();
 
@@ -755,7 +787,7 @@ public class FakeHBaseConnection extends HBaseConnection {
 
   @Override
   public void newTargetTable( String tableName, Properties arg1 )
-    throws Exception {
+      throws Exception {
     closeTargetTable();
 
     m_targetTable = tableName;
@@ -764,7 +796,7 @@ public class FakeHBaseConnection extends HBaseConnection {
 
   @Override
   public void newTargetTablePut( byte[] key, boolean writeToWAL )
-    throws Exception {
+      throws Exception {
     checkTargetTable();
     m_currentTargetPut = new Put( key );
   }

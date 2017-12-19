@@ -21,8 +21,11 @@
 ******************************************************************************/
 package org.pentaho.hbase.factory;
 
+import java.util.Map;
+
 public interface HBasePut {
   void setWriteToWAL( boolean writeToWAL );
   void addColumn( byte[] colFamily, byte[] colName, byte[] colValue );
-
+  void addColumn( byte[] colFamily, byte[] colName, long timestamp, byte[] colValue );
+  void setAcl( Map<String, String[]> userPermissions );
 }

@@ -23,7 +23,11 @@ package org.pentaho.hadoop.hbase.factory;
 
 import org.apache.hadoop.hbase.client.Durability;
 import org.apache.hadoop.hbase.client.Put;
+import org.apache.hadoop.hbase.security.access.Permission;
 import org.pentaho.hbase.factory.HBasePut;
+
+import java.util.HashMap;
+import java.util.Map;
 
 public class HBase10Put implements HBasePut {
   Put put;
@@ -42,8 +46,40 @@ public class HBase10Put implements HBasePut {
     put.addColumn( colFamily, colName, colValue );
   }
 
+  @Override
+  public void addColumn( byte[] colFamily, byte[] colName, long timestamp, byte[] colValue ) {
+    put.addColumn( colFamily, colName, timestamp, colValue );
+  }
+
+  @Override
+  public void setAcl( Map<String, String[]> userPermissions ) {
+    put.setACL( convert( userPermissions ) );
+  }
+
   Put getPut() {
     return put;
   }
 
+  private Map<String, Permission> convert( Map<String, String[]> userPermissions ) {
+    Map<String, Permission> permissionMap = new HashMap<String, Permission>(  );
+    for ( String user :userPermissions.keySet() ) {
+      String[] permissions  = userPermissions.get( user );
+      Permission.Action[] actions = new Permission.Action[userPermissions.size()];
+      int i = 0;
+      for( String permission : permissions ) {
+        switch ( permission.toUpperCase() ) {
+          case "WRITE":
+            actions[ i++] = Permission.Action.WRITE;
+          case "READ":
+            actions[ i++] = Permission.Action.READ;
+          case "EXECUTE":
+            actions[ i++] = Permission.Action.EXEC;
+          case "CREATE":
+            actions[ i++] = Permission.Action.CREATE;
+        }
+      }
+      permissionMap.put( user, new Permission( actions ) );
+    }
+    return permissionMap;
+  }
 }

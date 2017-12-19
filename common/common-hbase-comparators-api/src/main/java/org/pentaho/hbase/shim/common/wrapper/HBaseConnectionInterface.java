@@ -29,6 +29,7 @@ import org.pentaho.hbase.shim.api.HBaseValueMeta;
 import org.pentaho.hbase.shim.spi.HBaseBytesUtilShim;
 
 import java.util.List;
+import java.util.Map;
 import java.util.NavigableMap;
 import java.util.Properties;
 
@@ -42,6 +43,9 @@ public interface HBaseConnectionInterface {
 
   public abstract void addColumnToTargetPut( String columnFamily, String columnName, boolean colNameIsBinary,
                                              byte[] colValue ) throws Exception;
+  public abstract void addColumnToTargetPut( String columnFamily, String columnName, boolean colNameIsBinary,
+      long timestamp, byte[] colValue ) throws Exception;
+  public abstract void setAclOfTargetPut( Map<String, String[]> userPermissions ) throws Exception;
 
   public abstract boolean checkForHBaseRow( Object rowToCheck );
 

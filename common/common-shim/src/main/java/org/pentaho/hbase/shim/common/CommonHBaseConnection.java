@@ -64,6 +64,7 @@ import java.util.ArrayList;
 import java.util.Collection;
 import java.util.Date;
 import java.util.List;
+import java.util.Map;
 import java.util.NavigableMap;
 import java.util.Properties;
 import java.util.Set;
@@ -81,6 +82,7 @@ public class CommonHBaseConnection extends HBaseConnection {
   protected HBaseClientFactory m_factory;
 
   protected HBaseTable m_sourceTable;
+
   protected Scan m_sourceScan;
   protected ResultScanner m_resultSet;
   protected Result m_currentResultSetRow;
@@ -131,7 +133,7 @@ public class CommonHBaseConnection extends HBaseConnection {
 
         if ( !doZookeeperQuorumInNamedClusterAndConfigMatch( zookeeperQuorum ) ) {
           String message = BaseMessages.
-            getString( PKG, "CommonHBaseConnection.Error.MismatchZookeeperNamedClusterVsConfiguration", zookeeperQuorum, m_config.get( ZOOKEEPER_QUORUM_KEY ) );
+              getString( PKG, "CommonHBaseConnection.Error.MismatchZookeeperNamedClusterVsConfiguration", zookeeperQuorum, m_config.get( ZOOKEEPER_QUORUM_KEY ) );
           log.logBasic( message );
           //no throw exception here as for using some specific cases in host name - aliases that totally different from host name or ips, that case
           //can be checked only ping ip which is too expensive
@@ -167,7 +169,7 @@ public class CommonHBaseConnection extends HBaseConnection {
 
   private boolean doZookeeperQuorumInNamedClusterAndConfigMatch( String zookeeperQuorum ) {
     return
-      allZookeperHostsFromNameNodeInConfigQuorum( zookeeperQuorum ) || atLeastOneHostFromConfigInNameClusterZookeeperQuorum( zookeeperQuorum );
+        allZookeperHostsFromNameNodeInConfigQuorum( zookeeperQuorum ) || atLeastOneHostFromConfigInNameClusterZookeeperQuorum( zookeeperQuorum );
   }
 
   private boolean allZookeperHostsFromNameNodeInConfigQuorum( String zookeeperQuorum ) {
@@ -951,6 +953,24 @@ public class CommonHBaseConnection extends HBaseConnection {
 
     m_currentTargetPut.addColumn( m_bytesUtil.toBytes( columnFamily ),
         colNameIsBinary ? m_bytesUtil.toBytesBinary( columnName ) : m_bytesUtil.toBytes( columnName ), colValue );
+  }
+
+  @Override
+  public void addColumnToTargetPut( String columnFamily, String columnName, boolean colNameIsBinary, long timestamp, byte[] colValue )
+      throws Exception {
+
+    checkTargetTable();
+    checkTargetPut();
+
+    m_currentTargetPut.addColumn( m_bytesUtil.toBytes( columnFamily ),
+        colNameIsBinary ? m_bytesUtil.toBytesBinary( columnName ) : m_bytesUtil.toBytes( columnName ), timestamp,  colValue );
+  }
+
+  @Override public void setAclOfTargetPut(  Map<String, String[]> userPermissions ) throws Exception {
+    checkTargetTable();
+    checkTargetPut();
+
+    m_currentTargetPut.setAcl( userPermissions );
   }
 
   @Override

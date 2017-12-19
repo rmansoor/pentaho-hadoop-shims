@@ -25,6 +25,7 @@ package org.pentaho.hbase.shim.spi;
 import java.net.MalformedURLException;
 import java.net.URL;
 import java.util.List;
+import java.util.Map;
 import java.util.NavigableMap;
 import java.util.Properties;
 
@@ -260,6 +261,27 @@ public abstract class HBaseConnection {
    */
   public abstract void addColumnToTargetPut( String columnFamily,
       String columnName, boolean colNameIsBinary, byte[] colValue ) throws Exception;
+  /**
+   * Add a column value to the current target table push with a specified timestamp
+   *
+   * @param columnFamily the column family to add the column to
+   * @param columnName the name of the column to add
+   * @param colNameIsBinary true if the column name is binary
+   * @param timestamp timestamp in form of long value
+   * @param colValue the encoded column value to add
+   * @throws Exception if a problem occurs
+   */
+  public abstract void addColumnToTargetPut( String columnFamily,
+      String columnName, boolean colNameIsBinary, long timestamp, byte[] colValue ) throws Exception;
+
+  /**
+   * Set ACL (User permission) to a particular column. User permission are passed in in form or a map
+   * of users and permission (READ, WRITE, EXEC, CREATE)
+   *
+   * @param userPermissions
+   * @throws Exception
+   */
+  public abstract void setAclOfTargetPut( Map<String, String[]> userPermissions ) throws Exception;
 
   /**
    * Add a column filter to the list of filters that the scanner will apply to

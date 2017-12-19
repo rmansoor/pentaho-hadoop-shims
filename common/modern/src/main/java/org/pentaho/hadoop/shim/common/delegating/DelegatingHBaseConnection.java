@@ -1,24 +1,24 @@
 /*******************************************************************************
-*
-* Pentaho Big Data
-*
-* Copyright (C) 2002-2017 by Hitachi Vantara : http://www.pentaho.com
-*
-*******************************************************************************
-*
-* Licensed under the Apache License, Version 2.0 (the "License");
-* you may not use this file except in compliance with
-* the License. You may obtain a copy of the License at
-*
-*    http://www.apache.org/licenses/LICENSE-2.0
-*
-* Unless required by applicable law or agreed to in writing, software
-* distributed under the License is distributed on an "AS IS" BASIS,
-* WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
-* See the License for the specific language governing permissions and
-* limitations under the License.
-*
-******************************************************************************/
+ *
+ * Pentaho Big Data
+ *
+ * Copyright (C) 2002-2017 by Hitachi Vantara : http://www.pentaho.com
+ *
+ *******************************************************************************
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with
+ * the License. You may obtain a copy of the License at
+ *
+ *    http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ *
+ ******************************************************************************/
 
 package org.pentaho.hadoop.shim.common.delegating;
 
@@ -31,6 +31,7 @@ import org.pentaho.hbase.shim.spi.HBaseBytesUtilShim;
 import org.pentaho.hbase.shim.spi.HBaseConnection;
 
 import java.util.List;
+import java.util.Map;
 import java.util.NavigableMap;
 import java.util.Properties;
 
@@ -41,9 +42,13 @@ public class DelegatingHBaseConnection extends HBaseConnection implements HBaseC
     this.delegate = delegate;
   }
 
+  @Override public void setAclOfTargetPut( Map<String, String[]> userPermissions ) throws Exception {
+    delegate.setAclOfTargetPut( userPermissions );
+  }
+
   @Override
   public void addColumnFilterToScan( ColumnFilter cf, HBaseValueMeta columnMeta, VariableSpace vars, boolean matchAny )
-    throws Exception {
+      throws Exception {
     delegate.addColumnFilterToScan( cf, columnMeta, vars, matchAny );
   }
 
@@ -54,8 +59,14 @@ public class DelegatingHBaseConnection extends HBaseConnection implements HBaseC
 
   @Override
   public void addColumnToTargetPut( String columnFamily, String columnName, boolean colNameIsBinary, byte[] colValue )
-    throws Exception {
+      throws Exception {
     delegate.addColumnToTargetPut( columnFamily, columnName, colNameIsBinary, colValue );
+  }
+
+  @Override
+  public void addColumnToTargetPut( String columnFamily, String columnName, boolean colNameIsBinary, long timestamp, byte[] colValue )
+      throws Exception {
+    delegate.addColumnToTargetPut( columnFamily, columnName, colNameIsBinary, timestamp, colValue );
   }
 
   @Override
@@ -165,7 +176,7 @@ public class DelegatingHBaseConnection extends HBaseConnection implements HBaseC
 
   @Override
   public byte[] getResultSetCurrentRowColumnLatest( String colFamilyName, String colName, boolean colNameIsBinary )
-    throws Exception {
+      throws Exception {
     return delegate.getResultSetCurrentRowColumnLatest( colFamilyName, colName, colNameIsBinary );
   }
 
@@ -181,13 +192,13 @@ public class DelegatingHBaseConnection extends HBaseConnection implements HBaseC
 
   @Override
   public NavigableMap<byte[], NavigableMap<byte[], NavigableMap<Long, byte[]>>> getResultSetCurrentRowMap()
-    throws Exception {
+      throws Exception {
     return delegate.getResultSetCurrentRowMap();
   }
 
   @Override
   public byte[] getRowColumnLatest( Object aRow, String colFamilyName, String colName, boolean colNameIsBinary )
-    throws Exception {
+      throws Exception {
     return delegate.getRowColumnLatest( aRow, colFamilyName, colName, colNameIsBinary );
   }
 
@@ -203,7 +214,7 @@ public class DelegatingHBaseConnection extends HBaseConnection implements HBaseC
 
   @Override
   public NavigableMap<byte[], NavigableMap<byte[], NavigableMap<Long, byte[]>>> getRowMap( Object aRow )
-    throws Exception {
+      throws Exception {
     return delegate.getRowMap( aRow );
   }
 
