@@ -33,12 +33,18 @@ public class S3NCredentialUtils {
   private static final String S3NSCHEME = "s3n";
   private static final String S3NROOTBUCKET = S3NSCHEME + "/";
 
+  private static final DefaultAWSCredentialsProviderChain INSTANCE
+      = new DefaultAWSCredentialsProviderChain();
+
+  public static DefaultAWSCredentialsProviderChain getInstance() {
+    return INSTANCE;
+  }
   public static void applyS3CredentialsToHadoopConfigurationIfNecessary( String filename, Configuration conf ) {
     Path outputFile = new Path( scrubFilePathIfNecessary( filename ) );
     URI uri = outputFile.toUri();
     String scheme = uri != null ? uri.getScheme() : null;
     if ( scheme != null && scheme.equals( S3NSCHEME ) ) {
-      AWSCredentials credentials = DefaultAWSCredentialsProviderChain.getInstance().getCredentials();
+      AWSCredentials credentials = getInstance().getCredentials();
       conf.set( "fs.s3n.awsAccessKeyId", credentials.getAWSAccessKeyId() );
       conf.set( "fs.s3n.awsSecretAccessKey", credentials.getAWSSecretKey() );
       conf.set( "fs.s3.buffer.dir", System.getProperty( "java.io.tmpdir" ) );
