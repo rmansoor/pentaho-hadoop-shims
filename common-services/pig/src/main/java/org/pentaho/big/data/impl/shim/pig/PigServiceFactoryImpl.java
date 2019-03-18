@@ -43,8 +43,7 @@ public class PigServiceFactoryImpl implements NamedClusterServiceFactory<PigServ
   }
 
   @Override public boolean canHandle( NamedCluster namedCluster ) {
-    String shimIdentifier = null; // TODO: Specify shim
-    return true;
+    return namedCluster == null ? true : !namedCluster.isUseGateway();
   }
 
   @Override public PigService create( NamedCluster namedCluster ) {

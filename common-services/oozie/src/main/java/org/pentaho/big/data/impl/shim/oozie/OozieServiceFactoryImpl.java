@@ -36,9 +36,8 @@ public class OozieServiceFactoryImpl implements NamedClusterServiceFactory<Oozie
     return OozieService.class;
   }
 
-  @Override public boolean canHandle( NamedCluster namedCluster ) {
-//    boolean ncState = namedCluster == null || !namedCluster.isUseGateway();
-    return true;
+  public boolean canHandle( NamedCluster namedCluster ) {
+    return namedCluster == null ? true : !namedCluster.isUseGateway();
   }
 
   @Override public OozieService create( NamedCluster namedCluster ) {

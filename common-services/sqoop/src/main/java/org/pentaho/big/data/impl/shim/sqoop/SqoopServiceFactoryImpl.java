@@ -47,8 +47,7 @@ public class SqoopServiceFactoryImpl implements NamedClusterServiceFactory<Sqoop
 
   @Override
   public boolean canHandle( NamedCluster namedCluster ) {
-    //    boolean ncState = namedCluster == null ? true : !namedCluster.isUseGateway();
-    return true;
+    return namedCluster == null ? true : !namedCluster.isUseGateway();
   }
 
   @Override
