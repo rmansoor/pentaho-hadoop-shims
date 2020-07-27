@@ -138,6 +138,17 @@
       <artifactId>protobuf-java</artifactId>
       <version>2.5.0</version>
     </dependency>
+    <dependency>
+      <groupId>pentaho</groupId>
+      <artifactId>pentaho-s3-vfs</artifactId>
+      <version>${pdi.version}</version>
+      <exclusions>
+        <exclusion>
+          <groupId>*</groupId>
+          <artifactId>*</artifactId>
+        </exclusion>
+      </exclusions>
+    </dependency>
   </dependencies>
   <build>
     <plugins>
@@ -152,7 +163,7 @@
               <include>
                 *:aws-java-sdk-core,*:jackson-core,*:xstream,*:guava,*:httpclient,
                 *:htrace-core,*:hbase-protocol,*:zookeeper,
-                *:hbase-server,*:protobuf-java
+                *:hbase-server,*:protobuf-java,*:pentaho-s3-vfs
               </include>
               <exclude>
                 *:*log4j*,*:xml-apis,*:xercesImpl,*:hadoop*,*:hbase*,*:zookeeper*
