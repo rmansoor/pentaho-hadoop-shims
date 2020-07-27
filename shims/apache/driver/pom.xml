@@ -212,6 +212,21 @@
       <artifactId>commons-configuration2</artifactId>
       <version>${commons-configuration2.version}</version>
     </dependency>
+    <dependency>
+      <groupId>org.apache.httpcomponents</groupId>
+      <artifactId>httpcore</artifactId>
+    </dependency>
+    <dependency>
+      <groupId>joda-time</groupId>
+      <artifactId>joda-time</artifactId>
+      <version>${joda-time.version}</version>
+      <exclusions>
+        <exclusion>
+          <groupId>*</groupId>
+          <artifactId>*</artifactId>
+        </exclusion>
+      </exclusions>
+    </dependency>
 
     <dependency>
       <groupId>org.mockito</groupId>
@@ -245,7 +260,7 @@
               <exclude>
                 org.slf4j:*,
                 *:jersey*:jar:2.25.1,
-                *:*log4j*,*:xml-apis,*:xercesImpl,*:tests:*,
+                *:*log4j*,*:xml-apis,*:xercesImpl,*:tests:*,httpcore
                 <!--Needed for hive-->
                 org.apache.hadoop:hadoop-yarn-registry
               </exclude>
@@ -253,7 +268,7 @@
             </resolverFilter>
             <resolverFilter>
               <include>
-                *:libthrift,
+                *:libthrift,org.apache.httpcomponents:httpcore,joda-time:joda-time
               </include>
               <exclude>
                 *:tests:*
