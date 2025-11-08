@@ -13,7 +13,6 @@
 
 package org.pentaho.big.data.api.jdbc.impl;
 
-import org.osgi.framework.ServiceReference;
 import org.pentaho.di.core.database.DelegatingDriver;
 import org.slf4j.LoggerFactory;
 
@@ -24,7 +23,6 @@ import java.sql.DriverPropertyInfo;
 import java.sql.SQLException;
 import java.sql.SQLFeatureNotSupportedException;
 import java.util.Iterator;
-import java.util.Map;
 import java.util.Objects;
 import java.util.Properties;
 import java.util.function.Function;
