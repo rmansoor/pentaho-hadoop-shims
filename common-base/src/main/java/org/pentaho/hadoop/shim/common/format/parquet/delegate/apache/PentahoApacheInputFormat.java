@@ -41,6 +41,7 @@ import org.pentaho.hadoop.shim.common.format.ReadFilesFilter;
 import org.pentaho.hadoop.shim.common.format.S3NCredentialUtils;
 import org.pentaho.hadoop.shim.common.format.parquet.ParquetInputFieldList;
 import org.pentaho.hadoop.shim.common.format.parquet.PentahoInputSplitImpl;
+import org.pentaho.hadoop.shim.common.fs.FileSystemRegistry;
 
 import java.io.InputStream;
 import java.nio.file.NoSuchFileException;
@@ -73,6 +74,10 @@ public class PentahoApacheInputFormat extends HadoopFormatBase implements IPenta
         BiConsumer<InputStream, String> consumer = ( is, filename ) -> conf.addResource( is, filename );
         ShimConfigsLoader.addConfigsAsResources( namedCluster, consumer );
       }
+
+      FileSystemRegistry.registerDefaults();
+      FileSystemRegistry.applyToConfiguration( conf );
+
       job = Job.getInstance( conf );
 
       nativeParquetInputFormat = new ParquetInputFormat<>();

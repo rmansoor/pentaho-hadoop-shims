@@ -35,6 +35,7 @@ import org.pentaho.hadoop.shim.api.format.org.pentaho.hadoop.shim.pvfs.api.PvfsH
 import org.pentaho.hadoop.shim.common.ConfigurationProxy;
 import org.pentaho.hadoop.shim.common.format.HadoopFormatBase;
 import org.pentaho.hadoop.shim.common.format.S3NCredentialUtils;
+import org.pentaho.hadoop.shim.common.fs.FileSystemRegistry;
 
 import java.io.IOException;
 import java.io.InputStream;
@@ -70,6 +71,8 @@ public class PentahoApacheOutputFormat extends HadoopFormatBase implements IPent
         BiConsumer<InputStream, String> consumer = ( is, filename ) -> conf.addResource( is, filename );
         ShimConfigsLoader.addConfigsAsResources( namedCluster, consumer );
       }
+      FileSystemRegistry.registerDefaults();
+      FileSystemRegistry.applyToConfiguration( conf );
 
       job = Job.getInstance( conf );
 

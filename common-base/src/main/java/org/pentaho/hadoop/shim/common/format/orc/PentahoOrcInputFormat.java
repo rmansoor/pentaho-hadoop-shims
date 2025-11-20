@@ -23,6 +23,7 @@ import org.pentaho.hadoop.shim.api.format.IPentahoOrcInputFormat;
 import org.pentaho.hadoop.shim.common.ConfigurationProxy;
 import org.pentaho.hadoop.shim.common.format.HadoopFormatBase;
 import org.pentaho.hadoop.shim.common.format.S3NCredentialUtils;
+import org.pentaho.hadoop.shim.common.fs.FileSystemRegistry;
 
 import java.io.InputStream;
 import java.util.List;
@@ -53,6 +54,8 @@ public class PentahoOrcInputFormat extends HadoopFormatBase implements IPentahoO
         return confProxy;
       } );
     }
+    FileSystemRegistry.registerDefaults();
+    FileSystemRegistry.applyToConfiguration( conf );
   }
 
   @Override
