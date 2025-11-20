@@ -16,7 +16,7 @@ package org.pentaho.big.data.api.jdbc.impl;
 import com.google.common.annotations.VisibleForTesting;
 import org.pentaho.di.core.database.DelegatingDriver;
 import org.pentaho.hadoop.shim.api.jdbc.JdbcUrlParser;
-import org.slf4j.LoggerFactory;
+import org.apache.logging.log4j.LogManager;
 
 import java.sql.Connection;
 import java.sql.Driver;
@@ -38,7 +38,7 @@ public class ClusterInitializingDriver implements Driver {
   private static final List<String> BIG_DATA_DRIVER_URL_PATTERNS = new ArrayList<>();
 
   @VisibleForTesting
-  protected static org.slf4j.Logger logger = LoggerFactory.getLogger( ClusterInitializingDriver.class );
+  protected static org.apache.logging.log4j.Logger logger = LogManager.getLogger( ClusterInitializingDriver.class );
 
   private final JdbcUrlParser jdbcUrlParser;
 

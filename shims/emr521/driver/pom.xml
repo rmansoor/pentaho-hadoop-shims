@@ -55,8 +55,8 @@
       <version>${org.apache.hadoop.version}</version>
       <exclusions>
         <exclusion>
-          <groupId>org.slf4j</groupId>
-          <artifactId>slf4j-api</artifactId>
+          <groupId>org.apache.logging.log4j</groupId>
+      <artifactId>log4j-api</artifactId>
         </exclusion>
         <exclusion>
           <groupId>org.slf4j</groupId>
@@ -91,8 +91,8 @@
           <artifactId>jaxb-impl</artifactId>
         </exclusion>
         <exclusion>
-          <groupId>org.slf4j</groupId>
-          <artifactId>slf4j-api</artifactId>
+          <groupId>org.apache.logging.log4j</groupId>
+      <artifactId>log4j-api</artifactId>
         </exclusion>
         <exclusion>
           <groupId>org.slf4j</groupId>
@@ -136,8 +136,8 @@
           <artifactId>protobuf-java</artifactId>
         </exclusion>
         <exclusion>
-          <groupId>org.slf4j</groupId>
-          <artifactId>slf4j-api</artifactId>
+          <groupId>org.apache.logging.log4j</groupId>
+      <artifactId>log4j-api</artifactId>
         </exclusion>
         <exclusion>
           <groupId>org.slf4j</groupId>
@@ -159,8 +159,8 @@
       <version>${org.apache.orc.version}</version>
       <exclusions>
         <exclusion>
-          <groupId>org.slf4j</groupId>
-          <artifactId>slf4j-api</artifactId>
+          <groupId>org.apache.logging.log4j</groupId>
+      <artifactId>log4j-api</artifactId>
         </exclusion>
         <exclusion>
           <groupId>io.airlift</groupId>
@@ -180,8 +180,8 @@
       <version>${org.apache.avro.version}</version>
       <exclusions>
         <exclusion>
-          <groupId>org.slf4j</groupId>
-          <artifactId>slf4j-api</artifactId>
+          <groupId>org.apache.logging.log4j</groupId>
+      <artifactId>log4j-api</artifactId>
         </exclusion>
       </exclusions>
     </dependency>
@@ -191,8 +191,8 @@
       <version>${org.apache.avro.version}</version>
       <exclusions>
         <exclusion>
-          <groupId>org.slf4j</groupId>
-          <artifactId>slf4j-api</artifactId>
+          <groupId>org.apache.logging.log4j</groupId>
+      <artifactId>log4j-api</artifactId>
         </exclusion>
         <exclusion>
           <groupId>io.netty</groupId>
@@ -221,8 +221,8 @@
       <version>${org.apache.oozie.version}</version>
       <exclusions>
         <exclusion>
-          <groupId>org.slf4j</groupId>
-          <artifactId>slf4j-api</artifactId>
+          <groupId>org.apache.logging.log4j</groupId>
+      <artifactId>log4j-api</artifactId>
         </exclusion>
         <exclusion>
           <groupId>org.slf4j</groupId>
@@ -244,8 +244,8 @@
           <artifactId>protobuf-java</artifactId>
         </exclusion>
         <exclusion>
-          <groupId>org.slf4j</groupId>
-          <artifactId>slf4j-api</artifactId>
+          <groupId>org.apache.logging.log4j</groupId>
+      <artifactId>log4j-api</artifactId>
         </exclusion>
         <exclusion>
           <groupId>io.netty</groupId>
@@ -267,8 +267,8 @@
           <artifactId>protobuf-java</artifactId>
         </exclusion>
         <exclusion>
-          <groupId>org.slf4j</groupId>
-          <artifactId>slf4j-api</artifactId>
+          <groupId>org.apache.logging.log4j</groupId>
+      <artifactId>log4j-api</artifactId>
         </exclusion>
         <exclusion>
           <groupId>com.nimbusds</groupId>
@@ -357,8 +357,8 @@
           <artifactId>protobuf-java</artifactId>
         </exclusion>
         <exclusion>
-          <groupId>org.slf4j</groupId>
-          <artifactId>slf4j-api</artifactId>
+          <groupId>org.apache.logging.log4j</groupId>
+      <artifactId>log4j-api</artifactId>
         </exclusion>
         <exclusion>
           <groupId>org.slf4j</groupId>

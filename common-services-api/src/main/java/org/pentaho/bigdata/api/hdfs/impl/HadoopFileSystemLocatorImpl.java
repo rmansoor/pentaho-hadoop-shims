@@ -18,8 +18,8 @@ import org.pentaho.hadoop.shim.api.cluster.NamedCluster;
 import org.pentaho.hadoop.shim.api.hdfs.HadoopFileSystem;
 import org.pentaho.hadoop.shim.api.hdfs.HadoopFileSystemFactory;
 import org.pentaho.hadoop.shim.api.hdfs.HadoopFileSystemLocator;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
+import org.apache.logging.log4j.Logger;
+import org.apache.logging.log4j.LogManager;
 
 import java.io.IOException;
 import java.net.URI;
@@ -29,7 +29,7 @@ import java.util.List;
  * Created by bryan on 6/4/15.
  */
 public class HadoopFileSystemLocatorImpl implements HadoopFileSystemLocator {
-  private static final Logger LOGGER = LoggerFactory.getLogger( HadoopFileSystemLocatorImpl.class );
+  private static final Logger LOGGER = LogManager.getLogger( HadoopFileSystemLocatorImpl.class );
   private List<HadoopFileSystemFactory> hadoopFileSystemFactories;
   private static HadoopFileSystemLocatorImpl instance;
 

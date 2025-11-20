@@ -39,8 +39,8 @@ import org.pentaho.di.core.plugins.PluginFolderInterface;
 import org.pentaho.di.core.vfs.KettleVFS;
 import org.pentaho.di.i18n.BaseMessages;
 import org.pentaho.hadoop.shim.ShimRuntimeException;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
+import org.apache.logging.log4j.Logger;
+import org.apache.logging.log4j.LogManager;
 
 import java.io.File;
 import java.io.IOException;
@@ -67,7 +67,7 @@ import java.util.zip.ZipInputStream;
  */
 public class DistributedCacheUtilImpl implements org.pentaho.hadoop.shim.api.internal.DistributedCacheUtil {
 
-  protected static Logger logger = LoggerFactory.getLogger( DistributedCacheUtilImpl.class );
+  protected static Logger logger = LogManager.getLogger( DistributedCacheUtilImpl.class );
 
   /**
    * Path within the installation directory to deploy libraries

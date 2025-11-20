@@ -22,8 +22,8 @@ import org.pentaho.hadoop.shim.api.cluster.NamedClusterService;
 import org.pentaho.hadoop.shim.api.cluster.NamedClusterServiceFactory;
 import org.pentaho.hadoop.shim.api.cluster.NamedClusterServiceLocator;
 import org.pentaho.metastore.locator.api.MetastoreLocator;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
+import org.apache.logging.log4j.Logger;
+import org.apache.logging.log4j.LogManager;
 
 import java.io.IOException;
 import java.util.ArrayList;
@@ -50,7 +50,7 @@ public class NamedClusterServiceLocatorImpl implements NamedClusterServiceLocato
   private final NamedClusterService namedClusterManager;
   private static NamedClusterServiceLocatorImpl namedClusterServiceLocator = null;
 
-  private static final Logger logger = LoggerFactory.getLogger( NamedClusterServiceLocatorImpl.class );
+  private static final Logger logger = LogManager.getLogger( NamedClusterServiceLocatorImpl.class );
 
   protected NamedClusterServiceLocatorImpl( String internalShim, NamedClusterService namedClusterManager ) {
     this.internalShim = Objects.requireNonNull(

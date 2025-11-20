@@ -66,7 +66,7 @@ import org.pentaho.hadoop.shim.api.pig.PigResult;
 import org.pentaho.hadoop.shim.common.ShimUtils;
 import org.pentaho.hadoop.shim.spi.HadoopShim;
 import org.pentaho.hbase.shim.common.CommonHBaseBytesUtil;
-import org.slf4j.LoggerFactory;
+import org.apache.logging.log4j.LogManager;
 
 import java.io.BufferedReader;
 import java.io.File;
@@ -100,7 +100,7 @@ import static org.apache.oozie.client.OozieClient.COORDINATOR_APP_PATH;
 
 public class HadoopClientServicesImpl implements HadoopClientServices {
   private static final String[] EMPTY_STRING_ARRAY = new String[ 0 ];
-  private static final org.slf4j.Logger LOGGER = LoggerFactory.getLogger( HadoopClientServicesImpl.class );
+  private static final org.apache.logging.log4j.Logger LOGGER = LogManager.getLogger( HadoopClientServicesImpl.class );
   public static final String SQOOP_THROW_ON_ERROR = "sqoop.throwOnError";
   private static final String ALT_CLASSPATH = "hadoop.alt.classpath";
   private static final String TMPJARS = "tmpjars";

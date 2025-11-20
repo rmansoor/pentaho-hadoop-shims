@@ -1,0 +1,943 @@
+[INFO] Scanning for projects...
+Downloading from pentaho.resolve.repo: https://one.hitachivantara.com/artifactory/pnt-mvn/org/pentaho/pentaho-ce-jar-parent-pom/11.0.0.0-SNAPSHOT/maven-metadata.xml
+Progress (1): 448/842 BProgress (1): 842 B                       Downloaded from pentaho.resolve.repo: https://one.hitachivantara.com/artifactory/pnt-mvn/org/pentaho/pentaho-ce-jar-parent-pom/11.0.0.0-SNAPSHOT/maven-metadata.xml (842 B at 1.1 kB/s)
+Downloading from pentaho.resolve.repo: https://one.hitachivantara.com/artifactory/pnt-mvn/org/pentaho/pentaho-ce-parent-pom/11.0.0.0-SNAPSHOT/maven-metadata.xml
+Progress (1): 448/838 BProgress (1): 838 B                       Downloaded from pentaho.resolve.repo: https://one.hitachivantara.com/artifactory/pnt-mvn/org/pentaho/pentaho-ce-parent-pom/11.0.0.0-SNAPSHOT/maven-metadata.xml (838 B at 4.8 kB/s)
+Downloading from pentaho.resolve.repo: https://one.hitachivantara.com/artifactory/pnt-mvn/org/pentaho/pentaho-parent-pom/11.0.0.0-SNAPSHOT/maven-metadata.xml
+Progress (1): 448/616 BProgress (1): 616 B                       Downloaded from pentaho.resolve.repo: https://one.hitachivantara.com/artifactory/pnt-mvn/org/pentaho/pentaho-parent-pom/11.0.0.0-SNAPSHOT/maven-metadata.xml (616 B at 3.5 kB/s)
+[WARNING] 
+[WARNING] Some problems were encountered while building the effective model for org.pentaho:pentaho-hadoop-shims-common-services-api:bundle:11.0.0.0-SNAPSHOT
+[WARNING] 'dependencies.dependency.(groupId:artifactId:type:classifier)' must be unique: org.mockito:mockito-core:jar -> duplicate declaration of version ${org.mockito.version} @ line 51, column 17
+[WARNING] 
+[WARNING] Some problems were encountered while building the effective model for org.pentaho.hadoop.shims:pentaho-hadoop-shims-common-base:jar:11.0.0.0-SNAPSHOT
+[WARNING] 'dependencies.dependency.(groupId:artifactId:type:classifier)' must be unique: org.mockito:mockito-core:jar -> duplicate declaration of version ${org.mockito.version} @ line 442, column 17
+[WARNING] 'profiles.profile[hdp26].dependencies.dependency.(groupId:artifactId:type:classifier)' must be unique: org.apache.parquet:parquet-avro:jar -> duplicate declaration of version ${parquet.version} @ line 70, column 21
+[WARNING] 'profiles.profile[hdp26].dependencies.dependency.(groupId:artifactId:type:classifier)' must be unique: org.apache.parquet:parquet-avro:jar -> duplicate declaration of version ${parquet.version} @ line 75, column 21
+[WARNING] 
+[WARNING] Some problems were encountered while building the effective model for org.pentaho.hadoop.shims:pentaho-hadoop-shims-apache:jar:11.0.0.0-SNAPSHOT
+[WARNING] 'dependencies.dependency.(groupId:artifactId:type:classifier)' must be unique: org.pentaho:shim-api-core:jar -> duplicate declaration of version ${project.version} @ line 135, column 17
+[WARNING] 'dependencies.dependency.(groupId:artifactId:type:classifier)' must be unique: org.bouncycastle:bcprov-jdk18on:jar -> duplicate declaration of version ${bouncycastle.version} @ line 238, column 17
+[WARNING] 
+[WARNING] Some problems were encountered while building the effective model for org.pentaho.hadoop.shims:pentaho-hadoop-shims-emr770:jar:11.0.0.0-SNAPSHOT
+[WARNING] 'dependencies.dependency.(groupId:artifactId:type:classifier)' must be unique: org.eclipse.jetty:jetty-server:jar -> duplicate declaration of version ${jetty-hadoop.version} @ line 790, column 17
+[WARNING] 'dependencies.dependency.(groupId:artifactId:type:classifier)' must be unique: com.google.protobuf:protobuf-java:jar -> duplicate declaration of version ${protobuf-java.version} @ line 853, column 17
+[WARNING] 
+[WARNING] It is highly recommended to fix these problems because they threaten the stability of your build.
+[WARNING] 
+[WARNING] For this reason, future Maven versions might no longer support building such malformed projects.
+[WARNING] 
+[INFO] ------------------------------------------------------------------------
+[INFO] Detecting the operating system and CPU architecture
+[INFO] ------------------------------------------------------------------------
+[INFO] os.detected.name: osx
+[INFO] os.detected.arch: aarch_64
+[INFO] os.detected.version: 14.8
+[INFO] os.detected.version.major: 14
+[INFO] os.detected.version.minor: 8
+[INFO] os.detected.classifier: osx-aarch_64
+[INFO] ------------------------------------------------------------------------
+[INFO] Reactor Build Order:
+[INFO] 
+[INFO] pentaho-hadoop-shims                                               [pom]
+[INFO] shim-api                                                        [bundle]
+[INFO] pentaho-hadoop-shims-common-mapreduce                              [jar]
+[INFO] shim-api-core                                                      [jar]
+[INFO] pentaho-hadoop-shims-common-services-api                        [bundle]
+[INFO] pentaho-hadoop-shims-common-base                                   [jar]
+[INFO] pentaho-hadoop-shims-common-dependencies                           [jar]
+[INFO] pentaho-hadoop-shims-list                                          [pom]
+[INFO] pentaho-hadoop-shims-cdpdc71-reactor                               [pom]
+[INFO] pentaho-hadoop-shims-cdpdc71-pmr-libs                              [pom]
+[INFO] pentaho-hadoop-shims-cdpdc71                                       [jar]
+[INFO] pentaho-hadoop-shims-apache-reactor                                [pom]
+[INFO] pentaho-hadoop-shims-apache                                        [jar]
+[INFO] pentaho-hadoop-shims-emr770-reactor                                [pom]
+[INFO] pentaho-hadoop-shims-emr770-pmr-libs                               [pom]
+[INFO] pentaho-hadoop-shims-emr770                                        [jar]
+[INFO] 
+[INFO] ------------------< org.pentaho:pentaho-hadoop-shims >------------------
+[INFO] Building pentaho-hadoop-shims 11.0.0.0-SNAPSHOT                   [1/16]
+[INFO]   from pom.xml
+[INFO] --------------------------------[ pom ]---------------------------------
+[INFO] 
+[INFO] --- clean:3.1.0:clean (default-clean) @ pentaho-hadoop-shims ---
+[INFO] 
+[INFO] --- build-helper:3.1.0-pentaho:parse-version (set-doc-version-property) @ pentaho-hadoop-shims ---
+[INFO] 
+[INFO] --- build-helper:3.1.0-pentaho:rootlocation (set-root-dir-property) @ pentaho-hadoop-shims ---
+[INFO] 
+[INFO] --- license-helper:1.27:check-license (check-license) @ pentaho-hadoop-shims ---
+[WARNING] The licenseName is not defined, skipping validation.
+[INFO] 
+[INFO] --- iterator:0.5.1:iterator (javascript-dependencies_unpack-dependencies) @ pentaho-hadoop-shims ---
+[INFO] ------ (dummy) org.apache.maven.plugins:maven-dependency-plugin:3.1.0:unpack-dependencies
+[INFO] 
+[INFO] --- license-helper:1.27:bundle (bundle-license) @ pentaho-hadoop-shims ---
+[INFO] Project packaging not supported, nothing to do.
+[INFO] 
+[INFO] --- surefire:2.21.0:test (default-test) @ pentaho-hadoop-shims ---
+[INFO] No tests to run.
+[INFO] 
+[INFO] ------------------------< org.pentaho:shim-api >------------------------
+[INFO] Building shim-api 11.0.0.0-SNAPSHOT                               [2/16]
+[INFO]   from shim-api/pom.xml
+[INFO] -------------------------------[ bundle ]-------------------------------
+Downloading from pentaho.resolve.repo: https://one.hitachivantara.com/artifactory/pnt-mvn/pentaho-kettle/kettle-core/11.0.0.0-SNAPSHOT/maven-metadata.xml
+Progress (1): 0.4/1.4 kBProgress (1): 1.4 kB                        Downloaded from pentaho.resolve.repo: https://one.hitachivantara.com/artifactory/pnt-mvn/pentaho-kettle/kettle-core/11.0.0.0-SNAPSHOT/maven-metadata.xml (1.4 kB at 1.1 kB/s)
+Downloading from pentaho.resolve.repo: https://one.hitachivantara.com/artifactory/pnt-mvn/org/pentaho/di/pdi/11.0.0.0-SNAPSHOT/maven-metadata.xml
+Progress (1): 448/604 BProgress (1): 604 B                       Downloaded from pentaho.resolve.repo: https://one.hitachivantara.com/artifactory/pnt-mvn/org/pentaho/di/pdi/11.0.0.0-SNAPSHOT/maven-metadata.xml (604 B at 494 B/s)
+Downloading from pentaho.resolve.repo: https://one.hitachivantara.com/artifactory/pnt-mvn/pentaho/metastore/11.0.0.0-SNAPSHOT/maven-metadata.xml
+Progress (1): 0.4/1.2 kBProgress (1): 1.2 kB                        Downloaded from pentaho.resolve.repo: https://one.hitachivantara.com/artifactory/pnt-mvn/pentaho/metastore/11.0.0.0-SNAPSHOT/maven-metadata.xml (1.2 kB at 681 B/s)
+Downloading from pentaho.resolve.repo: https://one.hitachivantara.com/artifactory/pnt-mvn/org/pentaho/di/plugins/pentaho-metastore-locator-api/11.0.0.0-SNAPSHOT/maven-metadata.xml
+Progress (1): 0.4/1.3 kBProgress (1): 1.3 kB                        Downloaded from pentaho.resolve.repo: https://one.hitachivantara.com/artifactory/pnt-mvn/org/pentaho/di/plugins/pentaho-metastore-locator-api/11.0.0.0-SNAPSHOT/maven-metadata.xml (1.3 kB at 1.5 kB/s)
+Downloading from pentaho.resolve.repo: https://one.hitachivantara.com/artifactory/pnt-mvn/org/pentaho/di/plugins/metastore-locator/11.0.0.0-SNAPSHOT/maven-metadata.xml
+Progress (1): 448/626 BProgress (1): 626 B                       Downloaded from pentaho.resolve.repo: https://one.hitachivantara.com/artifactory/pnt-mvn/org/pentaho/di/plugins/metastore-locator/11.0.0.0-SNAPSHOT/maven-metadata.xml (626 B at 454 B/s)
+Downloading from pentaho.resolve.repo: https://one.hitachivantara.com/artifactory/pnt-mvn/org/pentaho/di/plugins/pdi-plugins/11.0.0.0-SNAPSHOT/maven-metadata.xml
+Progress (1): 448/620 BProgress (1): 620 B                       Downloaded from pentaho.resolve.repo: https://one.hitachivantara.com/artifactory/pnt-mvn/org/pentaho/di/plugins/pdi-plugins/11.0.0.0-SNAPSHOT/maven-metadata.xml (620 B at 529 B/s)
+[WARNING] 1 problem was encountered while building the effective model for org.javassist:javassist:jar:3.20.0-GA during dependency collection step for project (use -X to see details)
+Downloading from pentaho.resolve.repo: https://one.hitachivantara.com/artifactory/pnt-mvn/org/pentaho/pentaho-encryption-support/11.0.0.0-SNAPSHOT/maven-metadata.xml
+Progress (1): 0.4/1.0 kBProgress (1): 1.0 kB                        Downloaded from pentaho.resolve.repo: https://one.hitachivantara.com/artifactory/pnt-mvn/org/pentaho/pentaho-encryption-support/11.0.0.0-SNAPSHOT/maven-metadata.xml (1.0 kB at 4.3 kB/s)
+Downloading from pentaho.resolve.repo: https://one.hitachivantara.com/artifactory/pnt-mvn/pentaho-kettle/kettle-engine/11.0.0.0-SNAPSHOT/maven-metadata.xml
+Progress (1): 0.4/1.4 kBProgress (1): 1.4 kB                        Downloaded from pentaho.resolve.repo: https://one.hitachivantara.com/artifactory/pnt-mvn/pentaho-kettle/kettle-engine/11.0.0.0-SNAPSHOT/maven-metadata.xml (1.4 kB at 2.1 kB/s)
+[INFO] 
+[INFO] --- clean:3.1.0:clean (default-clean) @ shim-api ---
+[INFO] Deleting /Users/ramaizmansoor/Developer/pentaho-hadoop-shims/shim-api/target
+[INFO] 
+[INFO] --- build-helper:3.1.0-pentaho:parse-version (set-doc-version-property) @ shim-api ---
+[INFO] 
+[INFO] --- build-helper:3.1.0-pentaho:rootlocation (set-root-dir-property) @ shim-api ---
+[INFO] 
+[INFO] --- license-helper:1.27:check-license (check-license) @ shim-api ---
+[WARNING] The licenseName is not defined, skipping validation.
+[INFO] 
+[INFO] --- iterator:0.5.1:iterator (javascript-dependencies_unpack-dependencies) @ shim-api ---
+[INFO] ------ (dummy) org.apache.maven.plugins:maven-dependency-plugin:3.1.0:unpack-dependencies
+[INFO] 
+[INFO] --- license-helper:1.27:bundle (bundle-license) @ shim-api ---
+[WARNING] No license file found!
+
+  You may want to use the generate goal to create license file(s): 
+  $ mvn org.pentaho.maven.plugins:license-helper-maven-plugin:generate
+
+[INFO] 
+[INFO] --- resources:3.0.2:resources (default-resources) @ shim-api ---
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[INFO] skip non existing resourceDirectory /Users/ramaizmansoor/Developer/pentaho-hadoop-shims/shim-api/src/main/resources
+[INFO] 
+[INFO] --- compiler:3.14.0:compile (default-compile) @ shim-api ---
+[INFO] Recompiling the module because of changed source code.
+[INFO] Compiling 70 source files with javac [debug release 17] to target/classes
+[INFO] 
+[INFO] --- resources:3.0.2:testResources (default-testResources) @ shim-api ---
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[INFO] skip non existing resourceDirectory /Users/ramaizmansoor/Developer/pentaho-hadoop-shims/shim-api/src/test/resources
+[INFO] 
+[INFO] --- compiler:3.14.0:testCompile (default-testCompile) @ shim-api ---
+[INFO] Recompiling the module because of changed dependency.
+[INFO] Compiling 4 source files with javac [debug release 17] to target/test-classes
+[INFO] 
+[INFO] --- surefire:2.21.0:test (default-test) @ shim-api ---
+[INFO] 
+[INFO] -------------------------------------------------------
+[INFO]  T E S T S
+[INFO] -------------------------------------------------------
+[INFO] Running org.pentaho.hadoop.shim.api.cluster.NamedClusterComparatorTest
+Mockito is currently self-attaching to enable the inline-mock-maker. This will no longer work in future releases of the JDK. Please add Mockito as an agent to your build as described in Mockito's documentation: https://javadoc.io/doc/org.mockito/mockito-core/latest/org.mockito/org/mockito/Mockito.html#0.3
+WARNING: A Java agent has been loaded dynamically (/Users/ramaizmansoor/.m2/repository/net/bytebuddy/byte-buddy-agent/1.15.11/byte-buddy-agent-1.15.11.jar)
+WARNING: If a serviceability tool is in use, please run with -XX:+EnableDynamicAgentLoading to hide this warning
+WARNING: If a serviceability tool is not in use, please run with -Djdk.instrument.traceUsage for more information
+WARNING: Dynamic loading of agents will be disallowed by default in a future release
+[INFO] Tests run: 7, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 8.946 s - in org.pentaho.hadoop.shim.api.cluster.NamedClusterComparatorTest
+[INFO] Running org.pentaho.hadoop.shim.api.hbase.mapping.KeyTypeTest
+[INFO] Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0 s - in org.pentaho.hadoop.shim.api.hbase.mapping.KeyTypeTest
+[INFO] Running org.pentaho.hadoop.shim.api.hbase.mapping.ComparisonTypeTest
+[INFO] Tests run: 5, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0 s - in org.pentaho.hadoop.shim.api.hbase.mapping.ComparisonTypeTest
+[INFO] Running org.pentaho.hadoop.shim.api.hbase.ResultFactoryExceptionTest
+[INFO] Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.001 s - in org.pentaho.hadoop.shim.api.hbase.ResultFactoryExceptionTest
+[INFO] 
+[INFO] Results:
+[INFO] 
+[INFO] Tests run: 14, Failures: 0, Errors: 0, Skipped: 0
+[INFO] 
+[INFO] 
+[INFO] ---------< org.pentaho:pentaho-hadoop-shims-common-mapreduce >----------
+[INFO] Building pentaho-hadoop-shims-common-mapreduce 11.0.0.0-SNAPSHOT  [3/16]
+[INFO]   from mapreduce/pom.xml
+[INFO] --------------------------------[ jar ]---------------------------------
+[WARNING] 2 problems were encountered while building the effective model for org.apache.yetus:audience-annotations:jar:0.5.0 during dependency collection step for project (use -X to see details)
+[INFO] 
+[INFO] --- clean:3.1.0:clean (default-clean) @ pentaho-hadoop-shims-common-mapreduce ---
+[INFO] Deleting /Users/ramaizmansoor/Developer/pentaho-hadoop-shims/mapreduce/target
+[INFO] 
+[INFO] --- build-helper:3.1.0-pentaho:parse-version (set-doc-version-property) @ pentaho-hadoop-shims-common-mapreduce ---
+[INFO] 
+[INFO] --- build-helper:3.1.0-pentaho:rootlocation (set-root-dir-property) @ pentaho-hadoop-shims-common-mapreduce ---
+[INFO] 
+[INFO] --- license-helper:1.27:check-license (check-license) @ pentaho-hadoop-shims-common-mapreduce ---
+[WARNING] The licenseName is not defined, skipping validation.
+[INFO] 
+[INFO] --- iterator:0.5.1:iterator (javascript-dependencies_unpack-dependencies) @ pentaho-hadoop-shims-common-mapreduce ---
+[INFO] ------ (dummy) org.apache.maven.plugins:maven-dependency-plugin:3.1.0:unpack-dependencies
+[INFO] 
+[INFO] --- license-helper:1.27:bundle (bundle-license) @ pentaho-hadoop-shims-common-mapreduce ---
+[WARNING] No license file found!
+
+  You may want to use the generate goal to create license file(s): 
+  $ mvn org.pentaho.maven.plugins:license-helper-maven-plugin:generate
+
+[INFO] 
+[INFO] --- resources:3.0.2:resources (default-resources) @ pentaho-hadoop-shims-common-mapreduce ---
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[INFO] skip non existing resourceDirectory /Users/ramaizmansoor/Developer/pentaho-hadoop-shims/mapreduce/src/main/resources
+[INFO] 
+[INFO] --- compiler:3.14.0:compile (default-compile) @ pentaho-hadoop-shims-common-mapreduce ---
+[INFO] Recompiling the module because of changed dependency.
+[INFO] Compiling 33 source files with javac [debug release 17] to target/classes
+[WARNING] /Users/ramaizmansoor/Developer/pentaho-hadoop-shims/mapreduce/src/main/java/org/pentaho/hadoop/mapreduce/MRUtil.java:[228,17] Integer(int) in java.lang.Integer has been deprecated and marked for removal
+[WARNING] /Users/ramaizmansoor/Developer/pentaho-hadoop-shims/mapreduce/src/main/java/org/pentaho/hadoop/mapreduce/MRUtil.java:[232,17] Integer(int) in java.lang.Integer has been deprecated and marked for removal
+[WARNING] /Users/ramaizmansoor/Developer/pentaho-hadoop-shims/mapreduce/src/main/java/org/pentaho/hadoop/mapreduce/MRUtil.java:[236,17] Integer(int) in java.lang.Integer has been deprecated and marked for removal
+[WARNING] /Users/ramaizmansoor/Developer/pentaho-hadoop-shims/mapreduce/src/main/java/org/pentaho/hadoop/mapreduce/MRUtil.java:[237,17] Integer(int) in java.lang.Integer has been deprecated and marked for removal
+[WARNING] /Users/ramaizmansoor/Developer/pentaho-hadoop-shims/mapreduce/src/main/java/org/pentaho/hadoop/mapreduce/converter/converters/DoubleWritableToDoubleConverter.java:[32,12] Double(double) in java.lang.Double has been deprecated and marked for removal
+[WARNING] /Users/ramaizmansoor/Developer/pentaho-hadoop-shims/mapreduce/src/main/java/org/pentaho/hadoop/mapreduce/converter/converters/IntWritableToLongConverter.java:[32,12] Long(long) in java.lang.Long has been deprecated and marked for removal
+[INFO] /Users/ramaizmansoor/Developer/pentaho-hadoop-shims/mapreduce/src/main/java/org/pentaho/hadoop/mapreduce/converter/TypeConverterFactory.java: Some input files use or override a deprecated API.
+[INFO] /Users/ramaizmansoor/Developer/pentaho-hadoop-shims/mapreduce/src/main/java/org/pentaho/hadoop/mapreduce/converter/TypeConverterFactory.java: Recompile with -Xlint:deprecation for details.
+[INFO] /Users/ramaizmansoor/Developer/pentaho-hadoop-shims/mapreduce/src/main/java/org/pentaho/hadoop/mapreduce/PentahoMapReduceBase.java: Some input files use unchecked or unsafe operations.
+[INFO] /Users/ramaizmansoor/Developer/pentaho-hadoop-shims/mapreduce/src/main/java/org/pentaho/hadoop/mapreduce/PentahoMapReduceBase.java: Recompile with -Xlint:unchecked for details.
+[INFO] 
+[INFO] --- resources:3.0.2:testResources (default-testResources) @ pentaho-hadoop-shims-common-mapreduce ---
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[INFO] Copying 7 resources
+[INFO] 
+[INFO] --- compiler:3.14.0:testCompile (default-testCompile) @ pentaho-hadoop-shims-common-mapreduce ---
+[INFO] Recompiling the module because of changed dependency.
+[INFO] Compiling 31 source files with javac [debug release 17] to target/test-classes
+[INFO] Annotation processing is enabled because one or more processors were found
+  on the class path. A future release of javac may disable annotation processing
+  unless at least one processor is specified by name (-processor), or a search
+  path is specified (--processor-path, --processor-module-path), or annotation
+  processing is enabled explicitly (-proc:only, -proc:full).
+  Use -Xlint:-options to suppress this message.
+  Use -proc:none to disable annotation processing.
+[INFO] /Users/ramaizmansoor/Developer/pentaho-hadoop-shims/mapreduce/src/test/java/org/pentaho/hadoop/mapreduce/GenericTransCombinerTest.java: Some input files use or override a deprecated API.
+[INFO] /Users/ramaizmansoor/Developer/pentaho-hadoop-shims/mapreduce/src/test/java/org/pentaho/hadoop/mapreduce/GenericTransCombinerTest.java: Recompile with -Xlint:deprecation for details.
+[INFO] /Users/ramaizmansoor/Developer/pentaho-hadoop-shims/mapreduce/src/test/java/org/pentaho/hadoop/mapreduce/converter/TypeConverterFactoryTest.java: /Users/ramaizmansoor/Developer/pentaho-hadoop-shims/mapreduce/src/test/java/org/pentaho/hadoop/mapreduce/converter/TypeConverterFactoryTest.java uses unchecked or unsafe operations.
+[INFO] /Users/ramaizmansoor/Developer/pentaho-hadoop-shims/mapreduce/src/test/java/org/pentaho/hadoop/mapreduce/converter/TypeConverterFactoryTest.java: Recompile with -Xlint:unchecked for details.
+[INFO] 
+[INFO] --- surefire:2.21.0:test (default-test) @ pentaho-hadoop-shims-common-mapreduce ---
+[INFO] 
+[INFO] -------------------------------------------------------
+[INFO]  T E S T S
+[INFO] -------------------------------------------------------
+[INFO] Running org.pentaho.hadoop.mapreduce.PentahoMapRunnableTest
+SLF4J(W): No SLF4J providers were found.
+SLF4J(W): Defaulting to no-operation (NOP) logger implementation
+SLF4J(W): See https://www.slf4j.org/codes.html#noProviders for further details.
+SLF4J(W): Class path contains SLF4J bindings targeting slf4j-api versions 1.7.x or earlier.
+SLF4J(W): Ignoring binding found at [jar:file:/Users/ramaizmansoor/.m2/repository/org/slf4j/slf4j-reload4j/1.7.36/slf4j-reload4j-1.7.36.jar!/org/slf4j/impl/StaticLoggerBinder.class]
+SLF4J(W): See https://www.slf4j.org/codes.html#ignoredBindings for an explanation.
+Mockito is currently self-attaching to enable the inline-mock-maker. This will no longer work in future releases of the JDK. Please add Mockito as an agent to your build as described in Mockito's documentation: https://javadoc.io/doc/org.mockito/mockito-core/latest/org.mockito/org/mockito/Mockito.html#0.3
+WARNING: A Java agent has been loaded dynamically (/Users/ramaizmansoor/.m2/repository/net/bytebuddy/byte-buddy-agent/1.15.11/byte-buddy-agent-1.15.11.jar)
+WARNING: If a serviceability tool is in use, please run with -XX:+EnableDynamicAgentLoading to hide this warning
+WARNING: If a serviceability tool is not in use, please run with -Djdk.instrument.traceUsage for more information
+WARNING: Dynamic loading of agents will be disallowed by default in a future release
+2025/10/30 17:45:49 - org.pentaho.hadoop.mapreduce.PentahoMapRunnable - class org.pentaho.hadoop.mapreduce.PentahoMapRunnable: Trans creation checking starting now Thu Oct 30 17:45:49 EDT 2025
+2025/10/30 17:45:49 - org.pentaho.hadoop.mapreduce.PentahoMapRunnable - class org.pentaho.hadoop.mapreduce.PentahoMapRunnable: Done waiting on plugins now Thu Oct 30 17:45:49 EDT 2025
+2025/10/30 17:45:49 - org.pentaho.hadoop.mapreduce.PentahoMapRunnable - class org.pentaho.hadoop.mapreduce.PentahoMapRunnable: Trans creation checking starting now Thu Oct 30 17:45:49 EDT 2025
+2025/10/30 17:45:49 - org.pentaho.hadoop.mapreduce.PentahoMapRunnable - class org.pentaho.hadoop.mapreduce.PentahoMapRunnable: Done waiting on plugins now Thu Oct 30 17:45:49 EDT 2025
+2025/10/30 17:45:49 - Carte - Installing timer to purge stale objects after 1440 minutes.
+org.pentaho.di.core.exception.KettleException: 
+key or value is not defined in transformation injector step
+
+	at org.pentaho.hadoop.mapreduce.PentahoMapRunnable.run(PentahoMapRunnable.java:440)
+	at org.pentaho.hadoop.mapreduce.PentahoMapRunnableTest.testMapperBadInjectorFields(PentahoMapRunnableTest.java:147)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:47)
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
+	at org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:44)
+	at org.junit.internal.runners.statements.InvokeMethod.evaluate(InvokeMethod.java:17)
+	at org.junit.internal.runners.statements.RunBefores.evaluate(RunBefores.java:26)
+	at org.junit.runners.ParentRunner.runLeaf(ParentRunner.java:271)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:70)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:50)
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:238)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:63)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:236)
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:53)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:229)
+	at org.junit.internal.runners.statements.RunBefores.evaluate(RunBefores.java:26)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:309)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.execute(JUnit4Provider.java:365)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.executeWithRerun(JUnit4Provider.java:273)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.executeTestSet(JUnit4Provider.java:238)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.invoke(JUnit4Provider.java:159)
+	at org.apache.maven.surefire.booter.ForkedBooter.invokeProviderInSameClassLoader(ForkedBooter.java:379)
+	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:340)
+	at org.apache.maven.surefire.booter.ForkedBooter.execute(ForkedBooter.java:125)
+	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:413)
+2025/10/30 17:45:52 - org.pentaho.hadoop.mapreduce.PentahoMapRunnable - class org.pentaho.hadoop.mapreduce.PentahoMapRunnable: Trans creation checking starting now Thu Oct 30 17:45:52 EDT 2025
+2025/10/30 17:45:52 - org.pentaho.hadoop.mapreduce.PentahoMapRunnable - class org.pentaho.hadoop.mapreduce.PentahoMapRunnable: Done waiting on plugins now Thu Oct 30 17:45:52 EDT 2025
+2025/10/30 17:45:53 - org.pentaho.hadoop.mapreduce.PentahoMapRunnable - class org.pentaho.hadoop.mapreduce.PentahoMapRunnable: Trans creation checking starting now Thu Oct 30 17:45:53 EDT 2025
+2025/10/30 17:45:53 - org.pentaho.hadoop.mapreduce.PentahoMapRunnable - class org.pentaho.hadoop.mapreduce.PentahoMapRunnable: Done waiting on plugins now Thu Oct 30 17:45:53 EDT 2025
+2025/10/30 17:45:53 - org.pentaho.hadoop.mapreduce.PentahoMapRunnable - class org.pentaho.hadoop.mapreduce.PentahoMapRunnable: Trans creation checking starting now Thu Oct 30 17:45:53 EDT 2025
+2025/10/30 17:45:53 - org.pentaho.hadoop.mapreduce.PentahoMapRunnable - class org.pentaho.hadoop.mapreduce.PentahoMapRunnable: Done waiting on plugins now Thu Oct 30 17:45:53 EDT 2025
+2025/10/30 17:45:53 - org.pentaho.hadoop.mapreduce.PentahoMapRunnable - class org.pentaho.hadoop.mapreduce.PentahoMapRunnable: Trans creation checking starting now Thu Oct 30 17:45:53 EDT 2025
+2025/10/30 17:45:53 - org.pentaho.hadoop.mapreduce.PentahoMapRunnable - class org.pentaho.hadoop.mapreduce.PentahoMapRunnable: Done waiting on plugins now Thu Oct 30 17:45:53 EDT 2025
+org.pentaho.di.core.exception.KettleException: 
+Output step not defined in transformation
+
+	at org.pentaho.hadoop.mapreduce.PentahoMapRunnable.run(PentahoMapRunnable.java:502)
+	at org.pentaho.hadoop.mapreduce.PentahoMapRunnableTest.testMapperNoOutputStep(PentahoMapRunnableTest.java:130)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:47)
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
+	at org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:44)
+	at org.junit.internal.runners.statements.InvokeMethod.evaluate(InvokeMethod.java:17)
+	at org.junit.internal.runners.statements.RunBefores.evaluate(RunBefores.java:26)
+	at org.junit.runners.ParentRunner.runLeaf(ParentRunner.java:271)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:70)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:50)
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:238)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:63)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:236)
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:53)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:229)
+	at org.junit.internal.runners.statements.RunBefores.evaluate(RunBefores.java:26)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:309)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.execute(JUnit4Provider.java:365)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.executeWithRerun(JUnit4Provider.java:273)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.executeTestSet(JUnit4Provider.java:238)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.invoke(JUnit4Provider.java:159)
+	at org.apache.maven.surefire.booter.ForkedBooter.invokeProviderInSameClassLoader(ForkedBooter.java:379)
+	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:340)
+	at org.apache.maven.surefire.booter.ForkedBooter.execute(ForkedBooter.java:125)
+	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:413)
+2025/10/30 17:45:53 - org.pentaho.hadoop.mapreduce.PentahoMapRunnable - class org.pentaho.hadoop.mapreduce.PentahoMapRunnable: Trans creation checking starting now Thu Oct 30 17:45:53 EDT 2025
+2025/10/30 17:45:53 - org.pentaho.hadoop.mapreduce.PentahoMapRunnable - class org.pentaho.hadoop.mapreduce.PentahoMapRunnable: Done waiting on plugins now Thu Oct 30 17:45:53 EDT 2025
+org.pentaho.di.core.exception.KettleException: 
+Unable to find thread with name Injector and copy number 0
+
+	at org.pentaho.di.trans.Trans.addRowProducer(Trans.java:3455)
+	at org.pentaho.hadoop.mapreduce.PentahoMapRunnable.run(PentahoMapRunnable.java:425)
+	at org.pentaho.hadoop.mapreduce.PentahoMapRunnableTest.testMapperNoInjectorStep(PentahoMapRunnableTest.java:165)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:47)
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
+	at org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:44)
+	at org.junit.internal.runners.statements.InvokeMethod.evaluate(InvokeMethod.java:17)
+	at org.junit.internal.runners.statements.RunBefores.evaluate(RunBefores.java:26)
+	at org.junit.runners.ParentRunner.runLeaf(ParentRunner.java:271)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:70)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:50)
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:238)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:63)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:236)
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:53)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:229)
+	at org.junit.internal.runners.statements.RunBefores.evaluate(RunBefores.java:26)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:309)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.execute(JUnit4Provider.java:365)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.executeWithRerun(JUnit4Provider.java:273)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.executeTestSet(JUnit4Provider.java:238)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.invoke(JUnit4Provider.java:159)
+	at org.apache.maven.surefire.booter.ForkedBooter.invokeProviderInSameClassLoader(ForkedBooter.java:379)
+	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:340)
+	at org.apache.maven.surefire.booter.ForkedBooter.execute(ForkedBooter.java:125)
+	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:413)
+[INFO] Tests run: 7, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 16.441 s - in org.pentaho.hadoop.mapreduce.PentahoMapRunnableTest
+[INFO] Running org.pentaho.hadoop.mapreduce.test.MRUtilTest
+[INFO] Tests run: 6, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0 s - in org.pentaho.hadoop.mapreduce.test.MRUtilTest
+[INFO] Running org.pentaho.hadoop.mapreduce.converter.TypeConverterFactoryTest
+[INFO] Tests run: 4, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0 s - in org.pentaho.hadoop.mapreduce.converter.TypeConverterFactoryTest
+[INFO] Running org.pentaho.hadoop.mapreduce.converter.converters.KettleTypeToBytesWritableConverterTest
+[INFO] Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0 s - in org.pentaho.hadoop.mapreduce.converter.converters.KettleTypeToBytesWritableConverterTest
+[INFO] Running org.pentaho.hadoop.mapreduce.converter.converters.TextToStringConverterTest
+[INFO] Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0 s - in org.pentaho.hadoop.mapreduce.converter.converters.TextToStringConverterTest
+[INFO] Running org.pentaho.hadoop.mapreduce.converter.converters.BytesWritableToByteArrayConverterTest
+[INFO] Tests run: 3, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0 s - in org.pentaho.hadoop.mapreduce.converter.converters.BytesWritableToByteArrayConverterTest
+[INFO] Running org.pentaho.hadoop.mapreduce.converter.converters.ObjectToStringConverterTest
+[INFO] Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.001 s - in org.pentaho.hadoop.mapreduce.converter.converters.ObjectToStringConverterTest
+[INFO] Running org.pentaho.hadoop.mapreduce.converter.converters.LongWritableToTextConverterTest
+[INFO] Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0 s - in org.pentaho.hadoop.mapreduce.converter.converters.LongWritableToTextConverterTest
+[INFO] Running org.pentaho.hadoop.mapreduce.converter.converters.LongWritableToLongConverterTest
+[INFO] Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.001 s - in org.pentaho.hadoop.mapreduce.converter.converters.LongWritableToLongConverterTest
+[INFO] Running org.pentaho.hadoop.mapreduce.converter.converters.IntWritableToLongConverterTest
+[INFO] Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0 s - in org.pentaho.hadoop.mapreduce.converter.converters.IntWritableToLongConverterTest
+[INFO] Running org.pentaho.hadoop.mapreduce.converter.converters.KettleTypeToTextConverterTest
+[INFO] Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0 s - in org.pentaho.hadoop.mapreduce.converter.converters.KettleTypeToTextConverterTest
+[INFO] Running org.pentaho.hadoop.mapreduce.converter.converters.TextToIntegerConverterTest
+[INFO] Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0 s - in org.pentaho.hadoop.mapreduce.converter.converters.TextToIntegerConverterTest
+[INFO] Running org.pentaho.hadoop.mapreduce.converter.converters.NullConverterTest
+[INFO] Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0 s - in org.pentaho.hadoop.mapreduce.converter.converters.NullConverterTest
+[INFO] Running org.pentaho.hadoop.mapreduce.converter.converters.NullWritableConverterTest
+[INFO] Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.001 s - in org.pentaho.hadoop.mapreduce.converter.converters.NullWritableConverterTest
+[INFO] Running org.pentaho.hadoop.mapreduce.converter.converters.ResultPassThroughConverterTest
+[INFO] Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0 s - in org.pentaho.hadoop.mapreduce.converter.converters.ResultPassThroughConverterTest
+[INFO] Running org.pentaho.hadoop.mapreduce.converter.converters.KettleTypeToBooleanWritableConverterTest
+[INFO] Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.001 s - in org.pentaho.hadoop.mapreduce.converter.converters.KettleTypeToBooleanWritableConverterTest
+[INFO] Running org.pentaho.hadoop.mapreduce.converter.converters.DoubleWritableToLongConverterTest
+[INFO] Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0 s - in org.pentaho.hadoop.mapreduce.converter.converters.DoubleWritableToLongConverterTest
+[INFO] Running org.pentaho.hadoop.mapreduce.converter.converters.KettleTypeToLongWritableConverterTest
+[INFO] Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0 s - in org.pentaho.hadoop.mapreduce.converter.converters.KettleTypeToLongWritableConverterTest
+[INFO] Running org.pentaho.hadoop.mapreduce.converter.converters.KettleTypeToDoubleWritableConverterTest
+[INFO] Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0 s - in org.pentaho.hadoop.mapreduce.converter.converters.KettleTypeToDoubleWritableConverterTest
+[INFO] Running org.pentaho.hadoop.mapreduce.converter.converters.ImmutableBytesWritablePassThroughConverterTest
+[INFO] Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.001 s - in org.pentaho.hadoop.mapreduce.converter.converters.ImmutableBytesWritablePassThroughConverterTest
+[INFO] Running org.pentaho.hadoop.mapreduce.converter.converters.TextToLongConverterTest
+[INFO] Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0 s - in org.pentaho.hadoop.mapreduce.converter.converters.TextToLongConverterTest
+[INFO] Running org.pentaho.hadoop.mapreduce.converter.converters.KettleTypeToIntWritableConverterTest
+[INFO] Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0 s - in org.pentaho.hadoop.mapreduce.converter.converters.KettleTypeToIntWritableConverterTest
+[INFO] Running org.pentaho.hadoop.mapreduce.converter.converters.DoubleWritableToDoubleConverterTest
+[INFO] Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0 s - in org.pentaho.hadoop.mapreduce.converter.converters.DoubleWritableToDoubleConverterTest
+[INFO] Running org.pentaho.hadoop.mapreduce.converter.OrdinalExtractionTest
+[INFO] Tests run: 8, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.001 s - in org.pentaho.hadoop.mapreduce.converter.OrdinalExtractionTest
+[INFO] Running org.pentaho.hadoop.mapreduce.GenericTransReduceTest
+org.pentaho.di.core.exception.KettleException: 
+key or value is not defined in transformation injector step
+
+	at org.pentaho.hadoop.mapreduce.GenericTransReduce.addInjectorAndProducerToTrans(GenericTransReduce.java:257)
+	at org.pentaho.hadoop.mapreduce.GenericTransReduce.reduce(GenericTransReduce.java:96)
+	at org.pentaho.hadoop.mapreduce.GenericTransReduceTest.testReducerBadInjectorFields(GenericTransReduceTest.java:241)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:47)
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
+	at org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:44)
+	at org.junit.internal.runners.statements.InvokeMethod.evaluate(InvokeMethod.java:17)
+	at org.junit.internal.runners.statements.RunBefores.evaluate(RunBefores.java:26)
+	at org.junit.runners.ParentRunner.runLeaf(ParentRunner.java:271)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:70)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:50)
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:238)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:63)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:236)
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:53)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:229)
+	at org.junit.internal.runners.statements.RunBefores.evaluate(RunBefores.java:26)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:309)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.execute(JUnit4Provider.java:365)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.executeWithRerun(JUnit4Provider.java:273)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.executeTestSet(JUnit4Provider.java:238)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.invoke(JUnit4Provider.java:159)
+	at org.apache.maven.surefire.booter.ForkedBooter.invokeProviderInSameClassLoader(ForkedBooter.java:379)
+	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:340)
+	at org.apache.maven.surefire.booter.ForkedBooter.execute(ForkedBooter.java:125)
+	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:413)
+org.pentaho.di.core.exception.KettleException: 
+Unable to find thread with name Injector and copy number 0
+
+	at org.pentaho.di.trans.Trans.addRowProducer(Trans.java:3455)
+	at org.pentaho.hadoop.mapreduce.GenericTransReduce.addInjectorAndProducerToTrans(GenericTransReduce.java:243)
+	at org.pentaho.hadoop.mapreduce.GenericTransReduce.reduce(GenericTransReduce.java:96)
+	at org.pentaho.hadoop.mapreduce.GenericTransReduceTest.testReducerNoInjectorStep(GenericTransReduceTest.java:260)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:47)
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
+	at org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:44)
+	at org.junit.internal.runners.statements.InvokeMethod.evaluate(InvokeMethod.java:17)
+	at org.junit.internal.runners.statements.RunBefores.evaluate(RunBefores.java:26)
+	at org.junit.runners.ParentRunner.runLeaf(ParentRunner.java:271)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:70)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:50)
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:238)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:63)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:236)
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:53)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:229)
+	at org.junit.internal.runners.statements.RunBefores.evaluate(RunBefores.java:26)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:309)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.execute(JUnit4Provider.java:365)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.executeWithRerun(JUnit4Provider.java:273)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.executeTestSet(JUnit4Provider.java:238)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.invoke(JUnit4Provider.java:159)
+	at org.apache.maven.surefire.booter.ForkedBooter.invokeProviderInSameClassLoader(ForkedBooter.java:379)
+	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:340)
+	at org.apache.maven.surefire.booter.ForkedBooter.execute(ForkedBooter.java:125)
+	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:413)
+org.pentaho.di.core.exception.KettleException: 
+Output step not defined in transformation
+
+	at org.pentaho.hadoop.mapreduce.GenericTransReduce.addInjectorAndProducerToTrans(GenericTransReduce.java:296)
+	at org.pentaho.hadoop.mapreduce.GenericTransReduce.reduce(GenericTransReduce.java:96)
+	at org.pentaho.hadoop.mapreduce.GenericTransReduceTest.testReducerNoOutputStep(GenericTransReduceTest.java:222)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:47)
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
+	at org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:44)
+	at org.junit.internal.runners.statements.InvokeMethod.evaluate(InvokeMethod.java:17)
+	at org.junit.internal.runners.statements.RunBefores.evaluate(RunBefores.java:26)
+	at org.junit.runners.ParentRunner.runLeaf(ParentRunner.java:271)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:70)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:50)
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:238)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:63)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:236)
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:53)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:229)
+	at org.junit.internal.runners.statements.RunBefores.evaluate(RunBefores.java:26)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:309)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.execute(JUnit4Provider.java:365)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.executeWithRerun(JUnit4Provider.java:273)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.executeTestSet(JUnit4Provider.java:238)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.invoke(JUnit4Provider.java:159)
+	at org.apache.maven.surefire.booter.ForkedBooter.invokeProviderInSameClassLoader(ForkedBooter.java:379)
+	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:340)
+	at org.apache.maven.surefire.booter.ForkedBooter.execute(ForkedBooter.java:125)
+	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:413)
+[INFO] Tests run: 10, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.001 s - in org.pentaho.hadoop.mapreduce.GenericTransReduceTest
+[INFO] Running org.pentaho.hadoop.mapreduce.PentahoMapReduceTest
+2025/10/30 17:45:55 - org.pentaho.hadoop.mapreduce.PentahoMapRunnable - class org.pentaho.hadoop.mapreduce.PentahoMapRunnable: Trans creation checking starting now Thu Oct 30 17:45:55 EDT 2025
+2025/10/30 17:45:55 - org.pentaho.hadoop.mapreduce.PentahoMapRunnable - class org.pentaho.hadoop.mapreduce.PentahoMapRunnable: Done waiting on plugins now Thu Oct 30 17:45:55 EDT 2025
+[INFO] Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.001 s - in org.pentaho.hadoop.mapreduce.PentahoMapReduceTest
+[INFO] Running org.pentaho.hadoop.mapreduce.OrdinalExtractionTest
+[INFO] Tests run: 8, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0 s - in org.pentaho.hadoop.mapreduce.OrdinalExtractionTest
+[INFO] Running org.pentaho.hadoop.mapreduce.GenericTransCombinerTest
+[INFO] Tests run: 5, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0 s - in org.pentaho.hadoop.mapreduce.GenericTransCombinerTest
+[INFO] 
+[INFO] Results:
+[INFO] 
+[INFO] Tests run: 88, Failures: 0, Errors: 0, Skipped: 0
+[INFO] 
+[INFO] 
+[INFO] ---------------------< org.pentaho:shim-api-core >----------------------
+[INFO] Building shim-api-core 11.0.0.0-SNAPSHOT                          [4/16]
+[INFO]   from shim-api-core/pom.xml
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- clean:3.1.0:clean (default-clean) @ shim-api-core ---
+[INFO] Deleting /Users/ramaizmansoor/Developer/pentaho-hadoop-shims/shim-api-core/target
+[INFO] 
+[INFO] --- build-helper:3.1.0-pentaho:parse-version (set-doc-version-property) @ shim-api-core ---
+[INFO] 
+[INFO] --- build-helper:3.1.0-pentaho:rootlocation (set-root-dir-property) @ shim-api-core ---
+[INFO] 
+[INFO] --- license-helper:1.27:check-license (check-license) @ shim-api-core ---
+[WARNING] The licenseName is not defined, skipping validation.
+[INFO] 
+[INFO] --- iterator:0.5.1:iterator (javascript-dependencies_unpack-dependencies) @ shim-api-core ---
+[INFO] ------ (dummy) org.apache.maven.plugins:maven-dependency-plugin:3.1.0:unpack-dependencies
+[INFO] 
+[INFO] --- license-helper:1.27:bundle (bundle-license) @ shim-api-core ---
+[WARNING] No license file found!
+
+  You may want to use the generate goal to create license file(s): 
+  $ mvn org.pentaho.maven.plugins:license-helper-maven-plugin:generate
+
+[INFO] 
+[INFO] --- resources:3.0.2:resources (default-resources) @ shim-api-core ---
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[INFO] skip non existing resourceDirectory /Users/ramaizmansoor/Developer/pentaho-hadoop-shims/shim-api-core/src/main/resources
+[INFO] 
+[INFO] --- compiler:3.14.0:compile (default-compile) @ shim-api-core ---
+[INFO] Recompiling the module because of changed source code.
+[INFO] Compiling 1 source file with javac [debug release 17] to target/classes
+[INFO] 
+[INFO] --- resources:3.0.2:testResources (default-testResources) @ shim-api-core ---
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[INFO] skip non existing resourceDirectory /Users/ramaizmansoor/Developer/pentaho-hadoop-shims/shim-api-core/src/test/resources
+[INFO] 
+[INFO] --- compiler:3.14.0:testCompile (default-testCompile) @ shim-api-core ---
+[INFO] No sources to compile
+[INFO] 
+[INFO] --- surefire:2.21.0:test (default-test) @ shim-api-core ---
+[INFO] No tests to run.
+[INFO] 
+[INFO] --------< org.pentaho:pentaho-hadoop-shims-common-services-api >--------
+[INFO] Building pentaho-hadoop-shims-common-services-api 11.0.0.0-SNAPSHOT [5/16]
+[INFO]   from common-services-api/pom.xml
+[INFO] -------------------------------[ bundle ]-------------------------------
+Downloading from pentaho.resolve.repo: https://one.hitachivantara.com/artifactory/pnt-mvn/pentaho/pentaho-big-data-impl-cluster/11.0.0.0-SNAPSHOT/maven-metadata.xml
+Progress (1): 0.4/1.0 kBProgress (1): 1.0 kB                        Downloaded from pentaho.resolve.repo: https://one.hitachivantara.com/artifactory/pnt-mvn/pentaho/pentaho-big-data-impl-cluster/11.0.0.0-SNAPSHOT/maven-metadata.xml (1.0 kB at 1.6 kB/s)
+Downloading from pentaho.resolve.repo: https://one.hitachivantara.com/artifactory/pnt-mvn/pentaho/pentaho-big-data-impl/11.0.0.0-SNAPSHOT/maven-metadata.xml
+Progress (1): 448/615 BProgress (1): 615 B                       Downloaded from pentaho.resolve.repo: https://one.hitachivantara.com/artifactory/pnt-mvn/pentaho/pentaho-big-data-impl/11.0.0.0-SNAPSHOT/maven-metadata.xml (615 B at 1.6 kB/s)
+Downloading from pentaho.resolve.repo: https://one.hitachivantara.com/artifactory/pnt-mvn/pentaho/pentaho-big-data-parent/11.0.0.0-SNAPSHOT/maven-metadata.xml
+Progress (1): 448/615 BProgress (1): 615 B                       Downloaded from pentaho.resolve.repo: https://one.hitachivantara.com/artifactory/pnt-mvn/pentaho/pentaho-big-data-parent/11.0.0.0-SNAPSHOT/maven-metadata.xml (615 B at 1.9 kB/s)
+[INFO] 
+[INFO] --- clean:3.1.0:clean (default-clean) @ pentaho-hadoop-shims-common-services-api ---
+[INFO] Deleting /Users/ramaizmansoor/Developer/pentaho-hadoop-shims/common-services-api/target
+[INFO] 
+[INFO] --- build-helper:3.1.0-pentaho:parse-version (set-doc-version-property) @ pentaho-hadoop-shims-common-services-api ---
+[INFO] 
+[INFO] --- build-helper:3.1.0-pentaho:rootlocation (set-root-dir-property) @ pentaho-hadoop-shims-common-services-api ---
+[INFO] 
+[INFO] --- license-helper:1.27:check-license (check-license) @ pentaho-hadoop-shims-common-services-api ---
+[WARNING] The licenseName is not defined, skipping validation.
+[INFO] 
+[INFO] --- iterator:0.5.1:iterator (javascript-dependencies_unpack-dependencies) @ pentaho-hadoop-shims-common-services-api ---
+[INFO] ------ (dummy) org.apache.maven.plugins:maven-dependency-plugin:3.1.0:unpack-dependencies
+[INFO] 
+[INFO] --- license-helper:1.27:bundle (bundle-license) @ pentaho-hadoop-shims-common-services-api ---
+[WARNING] No license file found!
+
+  You may want to use the generate goal to create license file(s): 
+  $ mvn org.pentaho.maven.plugins:license-helper-maven-plugin:generate
+
+[INFO] 
+[INFO] --- resources:3.0.2:resources (default-resources) @ pentaho-hadoop-shims-common-services-api ---
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[INFO] Copying 1 resource
+[INFO] 
+[INFO] --- compiler:3.14.0:compile (default-compile) @ pentaho-hadoop-shims-common-services-api ---
+[INFO] Recompiling the module because of changed dependency.
+[INFO] Compiling 11 source files with javac [debug release 17] to target/classes
+[INFO] /Users/ramaizmansoor/Developer/pentaho-hadoop-shims/common-services-api/src/main/java/org/pentaho/big/data/api/shims/LegacyShimLocator.java: Some input files use or override a deprecated API.
+[INFO] /Users/ramaizmansoor/Developer/pentaho-hadoop-shims/common-services-api/src/main/java/org/pentaho/big/data/api/shims/LegacyShimLocator.java: Recompile with -Xlint:deprecation for details.
+[INFO] 
+[INFO] --- resources:3.0.2:testResources (default-testResources) @ pentaho-hadoop-shims-common-services-api ---
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[INFO] skip non existing resourceDirectory /Users/ramaizmansoor/Developer/pentaho-hadoop-shims/common-services-api/src/test/resources
+[INFO] 
+[INFO] --- compiler:3.14.0:testCompile (default-testCompile) @ pentaho-hadoop-shims-common-services-api ---
+[INFO] Recompiling the module because of changed dependency.
+[INFO] Compiling 4 source files with javac [debug release 17] to target/test-classes
+[INFO] /Users/ramaizmansoor/Developer/pentaho-hadoop-shims/common-services-api/src/test/java/org/pentaho/bigdata/api/hdfs/impl/HadoopFileSystemLocatorImplTest.java: /Users/ramaizmansoor/Developer/pentaho-hadoop-shims/common-services-api/src/test/java/org/pentaho/bigdata/api/hdfs/impl/HadoopFileSystemLocatorImplTest.java uses or overrides a deprecated API.
+[INFO] /Users/ramaizmansoor/Developer/pentaho-hadoop-shims/common-services-api/src/test/java/org/pentaho/bigdata/api/hdfs/impl/HadoopFileSystemLocatorImplTest.java: Recompile with -Xlint:deprecation for details.
+[INFO] 
+[INFO] --- surefire:2.21.0:test (default-test) @ pentaho-hadoop-shims-common-services-api ---
+[INFO] 
+[INFO] -------------------------------------------------------
+[INFO]  T E S T S
+[INFO] -------------------------------------------------------
+[INFO] Running org.pentaho.big.data.api.cluster.service.locator.impl.NamedClusterServiceLocatorImplTest
+Mockito is currently self-attaching to enable the inline-mock-maker. This will no longer work in future releases of the JDK. Please add Mockito as an agent to your build as described in Mockito's documentation: https://javadoc.io/doc/org.mockito/mockito-core/latest/org.mockito/org/mockito/Mockito.html#0.3
+WARNING: A Java agent has been loaded dynamically (/Users/ramaizmansoor/.m2/repository/net/bytebuddy/byte-buddy-agent/1.15.11/byte-buddy-agent-1.15.11.jar)
+WARNING: If a serviceability tool is in use, please run with -XX:+EnableDynamicAgentLoading to hide this warning
+WARNING: If a serviceability tool is not in use, please run with -Djdk.instrument.traceUsage for more information
+WARNING: Dynamic loading of agents will be disallowed by default in a future release
+SLF4J(W): No SLF4J providers were found.
+SLF4J(W): Defaulting to no-operation (NOP) logger implementation
+SLF4J(W): See https://www.slf4j.org/codes.html#noProviders for further details.
+[INFO] Tests run: 7, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 10.53 s - in org.pentaho.big.data.api.cluster.service.locator.impl.NamedClusterServiceLocatorImplTest
+[INFO] Running org.pentaho.big.data.api.jdbc.impl.LazyDelegatingDriverTest
+[INFO] Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.597 s - in org.pentaho.big.data.api.jdbc.impl.LazyDelegatingDriverTest
+[INFO] Running org.pentaho.big.data.api.jdbc.impl.ClusterInitializingDriverTest
+[INFO] Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.01 s - in org.pentaho.big.data.api.jdbc.impl.ClusterInitializingDriverTest
+[INFO] Running org.pentaho.bigdata.api.hdfs.impl.HadoopFileSystemLocatorImplTest
+[INFO] Tests run: 3, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.318 s - in org.pentaho.bigdata.api.hdfs.impl.HadoopFileSystemLocatorImplTest
+[INFO] 
+[INFO] Results:
+[INFO] 
+[INFO] Tests run: 14, Failures: 0, Errors: 0, Skipped: 0
+[INFO] 
+[INFO] 
+[INFO] -----< org.pentaho.hadoop.shims:pentaho-hadoop-shims-common-base >------
+[INFO] Building pentaho-hadoop-shims-common-base 11.0.0.0-SNAPSHOT       [6/16]
+[INFO]   from common-base/pom.xml
+[INFO] --------------------------------[ jar ]---------------------------------
+Downloading from pentaho.resolve.repo: https://one.hitachivantara.com/artifactory/pnt-mvn/pentaho/pentaho-platform-api/11.0.0.0-SNAPSHOT/maven-metadata.xml
+Progress (1): 0.4/1.2 kBProgress (1): 1.2 kB                        Downloaded from pentaho.resolve.repo: https://one.hitachivantara.com/artifactory/pnt-mvn/pentaho/pentaho-platform-api/11.0.0.0-SNAPSHOT/maven-metadata.xml (1.2 kB at 1.0 kB/s)
+Downloading from pentaho.resolve.repo: https://one.hitachivantara.com/artifactory/pnt-mvn/pentaho/pentaho-platform-ce-parent/11.0.0.0-SNAPSHOT/maven-metadata.xml
+Progress (1): 448/620 BProgress (1): 620 B                       Downloaded from pentaho.resolve.repo: https://one.hitachivantara.com/artifactory/pnt-mvn/pentaho/pentaho-platform-ce-parent/11.0.0.0-SNAPSHOT/maven-metadata.xml (620 B at 1.2 kB/s)
+[INFO] 
+[INFO] --- clean:3.1.0:clean (default-clean) @ pentaho-hadoop-shims-common-base ---
+[INFO] Deleting /Users/ramaizmansoor/Developer/pentaho-hadoop-shims/common-base/target
+[INFO] ------------------------------------------------------------------------
+[INFO] Reactor Summary for pentaho-hadoop-shims 11.0.0.0-SNAPSHOT:
+[INFO] 
+[INFO] pentaho-hadoop-shims ............................... SUCCESS [01:45 min]
+[INFO] shim-api ........................................... SUCCESS [03:32 min]
+[INFO] pentaho-hadoop-shims-common-mapreduce .............. SUCCESS [04:54 min]
+[INFO] shim-api-core ...................................... SUCCESS [  3.060 s]
+[INFO] pentaho-hadoop-shims-common-services-api ........... SUCCESS [01:08 min]
+[INFO] pentaho-hadoop-shims-common-base ................... FAILURE [03:46 min]
+[INFO] pentaho-hadoop-shims-common-dependencies ........... SKIPPED
+[INFO] pentaho-hadoop-shims-list .......................... SKIPPED
+[INFO] pentaho-hadoop-shims-cdpdc71-reactor ............... SKIPPED
+[INFO] pentaho-hadoop-shims-cdpdc71-pmr-libs .............. SKIPPED
+[INFO] pentaho-hadoop-shims-cdpdc71 ....................... SKIPPED
+[INFO] pentaho-hadoop-shims-apache-reactor ................ SKIPPED
+[INFO] pentaho-hadoop-shims-apache ........................ SKIPPED
+[INFO] pentaho-hadoop-shims-emr770-reactor ................ SKIPPED
+[INFO] pentaho-hadoop-shims-emr770-pmr-libs ............... SKIPPED
+[INFO] pentaho-hadoop-shims-emr770 ........................ SKIPPED
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD FAILURE
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time:  16:04 min
+[INFO] Finished at: 2025-10-30T17:50:57-04:00
+[INFO] ------------------------------------------------------------------------
+[ERROR] Failed to execute goal org.apache.maven.plugins:maven-clean-plugin:3.1.0:clean (default-clean) on project pentaho-hadoop-shims-common-base: Failed to clean project: Failed to delete /Users/ramaizmansoor/Developer/pentaho-hadoop-shims/common-base/target -> [Help 1]
+[ERROR] 
+[ERROR] To see the full stack trace of the errors, re-run Maven with the -e switch.
+[ERROR] Re-run Maven using the -X switch to enable full debug logging.
+[ERROR] 
+[ERROR] For more information about the errors and possible solutions, please read the following articles:
+[ERROR] [Help 1] http://cwiki.apache.org/confluence/display/MAVEN/MojoExecutionException
+[ERROR] 
+[ERROR] After correcting the problems, you can resume the build with the command
+[ERROR]   mvn <args> -rf :pentaho-hadoop-shims-common-base
+g(long) in java.lang.Long has been deprecated and marked for removal
+[WARNING] /Users/ramaizmansoor/Developer/pentaho-hadoop-shims/common-base/src/main/java/org/pentaho/hadoop/shim/api/internal/hbase/HBaseValueMeta.java:[540,14] Long(long) in java.lang.Long has been deprecated and marked for removal
+[WARNING] /Users/ramaizmansoor/Developer/pentaho-hadoop-shims/common-base/src/main/java/org/pentaho/hadoop/shim/api/internal/hbase/HBaseValueMeta.java:[547,14] Long(long) in java.lang.Long has been deprecated and marked for removal
+[WARNING] /Users/ramaizmansoor/Developer/pentaho-hadoop-shims/common-base/src/main/java/org/pentaho/hadoop/shim/api/internal/hbase/HBaseValueMeta.java:[559,14] Long(long) in java.lang.Long has been deprecated and marked for removal
+[WARNING] /Users/ramaizmansoor/Developer/pentaho-hadoop-shims/common-base/src/main/java/org/pentaho/hadoop/shim/api/internal/hbase/HBaseValueMeta.java:[657,18] Integer(int) in java.lang.Integer has been deprecated and marked for removal
+[WARNING] /Users/ramaizmansoor/Developer/pentaho-hadoop-shims/common-base/src/main/java/org/pentaho/hadoop/shim/api/internal/hbase/HBaseValueMeta.java:[670,16] Double(double) in java.lang.Double has been deprecated and marked for removal
+[WARNING] /Users/ramaizmansoor/Developer/pentaho-hadoop-shims/common-base/src/main/java/org/pentaho/hadoop/shim/api/internal/hbase/HBaseValueMeta.java:[674,16] Double(double) in java.lang.Double has been deprecated and marked for removal
+[WARNING] /Users/ramaizmansoor/Developer/pentaho-hadoop-shims/common-base/src/main/java/org/pentaho/hadoop/shim/api/internal/hbase/HBaseValueMeta.java:[681,16] Long(long) in java.lang.Long has been deprecated and marked for removal
+[WARNING] /Users/ramaizmansoor/Developer/pentaho-hadoop-shims/common-base/src/main/java/org/pentaho/hadoop/shim/api/internal/hbase/HBaseValueMeta.java:[685,16] Long(long) in java.lang.Long has been deprecated and marked for removal
+[WARNING] /Users/ramaizmansoor/Developer/pentaho-hadoop-shims/common-base/src/main/java/org/pentaho/hadoop/shim/api/internal/hbase/HBaseValueMeta.java:[692,16] Long(long) in java.lang.Long has been deprecated and marked for removal
+[WARNING] /Users/ramaizmansoor/Developer/pentaho-hadoop-shims/common-base/src/main/java/org/pentaho/hadoop/shim/api/internal/hbase/HBaseValueMeta.java:[888,16] Boolean(boolean) in java.lang.Boolean has been deprecated and marked for removal
+[WARNING] /Users/ramaizmansoor/Developer/pentaho-hadoop-shims/common-base/src/main/java/org/pentaho/hadoop/shim/api/internal/hbase/HBaseValueMeta.java:[896,16] Boolean(boolean) in java.lang.Boolean has been deprecated and marked for removal
+[WARNING] /Users/ramaizmansoor/Developer/pentaho-hadoop-shims/common-base/src/main/java/org/pentaho/hadoop/shim/api/internal/hbase/HBaseValueMeta.java:[904,16] Boolean(boolean) in java.lang.Boolean has been deprecated and marked for removal
+[WARNING] /Users/ramaizmansoor/Developer/pentaho-hadoop-shims/common-base/src/main/java/org/pentaho/hadoop/shim/api/internal/hbase/HBaseValueMeta.java:[909,16] Boolean(boolean) in java.lang.Boolean has been deprecated and marked for removal
+[WARNING] /Users/ramaizmansoor/Developer/pentaho-hadoop-shims/common-base/src/main/java/org/pentaho/hadoop/shim/api/internal/hbase/HBaseValueMeta.java:[917,16] Boolean(boolean) in java.lang.Boolean has been deprecated and marked for removal
+[WARNING] /Users/ramaizmansoor/Developer/pentaho-hadoop-shims/common-base/src/main/java/org/pentaho/hadoop/shim/api/internal/hbase/HBaseValueMeta.java:[922,16] Boolean(boolean) in java.lang.Boolean has been deprecated and marked for removal
+[WARNING] /Users/ramaizmansoor/Developer/pentaho-hadoop-shims/common-base/src/main/java/org/pentaho/di/job/entries/hadoopjobexecutor/SecurityManagerStack.java:[39,5] java.lang.SecurityManager in java.lang has been deprecated and marked for removal
+[WARNING] /Users/ramaizmansoor/Developer/pentaho-hadoop-shims/common-base/src/main/java/org/pentaho/di/job/entries/hadoopjobexecutor/SecurityManagerStack.java:[39,5] java.lang.SecurityManager in java.lang has been deprecated and marked for removal
+[WARNING] /Users/ramaizmansoor/Developer/pentaho-hadoop-shims/common-base/src/main/java/org/pentaho/di/job/entries/hadoopjobexecutor/SecurityManagerStack.java:[39,5] java.lang.SecurityManager in java.lang has been deprecated and marked for removal
+[WARNING] /Users/ramaizmansoor/Developer/pentaho-hadoop-shims/common-base/src/main/java/org/pentaho/di/job/entries/hadoopjobexecutor/SecurityManagerStack.java:[40,5] java.lang.SecurityManager in java.lang has been deprecated and marked for removal
+[WARNING] /Users/ramaizmansoor/Developer/pentaho-hadoop-shims/common-base/src/main/java/org/pentaho/di/job/entries/hadoopjobexecutor/SecurityManagerStack.java:[40,5] java.lang.SecurityManager in java.lang has been deprecated and marked for removal
+[WARNING] /Users/ramaizmansoor/Developer/pentaho-hadoop-shims/common-base/src/main/java/org/pentaho/di/job/entries/hadoopjobexecutor/SecurityManagerStack.java:[40,5] java.lang.SecurityManager in java.lang has been deprecated and marked for removal
+[WARNING] /Users/ramaizmansoor/Developer/pentaho-hadoop-shims/common-base/src/main/java/org/pentaho/di/job/entries/hadoopjobexecutor/SecurityManagerStack.java:[43,19] java.lang.SecurityManager in java.lang has been deprecated and marked for removal
+[WARNING] /Users/ramaizmansoor/Developer/pentaho-hadoop-shims/common-base/src/main/java/org/pentaho/di/job/entries/hadoopjobexecutor/SecurityManagerStack.java:[43,19] java.lang.SecurityManager in java.lang has been deprecated and marked for removal
+[WARNING] /Users/ramaizmansoor/Developer/pentaho-hadoop-shims/common-base/src/main/java/org/pentaho/di/job/entries/hadoopjobexecutor/SecurityManagerStack.java:[43,19] java.lang.SecurityManager in java.lang has been deprecated and marked for removal
+[WARNING] /Users/ramaizmansoor/Developer/pentaho-hadoop-shims/common-base/src/main/java/org/pentaho/di/job/entries/hadoopjobexecutor/SecurityManagerStack.java:[43,39] java.lang.SecurityManager in java.lang has been deprecated and marked for removal
+[WARNING] /Users/ramaizmansoor/Developer/pentaho-hadoop-shims/common-base/src/main/java/org/pentaho/di/job/entries/hadoopjobexecutor/SecurityManagerStack.java:[43,39] java.lang.SecurityManager in java.lang has been deprecated and marked for removal
+[WARNING] /Users/ramaizmansoor/Developer/pentaho-hadoop-shims/common-base/src/main/java/org/pentaho/di/job/entries/hadoopjobexecutor/SecurityManagerStack.java:[43,39] java.lang.SecurityManager in java.lang has been deprecated and marked for removal
+[WARNING] /Users/ramaizmansoor/Developer/pentaho-hadoop-shims/common-base/src/main/java/org/pentaho/di/job/entries/hadoopjobexecutor/SecurityManagerStack.java:[65,35] java.lang.SecurityManager in java.lang has been deprecated and marked for removal
+[WARNING] /Users/ramaizmansoor/Developer/pentaho-hadoop-shims/common-base/src/main/java/org/pentaho/di/job/entries/hadoopjobexecutor/SecurityManagerStack.java:[65,35] java.lang.SecurityManager in java.lang has been deprecated and marked for removal
+[WARNING] /Users/ramaizmansoor/Developer/pentaho-hadoop-shims/common-base/src/main/java/org/pentaho/di/job/entries/hadoopjobexecutor/SecurityManagerStack.java:[65,35] java.lang.SecurityManager in java.lang has been deprecated and marked for removal
+[WARNING] /Users/ramaizmansoor/Developer/pentaho-hadoop-shims/common-base/src/main/java/org/pentaho/di/job/entries/hadoopjobexecutor/SecurityManagerStack.java:[71,13] setSecurityManager(java.lang.SecurityManager) in java.lang.System has been deprecated and marked for removal
+[WARNING] /Users/ramaizmansoor/Developer/pentaho-hadoop-shims/common-base/src/main/java/org/pentaho/di/job/entries/hadoopjobexecutor/SecurityManagerStack.java:[81,38] java.lang.SecurityManager in java.lang has been deprecated and marked for removal
+[WARNING] /Users/ramaizmansoor/Developer/pentaho-hadoop-shims/common-base/src/main/java/org/pentaho/di/job/entries/hadoopjobexecutor/SecurityManagerStack.java:[81,38] java.lang.SecurityManager in java.lang has been deprecated and marked for removal
+[WARNING] /Users/ramaizmansoor/Developer/pentaho-hadoop-shims/common-base/src/main/java/org/pentaho/di/job/entries/hadoopjobexecutor/SecurityManagerStack.java:[81,38] java.lang.SecurityManager in java.lang has been deprecated and marked for removal
+[WARNING] /Users/ramaizmansoor/Developer/pentaho-hadoop-shims/common-base/src/main/java/org/pentaho/di/job/entries/hadoopjobexecutor/SecurityManagerStack.java:[93,9] java.lang.SecurityManager in java.lang has been deprecated and marked for removal
+[WARNING] /Users/ramaizmansoor/Developer/pentaho-hadoop-shims/common-base/src/main/java/org/pentaho/di/job/entries/hadoopjobexecutor/SecurityManagerStack.java:[115,11] java.lang.SecurityManager in java.lang has been deprecated and marked for removal
+[WARNING] /Users/ramaizmansoor/Developer/pentaho-hadoop-shims/common-base/src/main/java/org/pentaho/di/job/entries/hadoopjobexecutor/SecurityManagerStack.java:[115,11] java.lang.SecurityManager in java.lang has been deprecated and marked for removal
+[WARNING] /Users/ramaizmansoor/Developer/pentaho-hadoop-shims/common-base/src/main/java/org/pentaho/di/job/entries/hadoopjobexecutor/SecurityManagerStack.java:[115,11] java.lang.SecurityManager in java.lang has been deprecated and marked for removal
+[WARNING] /Users/ramaizmansoor/Developer/pentaho-hadoop-shims/common-base/src/main/java/org/pentaho/di/job/entries/hadoopjobexecutor/SecurityManagerStack.java:[116,18] getSecurityManager() in java.lang.System has been deprecated and marked for removal
+[WARNING] /Users/ramaizmansoor/Developer/pentaho-hadoop-shims/common-base/src/main/java/org/pentaho/di/job/entries/hadoopjobexecutor/SecurityManagerStack.java:[124,25] java.lang.SecurityManager in java.lang has been deprecated and marked for removal
+[WARNING] /Users/ramaizmansoor/Developer/pentaho-hadoop-shims/common-base/src/main/java/org/pentaho/di/job/entries/hadoopjobexecutor/SecurityManagerStack.java:[124,25] java.lang.SecurityManager in java.lang has been deprecated and marked for removal
+[WARNING] /Users/ramaizmansoor/Developer/pentaho-hadoop-shims/common-base/src/main/java/org/pentaho/di/job/entries/hadoopjobexecutor/SecurityManagerStack.java:[124,25] java.lang.SecurityManager in java.lang has been deprecated and marked for removal
+[WARNING] /Users/ramaizmansoor/Developer/pentaho-hadoop-shims/common-base/src/main/java/org/pentaho/di/job/entries/hadoopjobexecutor/SecurityManagerStack.java:[125,11] setSecurityManager(java.lang.SecurityManager) in java.lang.System has been deprecated and marked for removal
+[WARNING] /Users/ramaizmansoor/Developer/pentaho-hadoop-shims/common-base/src/main/java/org/pentaho/di/job/entries/hadoopjobexecutor/NoExitSecurityManager.java:[28,44] java.lang.SecurityManager in java.lang has been deprecated and marked for removal
+[WARNING] /Users/ramaizmansoor/Developer/pentaho-hadoop-shims/common-base/src/main/java/org/pentaho/di/job/entries/hadoopjobexecutor/NoExitSecurityManager.java:[28,44] java.lang.SecurityManager in java.lang has been deprecated and marked for removal
+[WARNING] /Users/ramaizmansoor/Developer/pentaho-hadoop-shims/common-base/src/main/java/org/pentaho/di/job/entries/hadoopjobexecutor/NoExitSecurityManager.java:[28,44] java.lang.SecurityManager in java.lang has been deprecated and marked for removal
+[WARNING] /Users/ramaizmansoor/Developer/pentaho-hadoop-shims/common-base/src/main/java/org/pentaho/di/job/entries/hadoopjobexecutor/NoExitSecurityManager.java:[29,11] java.lang.SecurityManager in java.lang has been deprecated and marked for removal
+[WARNING] /Users/ramaizmansoor/Developer/pentaho-hadoop-shims/common-base/src/main/java/org/pentaho/di/job/entries/hadoopjobexecutor/NoExitSecurityManager.java:[29,11] java.lang.SecurityManager in java.lang has been deprecated and marked for removal
+[WARNING] /Users/ramaizmansoor/Developer/pentaho-hadoop-shims/common-base/src/main/java/org/pentaho/di/job/entries/hadoopjobexecutor/NoExitSecurityManager.java:[29,11] java.lang.SecurityManager in java.lang has been deprecated and marked for removal
+[WARNING] /Users/ramaizmansoor/Developer/pentaho-hadoop-shims/common-base/src/main/java/org/pentaho/di/job/entries/hadoopjobexecutor/NoExitSecurityManager.java:[49,33] java.lang.SecurityManager in java.lang has been deprecated and marked for removal
+[WARNING] /Users/ramaizmansoor/Developer/pentaho-hadoop-shims/common-base/src/main/java/org/pentaho/di/job/entries/hadoopjobexecutor/NoExitSecurityManager.java:[49,33] java.lang.SecurityManager in java.lang has been deprecated and marked for removal
+[WARNING] /Users/ramaizmansoor/Developer/pentaho-hadoop-shims/common-base/src/main/java/org/pentaho/di/job/entries/hadoopjobexecutor/NoExitSecurityManager.java:[49,33] java.lang.SecurityManager in java.lang has been deprecated and marked for removal
+[WARNING] /Users/ramaizmansoor/Developer/pentaho-hadoop-shims/common-base/src/main/java/org/pentaho/di/job/entries/hadoopjobexecutor/NoExitSecurityManager.java:[170,15] checkMulticast(java.net.InetAddress,byte) in java.lang.SecurityManager has been deprecated and marked for removal
+[WARNING] /Users/ramaizmansoor/Developer/pentaho-hadoop-shims/common-base/src/main/java/org/pentaho/di/job/entries/hadoopjobexecutor/NoExitSecurityManager.java:[172,16] checkMulticast(java.net.InetAddress,byte) in java.lang.SecurityManager has been deprecated and marked for removal
+[WARNING] /Users/ramaizmansoor/Developer/pentaho-hadoop-shims/common-base/src/main/java/org/pentaho/hadoop/shim/common/format/orc/PentahoOrcRecordWriter.java:[186,47] Double(java.lang.String) in java.lang.Double has been deprecated and marked for removal
+[WARNING] /Users/ramaizmansoor/Developer/pentaho-hadoop-shims/common-base/src/main/java/org/pentaho/hadoop/shim/common/format/orc/PentahoOrcRecordWriter.java:[186,87] Double(double) in java.lang.Double has been deprecated and marked for removal
+[WARNING] /Users/ramaizmansoor/Developer/pentaho-hadoop-shims/common-base/src/main/java/org/pentaho/hbase/shim/common/CommonHBaseConnection.java:[118,12] Integer(java.lang.String) in java.lang.Integer has been deprecated and marked for removal
+[WARNING] /Users/ramaizmansoor/Developer/pentaho-hadoop-shims/common-base/src/main/java/org/pentaho/hbase/shim/common/DeserializedBooleanComparator.java:[57,15] Boolean(boolean) in java.lang.Boolean has been deprecated and marked for removal
+[WARNING] /Users/ramaizmansoor/Developer/pentaho-hadoop-shims/common-base/src/main/java/org/pentaho/hbase/shim/common/DeserializedBooleanComparator.java:[115,16] Boolean(boolean) in java.lang.Boolean has been deprecated and marked for removal
+[WARNING] /Users/ramaizmansoor/Developer/pentaho-hadoop-shims/common-base/src/main/java/org/pentaho/hbase/shim/common/DeserializedBooleanComparator.java:[123,16] Boolean(boolean) in java.lang.Boolean has been deprecated and marked for removal
+[WARNING] /Users/ramaizmansoor/Developer/pentaho-hadoop-shims/common-base/src/main/java/org/pentaho/hbase/shim/common/DeserializedBooleanComparator.java:[130,16] Boolean(boolean) in java.lang.Boolean has been deprecated and marked for removal
+[WARNING] /Users/ramaizmansoor/Developer/pentaho-hadoop-shims/common-base/src/main/java/org/pentaho/hbase/shim/common/DeserializedBooleanComparator.java:[135,16] Boolean(boolean) in java.lang.Boolean has been deprecated and marked for removal
+[WARNING] /Users/ramaizmansoor/Developer/pentaho-hadoop-shims/common-base/src/main/java/org/pentaho/hbase/shim/common/DeserializedBooleanComparator.java:[142,16] Boolean(boolean) in java.lang.Boolean has been deprecated and marked for removal
+[WARNING] /Users/ramaizmansoor/Developer/pentaho-hadoop-shims/common-base/src/main/java/org/pentaho/hbase/shim/common/DeserializedBooleanComparator.java:[147,16] Boolean(boolean) in java.lang.Boolean has been deprecated and marked for removal
+[WARNING] /Users/ramaizmansoor/Developer/pentaho-hadoop-shims/common-base/src/main/java/org/pentaho/hbase/shim/common/DeserializedBooleanComparator.java:[177,25] Boolean(boolean) in java.lang.Boolean has been deprecated and marked for removal
+[WARNING] /Users/ramaizmansoor/Developer/pentaho-hadoop-shims/common-base/src/main/java/org/pentaho/hbase/shim/common/DeserializedNumericComparator.java:[100,16] Long(long) in java.lang.Long has been deprecated and marked for removal
+[WARNING] /Users/ramaizmansoor/Developer/pentaho-hadoop-shims/common-base/src/main/java/org/pentaho/hbase/shim/common/DeserializedNumericComparator.java:[111,16] Double(double) in java.lang.Double has been deprecated and marked for removal
+[WARNING] /Users/ramaizmansoor/Developer/pentaho-hadoop-shims/common-base/src/main/java/org/pentaho/hbase/shim/fake/FakeHBaseConnection.java:[179,19] Long(long) in java.lang.Long has been deprecated and marked for removal
+[INFO] /Users/ramaizmansoor/Developer/pentaho-hadoop-shims/common-base/src/main/java/com/pentaho/big/data/bundles/impl/shim/hbase/HBaseConnectionWrapper.java: Some input files use or override a deprecated API.
+[INFO] /Users/ramaizmansoor/Developer/pentaho-hadoop-shims/common-base/src/main/java/com/pentaho/big/data/bundles/impl/shim/hbase/HBaseConnectionWrapper.java: Recompile with -Xlint:deprecation for details.
+[INFO] /Users/ramaizmansoor/Developer/pentaho-hadoop-shims/common-base/src/main/java/org/pentaho/big/data/impl/shim/ShimServicesReader.java: Some input files use unchecked or unsafe operations.
+[INFO] /Users/ramaizmansoor/Developer/pentaho-hadoop-shims/common-base/src/main/java/org/pentaho/big/data/impl/shim/ShimServicesReader.java: Recompile with -Xlint:unchecked for details.
+[INFO] 
+[INFO] --- resources:3.0.2:testResources (default-testResources) @ pentaho-hadoop-shims-common-base ---
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[INFO] Copying 11 resources
+[INFO] 
+[INFO] --- compiler:3.14.0:testCompile (default-testCompile) @ pentaho-hadoop-shims-common-base ---
+[INFO] Recompiling the module because of changed dependency.
+[INFO] Compiling 95 source files with javac [debug release 17] to target/test-classes
+[INFO] Annotation processing is enabled because one or more processors were found
+  on the class path. A future release of javac may disable annotation processing
+  unless at least one processor is specified by name (-processor), or a search
+  path is specified (--processor-path, --processor-module-path), or annotation
+  processing is enabled explicitly (-proc:only, -proc:full).
+  Use -Xlint:-options to suppress this message.
+  Use -proc:none to disable annotation processing.
+[WARNING] /Users/ramaizmansoor/Developer/pentaho-hadoop-shims/common-base/src/test/java/org/pentaho/big/data/impl/shim/mapreduce/FutureMapReduceJobSimpleRunnableTest.java:[35,24] java.lang.SecurityManager in java.lang has been deprecated and marked for removal
+[WARNING] /Users/ramaizmansoor/Developer/pentaho-hadoop-shims/common-base/src/test/java/org/pentaho/big/data/impl/shim/mapreduce/FutureMapReduceJobSimpleRunnableTest.java:[35,24] java.lang.SecurityManager in java.lang has been deprecated and marked for removal
+[WARNING] /Users/ramaizmansoor/Developer/pentaho-hadoop-shims/common-base/src/test/java/org/pentaho/big/data/impl/shim/mapreduce/FutureMapReduceJobSimpleRunnableTest.java:[35,24] java.lang.SecurityManager in java.lang has been deprecated and marked for removal
+[WARNING] /Users/ramaizmansoor/Developer/pentaho-hadoop-shims/common-base/src/test/java/org/pentaho/big/data/impl/shim/mapreduce/FutureMapReduceJobSimpleRunnableTest.java:[35,71] getSecurityManager() in java.lang.System has been deprecated and marked for removal
+[WARNING] /Users/ramaizmansoor/Developer/pentaho-hadoop-shims/common-base/src/test/java/org/pentaho/big/data/impl/shim/mapreduce/FutureMapReduceJobSimpleRunnableTest.java:[82,49] getSecurityManager() in java.lang.System has been deprecated and marked for removal
+[WARNING] /Users/ramaizmansoor/Developer/pentaho-hadoop-shims/common-base/src/test/java/org/pentaho/di/job/entries/hadoopjobexecutor/NoExitSecurityManagerTest.java:[26,67] getSecurityManager() in java.lang.System has been deprecated and marked for removal
+[WARNING] /Users/ramaizmansoor/Developer/pentaho-hadoop-shims/common-base/src/test/java/org/pentaho/di/job/entries/hadoopjobexecutor/NoExitSecurityManagerTest.java:[40,67] getSecurityManager() in java.lang.System has been deprecated and marked for removal
+[WARNING] /Users/ramaizmansoor/Developer/pentaho-hadoop-shims/common-base/src/test/java/org/pentaho/di/job/entries/hadoopjobexecutor/SecurityManagerStackTest.java:[53,5] java.lang.SecurityManager in java.lang has been deprecated and marked for removal
+[WARNING] /Users/ramaizmansoor/Developer/pentaho-hadoop-shims/common-base/src/test/java/org/pentaho/di/job/entries/hadoopjobexecutor/SecurityManagerStackTest.java:[53,38] getSecurityManager() in java.lang.System has been deprecated and marked for removal
+[WARNING] /Users/ramaizmansoor/Developer/pentaho-hadoop-shims/common-base/src/test/java/org/pentaho/di/job/entries/hadoopjobexecutor/SecurityManagerStackTest.java:[58,29] getSecurityManager() in java.lang.System has been deprecated and marked for removal
+[WARNING] /Users/ramaizmansoor/Developer/pentaho-hadoop-shims/common-base/src/test/java/org/pentaho/di/job/entries/hadoopjobexecutor/SecurityManagerStackTest.java:[60,35] getSecurityManager() in java.lang.System has been deprecated and marked for removal
+[WARNING] /Users/ramaizmansoor/Developer/pentaho-hadoop-shims/common-base/src/test/java/org/pentaho/di/job/entries/hadoopjobexecutor/SecurityManagerStackTest.java:[65,5] java.lang.SecurityManager in java.lang has been deprecated and marked for removal
+[WARNING] /Users/ramaizmansoor/Developer/pentaho-hadoop-shims/common-base/src/test/java/org/pentaho/di/job/entries/hadoopjobexecutor/SecurityManagerStackTest.java:[65,38] getSecurityManager() in java.lang.System has been deprecated and marked for removal
+[WARNING] /Users/ramaizmansoor/Developer/pentaho-hadoop-shims/common-base/src/test/java/org/pentaho/di/job/entries/hadoopjobexecutor/SecurityManagerStackTest.java:[72,30] getSecurityManager() in java.lang.System has been deprecated and marked for removal
+[WARNING] /Users/ramaizmansoor/Developer/pentaho-hadoop-shims/common-base/src/test/java/org/pentaho/di/job/entries/hadoopjobexecutor/SecurityManagerStackTest.java:[74,30] getSecurityManager() in java.lang.System has been deprecated and marked for removal
+[WARNING] /Users/ramaizmansoor/Developer/pentaho-hadoop-shims/common-base/src/test/java/org/pentaho/di/job/entries/hadoopjobexecutor/SecurityManagerStackTest.java:[76,35] getSecurityManager() in java.lang.System has been deprecated and marked for removal
+[WARNING] /Users/ramaizmansoor/Developer/pentaho-hadoop-shims/common-base/src/test/java/org/pentaho/di/job/entries/hadoopjobexecutor/SecurityManagerStackTest.java:[81,5] java.lang.SecurityManager in java.lang has been deprecated and marked for removal
+[WARNING] /Users/ramaizmansoor/Developer/pentaho-hadoop-shims/common-base/src/test/java/org/pentaho/di/job/entries/hadoopjobexecutor/SecurityManagerStackTest.java:[81,38] getSecurityManager() in java.lang.System has been deprecated and marked for removal
+[WARNING] /Users/ramaizmansoor/Developer/pentaho-hadoop-shims/common-base/src/test/java/org/pentaho/di/job/entries/hadoopjobexecutor/SecurityManagerStackTest.java:[88,30] getSecurityManager() in java.lang.System has been deprecated and marked for removal
+[WARNING] /Users/ramaizmansoor/Developer/pentaho-hadoop-shims/common-base/src/test/java/org/pentaho/di/job/entries/hadoopjobexecutor/SecurityManagerStackTest.java:[90,30] getSecurityManager() in java.lang.System has been deprecated and marked for removal
+[WARNING] /Users/ramaizmansoor/Developer/pentaho-hadoop-shims/common-base/src/test/java/org/pentaho/di/job/entries/hadoopjobexecutor/SecurityManagerStackTest.java:[92,35] getSecurityManager() in java.lang.System has been deprecated and marked for removal
+[WARNING] /Users/ramaizmansoor/Developer/pentaho-hadoop-shims/common-base/src/test/java/org/pentaho/di/job/entries/hadoopjobexecutor/SecurityManagerStackTest.java:[102,5] java.lang.SecurityManager in java.lang has been deprecated and marked for removal
+[WARNING] /Users/ramaizmansoor/Developer/pentaho-hadoop-shims/common-base/src/test/java/org/pentaho/di/job/entries/hadoopjobexecutor/SecurityManagerStackTest.java:[102,38] getSecurityManager() in java.lang.System has been deprecated and marked for removal
+[WARNING] /Users/ramaizmansoor/Developer/pentaho-hadoop-shims/common-base/src/test/java/org/pentaho/di/job/entries/hadoopjobexecutor/SecurityManagerStackTest.java:[129,31] getSecurityManager() in java.lang.System has been deprecated and marked for removal
+[WARNING] /Users/ramaizmansoor/Developer/pentaho-hadoop-shims/common-base/src/test/java/org/pentaho/di/job/entries/hadoopjobexecutor/SecurityManagerStackTest.java:[131,35] getSecurityManager() in java.lang.System has been deprecated and marked for removal
+[WARNING] /Users/ramaizmansoor/Developer/pentaho-hadoop-shims/common-base/src/test/java/org/pentaho/hadoop/shim/common/ConfigurationProxyTest.java:[104,39] non-varargs call of varargs method with inexact argument type for last parameter;
+  cast to org.pentaho.hadoop.shim.api.internal.fs.Path for a varargs call
+  cast to org.pentaho.hadoop.shim.api.internal.fs.Path[] for a non-varargs call and to suppress this warning
+[INFO] /Users/ramaizmansoor/Developer/pentaho-hadoop-shims/common-base/src/test/java/com/pentaho/big/data/bundles/impl/shim/hbase/meta/HBaseValueMetaInterfaceImplTest.java: Some input files use or override a deprecated API.
+[INFO] /Users/ramaizmansoor/Developer/pentaho-hadoop-shims/common-base/src/test/java/com/pentaho/big/data/bundles/impl/shim/hbase/meta/HBaseValueMetaInterfaceImplTest.java: Recompile with -Xlint:deprecation for details.
+[INFO] /Users/ramaizmansoor/Developer/pentaho-hadoop-shims/common-base/src/test/java/com/pentaho/big/data/bundles/impl/shim/hbase/HBaseConnectionWrapperTest.java: Some input files use unchecked or unsafe operations.
+[INFO] /Users/ramaizmansoor/Developer/pentaho-hadoop-shims/common-base/src/test/java/com/pentaho/big/data/bundles/impl/shim/hbase/HBaseConnectionWrapperTest.java: Recompile with -Xlint:unchecked for details.
+[INFO] 
+[INFO] --- surefire:2.21.0:test (default-test) @ pentaho-hadoop-shims-common-base ---
+[INFO] 
+[INFO] -------------------------------------------------------
+[INFO]  T E S T S
+[INFO] -------------------------------------------------------
+[INFO] Running org.pentaho.di.job.entries.hadoopjobexecutor.NoExitSecurityManagerTest
+SLF4J(W): No SLF4J providers were found.
+SLF4J(W): Defaulting to no-operation (NOP) logger implementation
+SLF4J(W): See https://www.slf4j.org/codes.html#noProviders for further details.
+SLF4J(W): Class path contains SLF4J bindings targeting slf4j-api versions 1.7.x or earlier.
+SLF4J(W): Ignoring binding found at [jar:file:/Users/ramaizmansoor/.m2/repository/org/slf4j/slf4j-log4j12/1.6.6/slf4j-log4j12-1.6.6.jar!/org/slf4j/impl/StaticLoggerBinder.class]
+SLF4J(W): Ignoring binding found at [jar:file:/Users/ramaizmansoor/.m2/repository/org/slf4j/slf4j-simple/1.6.6/slf4j-simple-1.6.6.jar!/org/slf4j/impl/StaticLoggerBinder.class]
+SLF4J(W): Ignoring binding found at [jar:file:/Users/ramaizmansoor/.m2/repository/org/slf4j/slf4j-reload4j/1.7.36/slf4j-reload4j-1.7.36.jar!/org/slf4j/impl/StaticLoggerBinder.class]
+SLF4J(W): See https://www.slf4j.org/codes.html#ignoredBindings for an explanation.
+[INFO] Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.139 s - in org.pentaho.di.job.entries.hadoopjobexecutor.NoExitSecurityManagerTest
+[INFO] Running org.pentaho.di.job.entries.hadoopjobexecutor.SecurityManagerStackTest
+[ERROR] Tests run: 7, Failures: 0, Errors: 4, Skipped: 0, Time elapsed: 0.003 s <<< FAILURE! - in org.pentaho.di.job.entries.hadoopjobexecutor.SecurityManagerStackTest
+[ERROR] randomized_executions(org.pentaho.di.job.entries.hadoopjobexecutor.SecurityManagerStackTest)  Time elapsed: 0.002 s  <<< ERROR!
+java.lang.UnsupportedOperationException: The Security Manager is deprecated and will be removed in a future release
+	at org.pentaho.di.job.entries.hadoopjobexecutor.SecurityManagerStackTest.randomized_executions(SecurityManagerStackTest.java:103)
+
+[ERROR] sequential_executions(org.pentaho.di.job.entries.hadoopjobexecutor.SecurityManagerStackTest)  Time elapsed: 0 s  <<< ERROR!
+java.lang.UnsupportedOperationException: The Security Manager is deprecated and will be removed in a future release
+	at org.pentaho.di.job.entries.hadoopjobexecutor.SecurityManagerStackTest.sequential_executions(SecurityManagerStackTest.java:86)
+
+[ERROR] simple_replace_in_isolation(org.pentaho.di.job.entries.hadoopjobexecutor.SecurityManagerStackTest)  Time elapsed: 0 s  <<< ERROR!
+java.lang.UnsupportedOperationException: The Security Manager is deprecated and will be removed in a future release
+	at org.pentaho.di.job.entries.hadoopjobexecutor.SecurityManagerStackTest.simple_replace_in_isolation(SecurityManagerStackTest.java:57)
+
+[ERROR] interweaved_executions(org.pentaho.di.job.entries.hadoopjobexecutor.SecurityManagerStackTest)  Time elapsed: 0 s  <<< ERROR!
+java.lang.UnsupportedOperationException: The Security Manager is deprecated and will be removed in a future release
+	at org.pentaho.di.job.entries.hadoopjobexecutor.SecurityManagerStackTest.interweaved_executions(SecurityManagerStackTest.java:70)
+
+[INFO] Running org.pentaho.big.data.impl.shim.pig.PigResultImplTest
+Mockito is currently self-attaching to enable the inline-mock-maker. This will no longer work in future releases of the JDK. Please add Mockito as an agent to your build as described in Mockito's documentation: https://javadoc.io/doc/org.mockito/mockito-core/latest/org.mockito/org/mockito/Mockito.html#0.3
+WARNING: A Java agent has been loaded dynamically (/Users/ramaizmansoor/.m2/repository/net/bytebuddy/byte-buddy-agent/1.15.11/byte-buddy-agent-1.15.11.jar)
+WARNING: If a serviceability tool is in use, please run with -XX:+EnableDynamicAgentLoading to hide this warning
+WARNING: If a serviceability tool is not in use, please run with -Djdk.instrument.traceUsage for more information
+WARNING: Dynamic loading of agents will be disallowed by default in a future release
+[INFO] Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 6.231 s - in org.pentaho.big.data.impl.shim.pig.PigResultImplTest
+[INFO] Running org.pentaho.big.data.impl.shim.pig.WriterAppenderManagerTest
+[INFO] Tests run: 3, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 8.624 s - in org.pentaho.big.data.impl.shim.pig.WriterAppenderManagerTest
+[INFO] Running org.pentaho.big.data.impl.shim.pig.KettleLoggingPrintWriterTest
+[INFO] Tests run: 7, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.001 s - in org.pentaho.big.data.impl.shim.pig.KettleLoggingPrintWriterTest
+[INFO] Running org.pentaho.big.data.impl.shim.oozie.OozieJobInfoImplTest
+[INFO] Tests run: 6, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0 s - in org.pentaho.big.data.impl.shim.oozie.OozieJobInfoImplTest
+[INFO] Running org.pentaho.big.data.impl.shim.oozie.OozieJobInfoDelegateTest
+[INFO] Tests run: 6, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0 s - in org.pentaho.big.data.impl.shim.oozie.OozieJobInfoDelegateTest
+[INFO] Running org.pentaho.big.data.impl.shim.mapreduce.MapReduceJobBuilderImplTest
+[INFO] Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 2.681 s - in org.pentaho.big.data.impl.shim.mapreduce.MapReduceJobBuilderImplTest
+[INFO] Running org.pentaho.big.data.impl.shim.mapreduce.RunningJobMapReduceJobAdvancedImplTest
+[INFO] Tests run: 12, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.471 s - in org.pentaho.big.data.impl.shim.mapreduce.RunningJobMapReduceJobAdvancedImplTest
+[INFO] Running org.pentaho.big.data.impl.shim.mapreduce.TaskCompletionEventImplTest
+[INFO] Tests run: 3, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0 s - in org.pentaho.big.data.impl.shim.mapreduce.TaskCompletionEventImplTest
+[INFO] Running org.pentaho.big.data.impl.shim.mapreduce.FutureMapReduceJobSimpleImplTest
+[INFO] Tests run: 9, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0 s - in org.pentaho.big.data.impl.shim.mapreduce.FutureMapReduceJobSimpleImplTest
+[INFO] Running org.pentaho.big.data.impl.shim.mapreduce.FutureMapReduceJobSimpleRunnableTest
+[INFO] 
+[INFO] Results:
+[INFO] 
+[ERROR] Errors: 
+[ERROR]   SecurityManagerStackTest.interweaved_executions:70 » UnsupportedOperation The ...
+[ERROR]   SecurityManagerStackTest.randomized_executions:103 » UnsupportedOperation The ...
+[ERROR]   SecurityManagerStackTest.sequential_executions:86 » UnsupportedOperation The S...
+[ERROR]   SecurityManagerStackTest.simple_replace_in_isolation:57 » UnsupportedOperation
+[INFO] 
+[ERROR] Tests run: 58, Failures: 0, Errors: 4, Skipped: 0
+[INFO] 
+[INFO] ------------------------------------------------------------------------
+[INFO] Reactor Summary for pentaho-hadoop-shims 11.0.0.0-SNAPSHOT:
+[INFO] 
+[INFO] pentaho-hadoop-shims ............................... SUCCESS [ 51.371 s]
+[INFO] shim-api ........................................... SUCCESS [02:09 min]
+[INFO] pentaho-hadoop-shims-common-mapreduce .............. SUCCESS [01:02 min]
+[INFO] shim-api-core ...................................... SUCCESS [  2.680 s]
+[INFO] pentaho-hadoop-shims-common-services-api ........... SUCCESS [01:37 min]
+[INFO] pentaho-hadoop-shims-common-base ................... FAILURE [13:10 min]
+[INFO] pentaho-hadoop-shims-common-dependencies ........... SKIPPED
+[INFO] pentaho-hadoop-shims-list .......................... SKIPPED
+[INFO] pentaho-hadoop-shims-cdpdc71-reactor ............... SKIPPED
+[INFO] pentaho-hadoop-shims-cdpdc71-pmr-libs .............. SKIPPED
+[INFO] pentaho-hadoop-shims-cdpdc71 ....................... SKIPPED
+[INFO] pentaho-hadoop-shims-apache-reactor ................ SKIPPED
+[INFO] pentaho-hadoop-shims-apache ........................ SKIPPED
+[INFO] pentaho-hadoop-shims-emr770-reactor ................ SKIPPED
+[INFO] pentaho-hadoop-shims-emr770-pmr-libs ............... SKIPPED
+[INFO] pentaho-hadoop-shims-emr770 ........................ SKIPPED
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD FAILURE
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time:  19:34 min
+[INFO] Finished at: 2025-10-30T17:49:43-04:00
+[INFO] ------------------------------------------------------------------------
+[ERROR] Failed to execute goal org.apache.maven.plugins:maven-surefire-plugin:2.21.0:test (default-test) on project pentaho-hadoop-shims-common-base: There are test failures.
+[ERROR] 
+[ERROR] Please refer to /Users/ramaizmansoor/Developer/pentaho-hadoop-shims/common-base/target/surefire-reports for the individual test results.
+[ERROR] Please refer to dump files (if any exist) [date]-jvmRun[N].dump, [date].dumpstream and [date]-jvmRun[N].dumpstream.
+[ERROR] The forked VM terminated without properly saying goodbye. VM crash or System.exit called?
+[ERROR] Command was /bin/sh -c cd /Users/ramaizmansoor/Developer/pentaho-hadoop-shims/common-base/target && /opt/homebrew/Cellar/openjdk@21/21.0.9/libexec/openjdk.jdk/Contents/Home/bin/java -Dfile.encoding=UTF-8 -jar /Users/ramaizmansoor/Developer/pentaho-hadoop-shims/common-base/target/surefire/surefirebooter8201045451633793319.jar /Users/ramaizmansoor/Developer/pentaho-hadoop-shims/common-base/target/surefire 2025-10-30T17-31-41_384-jvmRun1 surefire5646048706274984793tmp surefire_11513181401014583487tmp
+[ERROR] Process Exit Code: 0
+[ERROR] Crashed tests:
+[ERROR] org.pentaho.big.data.impl.shim.mapreduce.FutureMapReduceJobSimpleRunnableTest
+[ERROR] org.apache.maven.surefire.booter.SurefireBooterForkException: The forked VM terminated without properly saying goodbye. VM crash or System.exit called?
+[ERROR] Command was /bin/sh -c cd /Users/ramaizmansoor/Developer/pentaho-hadoop-shims/common-base/target && /opt/homebrew/Cellar/openjdk@21/21.0.9/libexec/openjdk.jdk/Contents/Home/bin/java -Dfile.encoding=UTF-8 -jar /Users/ramaizmansoor/Developer/pentaho-hadoop-shims/common-base/target/surefire/surefirebooter8201045451633793319.jar /Users/ramaizmansoor/Developer/pentaho-hadoop-shims/common-base/target/surefire 2025-10-30T17-31-41_384-jvmRun1 surefire5646048706274984793tmp surefire_11513181401014583487tmp
+[ERROR] Process Exit Code: 0
+[ERROR] Crashed tests:
+[ERROR] org.pentaho.big.data.impl.shim.mapreduce.FutureMapReduceJobSimpleRunnableTest
+[ERROR] 	at org.apache.maven.plugin.surefire.booterclient.ForkStarter.fork(ForkStarter.java:671)
+[ERROR] 	at org.apache.maven.plugin.surefire.booterclient.ForkStarter.fork(ForkStarter.java:533)
+[ERROR] 	at org.apache.maven.plugin.surefire.booterclient.ForkStarter.run(ForkStarter.java:278)
+[ERROR] 	at org.apache.maven.plugin.surefire.booterclient.ForkStarter.run(ForkStarter.java:244)
+[ERROR] 	at org.apache.maven.plugin.surefire.AbstractSurefireMojo.executeProvider(AbstractSurefireMojo.java:1149)
+[ERROR] 	at org.apache.maven.plugin.surefire.AbstractSurefireMojo.executeAfterPreconditionsChecked(AbstractSurefireMojo.java:978)
+[ERROR] 	at org.apache.maven.plugin.surefire.AbstractSurefireMojo.execute(AbstractSurefireMojo.java:854)
+[ERROR] 	at org.apache.maven.plugin.DefaultBuildPluginManager.executeMojo(DefaultBuildPluginManager.java:126)
+[ERROR] 	at org.apache.maven.lifecycle.internal.MojoExecutor.doExecute2(MojoExecutor.java:328)
+[ERROR] 	at org.apache.maven.lifecycle.internal.MojoExecutor.doExecute(MojoExecutor.java:316)
+[ERROR] 	at org.apache.maven.lifecycle.internal.MojoExecutor.execute(MojoExecutor.java:212)
+[ERROR] 	at org.apache.maven.lifecycle.internal.MojoExecutor.execute(MojoExecutor.java:174)
+[ERROR] 	at org.apache.maven.lifecycle.internal.MojoExecutor.access$000(MojoExecutor.java:75)
+[ERROR] 	at org.apache.maven.lifecycle.internal.MojoExecutor$1.run(MojoExecutor.java:162)
+[ERROR] 	at org.apache.maven.plugin.DefaultMojosExecutionStrategy.execute(DefaultMojosExecutionStrategy.java:39)
+[ERROR] 	at org.apache.maven.lifecycle.internal.MojoExecutor.execute(MojoExecutor.java:159)
+[ERROR] 	at org.apache.maven.lifecycle.internal.LifecycleModuleBuilder.buildProject(LifecycleModuleBuilder.java:105)
+[ERROR] 	at org.apache.maven.lifecycle.internal.LifecycleModuleBuilder.buildProject(LifecycleModuleBuilder.java:73)
+[ERROR] 	at org.apache.maven.lifecycle.internal.builder.singlethreaded.SingleThreadedBuilder.build(SingleThreadedBuilder.java:53)
+[ERROR] 	at org.apache.maven.lifecycle.internal.LifecycleStarter.execute(LifecycleStarter.java:118)
+[ERROR] 	at org.apache.maven.DefaultMaven.doExecute(DefaultMaven.java:261)
+[ERROR] 	at org.apache.maven.DefaultMaven.doExecute(DefaultMaven.java:173)
+[ERROR] 	at org.apache.maven.DefaultMaven.execute(DefaultMaven.java:101)
+[ERROR] 	at org.apache.maven.cli.MavenCli.execute(MavenCli.java:906)
+[ERROR] 	at org.apache.maven.cli.MavenCli.doMain(MavenCli.java:283)
+[ERROR] 	at org.apache.maven.cli.MavenCli.main(MavenCli.java:206)
+[ERROR] 	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+[ERROR] 	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+[ERROR] 	at org.codehaus.plexus.classworlds.launcher.Launcher.launchEnhanced(Launcher.java:255)
+[ERROR] 	at org.codehaus.plexus.classworlds.launcher.Launcher.launch(Launcher.java:201)
+[ERROR] 	at org.codehaus.plexus.classworlds.launcher.Launcher.mainWithExitCode(Launcher.java:361)
+[ERROR] 	at org.codehaus.plexus.classworlds.launcher.Launcher.main(Launcher.java:314)
+[ERROR] 
+[ERROR] -> [Help 1]
+[ERROR] 
+[ERROR] To see the full stack trace of the errors, re-run Maven with the -e switch.
+[ERROR] Re-run Maven using the -X switch to enable full debug logging.
+[ERROR] 
+[ERROR] For more information about the errors and possible solutions, please read the following articles:
+[ERROR] [Help 1] http://cwiki.apache.org/confluence/display/MAVEN/MojoExecutionException
+[ERROR] 
+[ERROR] After correcting the problems, you can resume the build with the command
+[ERROR]   mvn <args> -rf :pentaho-hadoop-shims-common-base

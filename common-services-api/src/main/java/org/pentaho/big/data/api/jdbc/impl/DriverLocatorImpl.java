@@ -17,8 +17,8 @@ import org.osgi.framework.BundleContext;
 import org.osgi.framework.InvalidSyntaxException;
 import org.osgi.framework.ServiceReference;
 import org.pentaho.hadoop.shim.api.jdbc.DriverLocator;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
+import org.apache.logging.log4j.Logger;
+import org.apache.logging.log4j.LogManager;
 
 import java.sql.Driver;
 import java.sql.DriverManager;
@@ -34,7 +34,7 @@ import java.util.Map;
  * Created by bryan on 4/18/16.
  */
 public class DriverLocatorImpl implements DriverLocator {
-  private static final Logger logger = LoggerFactory.getLogger( DriverLocatorImpl.class );
+  private static final Logger logger = LogManager.getLogger( DriverLocatorImpl.class );
   public static final String DATA_SOURCE_TYPE_BIGDATA = "(dataSourceType=bigdata)";
   private final HasRegisterDriver hasRegisterDriver;
   private final HasDeregisterDriver hasDeregisterDriver;

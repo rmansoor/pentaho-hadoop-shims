@@ -1,0 +1,660 @@
+[INFO] Scanning for projects...
+Downloading from pentaho.resolve.repo: https://one.hitachivantara.com/artifactory/pnt-mvn/org/pentaho/pentaho-ce-jar-parent-pom/11.0.0.0-SNAPSHOT/maven-metadata.xml
+Progress (1): 448/842 BProgress (1): 842 B                       Downloaded from pentaho.resolve.repo: https://one.hitachivantara.com/artifactory/pnt-mvn/org/pentaho/pentaho-ce-jar-parent-pom/11.0.0.0-SNAPSHOT/maven-metadata.xml (842 B at 463 B/s)
+Downloading from pentaho.resolve.repo: https://one.hitachivantara.com/artifactory/pnt-mvn/org/pentaho/pentaho-ce-parent-pom/11.0.0.0-SNAPSHOT/maven-metadata.xml
+Progress (1): 448/838 BProgress (1): 838 B                       Downloaded from pentaho.resolve.repo: https://one.hitachivantara.com/artifactory/pnt-mvn/org/pentaho/pentaho-ce-parent-pom/11.0.0.0-SNAPSHOT/maven-metadata.xml (838 B at 712 B/s)
+Downloading from pentaho.resolve.repo: https://one.hitachivantara.com/artifactory/pnt-mvn/org/pentaho/pentaho-parent-pom/11.0.0.0-SNAPSHOT/maven-metadata.xml
+Progress (1): 448/616 BProgress (1): 616 B                       Downloaded from pentaho.resolve.repo: https://one.hitachivantara.com/artifactory/pnt-mvn/org/pentaho/pentaho-parent-pom/11.0.0.0-SNAPSHOT/maven-metadata.xml (616 B at 594 B/s)
+[WARNING] 
+[WARNING] Some problems were encountered while building the effective model for org.pentaho:pentaho-hadoop-shims-common-services-api:bundle:11.0.0.0-SNAPSHOT
+[WARNING] 'dependencies.dependency.(groupId:artifactId:type:classifier)' must be unique: org.mockito:mockito-core:jar -> duplicate declaration of version ${org.mockito.version} @ line 51, column 17
+[WARNING] 
+[WARNING] Some problems were encountered while building the effective model for org.pentaho.hadoop.shims:pentaho-hadoop-shims-common-base:jar:11.0.0.0-SNAPSHOT
+[WARNING] 'dependencies.dependency.(groupId:artifactId:type:classifier)' must be unique: org.mockito:mockito-core:jar -> duplicate declaration of version ${org.mockito.version} @ line 442, column 17
+[WARNING] 'profiles.profile[hdp26].dependencies.dependency.(groupId:artifactId:type:classifier)' must be unique: org.apache.parquet:parquet-avro:jar -> duplicate declaration of version ${parquet.version} @ line 70, column 21
+[WARNING] 'profiles.profile[hdp26].dependencies.dependency.(groupId:artifactId:type:classifier)' must be unique: org.apache.parquet:parquet-avro:jar -> duplicate declaration of version ${parquet.version} @ line 75, column 21
+[WARNING] 
+[WARNING] Some problems were encountered while building the effective model for org.pentaho.hadoop.shims:pentaho-hadoop-shims-apache:jar:11.0.0.0-SNAPSHOT
+[WARNING] 'dependencies.dependency.(groupId:artifactId:type:classifier)' must be unique: org.pentaho:shim-api-core:jar -> duplicate declaration of version ${project.version} @ line 135, column 17
+[WARNING] 'dependencies.dependency.(groupId:artifactId:type:classifier)' must be unique: org.bouncycastle:bcprov-jdk18on:jar -> duplicate declaration of version ${bouncycastle.version} @ line 238, column 17
+[WARNING] 
+[WARNING] Some problems were encountered while building the effective model for org.pentaho.hadoop.shims:pentaho-hadoop-shims-emr770:jar:11.0.0.0-SNAPSHOT
+[WARNING] 'dependencies.dependency.(groupId:artifactId:type:classifier)' must be unique: org.eclipse.jetty:jetty-server:jar -> duplicate declaration of version ${jetty-hadoop.version} @ line 790, column 17
+[WARNING] 'dependencies.dependency.(groupId:artifactId:type:classifier)' must be unique: com.google.protobuf:protobuf-java:jar -> duplicate declaration of version ${protobuf-java.version} @ line 853, column 17
+[WARNING] 
+[WARNING] It is highly recommended to fix these problems because they threaten the stability of your build.
+[WARNING] 
+[WARNING] For this reason, future Maven versions might no longer support building such malformed projects.
+[WARNING] 
+[INFO] ------------------------------------------------------------------------
+[INFO] Detecting the operating system and CPU architecture
+[INFO] ------------------------------------------------------------------------
+[INFO] os.detected.name: osx
+[INFO] os.detected.arch: aarch_64
+[INFO] os.detected.version: 14.8
+[INFO] os.detected.version.major: 14
+[INFO] os.detected.version.minor: 8
+[INFO] os.detected.classifier: osx-aarch_64
+[INFO] 
+[INFO] -----< org.pentaho.hadoop.shims:pentaho-hadoop-shims-common-base >------
+[INFO] Building pentaho-hadoop-shims-common-base 11.0.0.0-SNAPSHOT
+[INFO]   from pom.xml
+[INFO] --------------------------------[ jar ]---------------------------------
+Downloading from pentaho.resolve.repo: https://one.hitachivantara.com/artifactory/pnt-mvn/org/pentaho/shim-api-core/11.0.0.0-SNAPSHOT/maven-metadata.xml
+Progress (1): 0.4/1.0 kBProgress (1): 1.0 kB                        Downloaded from pentaho.resolve.repo: https://one.hitachivantara.com/artifactory/pnt-mvn/org/pentaho/shim-api-core/11.0.0.0-SNAPSHOT/maven-metadata.xml (1.0 kB at 554 B/s)
+Downloading from pentaho.resolve.repo: https://one.hitachivantara.com/artifactory/pnt-mvn/org/pentaho/pentaho-hadoop-shims/11.0.0.0-SNAPSHOT/maven-metadata.xml
+Progress (1): 448/618 BProgress (1): 618 B                       Downloaded from pentaho.resolve.repo: https://one.hitachivantara.com/artifactory/pnt-mvn/org/pentaho/pentaho-hadoop-shims/11.0.0.0-SNAPSHOT/maven-metadata.xml (618 B at 600 B/s)
+Downloading from pentaho.resolve.repo: https://one.hitachivantara.com/artifactory/pnt-mvn/org/pentaho/shim-api/11.0.0.0-SNAPSHOT/maven-metadata.xml
+Progress (1): 0.4/1.0 kBProgress (1): 1.0 kB                        Downloaded from pentaho.resolve.repo: https://one.hitachivantara.com/artifactory/pnt-mvn/org/pentaho/shim-api/11.0.0.0-SNAPSHOT/maven-metadata.xml (1.0 kB at 941 B/s)
+Downloading from pentaho.resolve.repo: https://one.hitachivantara.com/artifactory/pnt-mvn/pentaho-kettle/kettle-core/11.0.0.0-SNAPSHOT/maven-metadata.xml
+Progress (1): 0.4/1.4 kBProgress (1): 1.4 kB                        Downloaded from pentaho.resolve.repo: https://one.hitachivantara.com/artifactory/pnt-mvn/pentaho-kettle/kettle-core/11.0.0.0-SNAPSHOT/maven-metadata.xml (1.4 kB at 1.1 kB/s)
+Downloading from pentaho.resolve.repo: https://one.hitachivantara.com/artifactory/pnt-mvn/org/pentaho/di/pdi/11.0.0.0-SNAPSHOT/maven-metadata.xml
+Progress (1): 448/604 BProgress (1): 604 B                       Downloaded from pentaho.resolve.repo: https://one.hitachivantara.com/artifactory/pnt-mvn/org/pentaho/di/pdi/11.0.0.0-SNAPSHOT/maven-metadata.xml (604 B at 557 B/s)
+Downloading from pentaho.resolve.repo: https://one.hitachivantara.com/artifactory/pnt-mvn/pentaho/metastore/11.0.0.0-SNAPSHOT/maven-metadata.xml
+Progress (1): 0.4/1.2 kBProgress (1): 1.2 kB                        Downloaded from pentaho.resolve.repo: https://one.hitachivantara.com/artifactory/pnt-mvn/pentaho/metastore/11.0.0.0-SNAPSHOT/maven-metadata.xml (1.2 kB at 1.1 kB/s)
+Downloading from pentaho.resolve.repo: https://one.hitachivantara.com/artifactory/pnt-mvn/org/pentaho/di/plugins/pentaho-metastore-locator-api/11.0.0.0-SNAPSHOT/maven-metadata.xml
+Progress (1): 0.4/1.3 kBProgress (1): 1.3 kB                        Downloaded from pentaho.resolve.repo: https://one.hitachivantara.com/artifactory/pnt-mvn/org/pentaho/di/plugins/pentaho-metastore-locator-api/11.0.0.0-SNAPSHOT/maven-metadata.xml (1.3 kB at 1.1 kB/s)
+Downloading from pentaho.resolve.repo: https://one.hitachivantara.com/artifactory/pnt-mvn/org/pentaho/di/plugins/metastore-locator/11.0.0.0-SNAPSHOT/maven-metadata.xml
+Progress (1): 448/626 BProgress (1): 626 B                       Downloaded from pentaho.resolve.repo: https://one.hitachivantara.com/artifactory/pnt-mvn/org/pentaho/di/plugins/metastore-locator/11.0.0.0-SNAPSHOT/maven-metadata.xml (626 B at 570 B/s)
+Downloading from pentaho.resolve.repo: https://one.hitachivantara.com/artifactory/pnt-mvn/org/pentaho/di/plugins/pdi-plugins/11.0.0.0-SNAPSHOT/maven-metadata.xml
+Progress (1): 448/620 BProgress (1): 620 B                       Downloaded from pentaho.resolve.repo: https://one.hitachivantara.com/artifactory/pnt-mvn/org/pentaho/di/plugins/pdi-plugins/11.0.0.0-SNAPSHOT/maven-metadata.xml (620 B at 619 B/s)
+[WARNING] 1 problem was encountered while building the effective model for org.javassist:javassist:jar:3.20.0-GA during dependency collection step for project (use -X to see details)
+Downloading from pentaho.resolve.repo: https://one.hitachivantara.com/artifactory/pnt-mvn/org/pentaho/pentaho-encryption-support/11.0.0.0-SNAPSHOT/maven-metadata.xml
+Progress (1): 0.4/1.0 kBProgress (1): 1.0 kB                        Downloaded from pentaho.resolve.repo: https://one.hitachivantara.com/artifactory/pnt-mvn/org/pentaho/pentaho-encryption-support/11.0.0.0-SNAPSHOT/maven-metadata.xml (1.0 kB at 1.0 kB/s)
+Downloading from pentaho.resolve.repo: https://one.hitachivantara.com/artifactory/pnt-mvn/pentaho-kettle/kettle-engine/11.0.0.0-SNAPSHOT/maven-metadata.xml
+Progress (1): 0.4/1.4 kBProgress (1): 1.4 kB                        Downloaded from pentaho.resolve.repo: https://one.hitachivantara.com/artifactory/pnt-mvn/pentaho-kettle/kettle-engine/11.0.0.0-SNAPSHOT/maven-metadata.xml (1.4 kB at 1.4 kB/s)
+Downloading from pentaho.resolve.repo: https://one.hitachivantara.com/artifactory/pnt-mvn/pentaho/pentaho-platform-api/11.0.0.0-SNAPSHOT/maven-metadata.xml
+Progress (1): 0.4/1.2 kBProgress (1): 1.2 kB                        Downloaded from pentaho.resolve.repo: https://one.hitachivantara.com/artifactory/pnt-mvn/pentaho/pentaho-platform-api/11.0.0.0-SNAPSHOT/maven-metadata.xml (1.2 kB at 1.1 kB/s)
+Downloading from pentaho.resolve.repo: https://one.hitachivantara.com/artifactory/pnt-mvn/pentaho/pentaho-platform-ce-parent/11.0.0.0-SNAPSHOT/maven-metadata.xml
+Progress (1): 448/620 BProgress (1): 620 B                       Downloaded from pentaho.resolve.repo: https://one.hitachivantara.com/artifactory/pnt-mvn/pentaho/pentaho-platform-ce-parent/11.0.0.0-SNAPSHOT/maven-metadata.xml (620 B at 607 B/s)
+Downloading from pentaho.resolve.repo: https://one.hitachivantara.com/artifactory/pnt-mvn/org/pentaho/pentaho-hadoop-shims-common-mapreduce/11.0.0.0-SNAPSHOT/maven-metadata.xml
+Progress (1): 0.4/1.0 kBProgress (1): 1.0 kB                        Downloaded from pentaho.resolve.repo: https://one.hitachivantara.com/artifactory/pnt-mvn/org/pentaho/pentaho-hadoop-shims-common-mapreduce/11.0.0.0-SNAPSHOT/maven-metadata.xml (1.0 kB at 906 B/s)
+Downloading from pentaho.resolve.repo: https://one.hitachivantara.com/artifactory/pnt-mvn/org/pentaho/pentaho-hadoop-shims-common-services-api/11.0.0.0-SNAPSHOT/maven-metadata.xml
+Progress (1): 0.4/1.0 kBProgress (1): 1.0 kB                        Downloaded from pentaho.resolve.repo: https://one.hitachivantara.com/artifactory/pnt-mvn/org/pentaho/pentaho-hadoop-shims-common-services-api/11.0.0.0-SNAPSHOT/maven-metadata.xml (1.0 kB at 7.1 kB/s)
+Downloading from pentaho.resolve.repo: https://one.hitachivantara.com/artifactory/pnt-mvn/pentaho/pentaho-big-data-impl-cluster/11.0.0.0-SNAPSHOT/maven-metadata.xml
+Progress (1): 0.4/1.0 kBProgress (1): 1.0 kB                        Downloaded from pentaho.resolve.repo: https://one.hitachivantara.com/artifactory/pnt-mvn/pentaho/pentaho-big-data-impl-cluster/11.0.0.0-SNAPSHOT/maven-metadata.xml (1.0 kB at 6.6 kB/s)
+Downloading from pentaho.resolve.repo: https://one.hitachivantara.com/artifactory/pnt-mvn/pentaho/pentaho-big-data-impl/11.0.0.0-SNAPSHOT/maven-metadata.xml
+Progress (1): 448/615 BProgress (1): 615 B                       Downloaded from pentaho.resolve.repo: https://one.hitachivantara.com/artifactory/pnt-mvn/pentaho/pentaho-big-data-impl/11.0.0.0-SNAPSHOT/maven-metadata.xml (615 B at 7.0 kB/s)
+Downloading from pentaho.resolve.repo: https://one.hitachivantara.com/artifactory/pnt-mvn/pentaho/pentaho-big-data-parent/11.0.0.0-SNAPSHOT/maven-metadata.xml
+Progress (1): 448/615 BProgress (1): 615 B                       Downloaded from pentaho.resolve.repo: https://one.hitachivantara.com/artifactory/pnt-mvn/pentaho/pentaho-big-data-parent/11.0.0.0-SNAPSHOT/maven-metadata.xml (615 B at 3.7 kB/s)
+[WARNING] 2 problems were encountered while building the effective model for org.apache.yetus:audience-annotations:jar:0.5.0 during dependency collection step for project (use -X to see details)
+[INFO] 
+[INFO] --- build-helper:3.1.0-pentaho:parse-version (set-doc-version-property) @ pentaho-hadoop-shims-common-base ---
+[INFO] 
+[INFO] --- build-helper:3.1.0-pentaho:rootlocation (set-root-dir-property) @ pentaho-hadoop-shims-common-base ---
+[INFO] 
+[INFO] --- license-helper:1.27:check-license (check-license) @ pentaho-hadoop-shims-common-base ---
+[WARNING] The licenseName is not defined, skipping validation.
+[INFO] 
+[INFO] --- iterator:0.5.1:iterator (javascript-dependencies_unpack-dependencies) @ pentaho-hadoop-shims-common-base ---
+[INFO] ------ (dummy) org.apache.maven.plugins:maven-dependency-plugin:3.1.0:unpack-dependencies
+[INFO] 
+[INFO] --- license-helper:1.27:bundle (bundle-license) @ pentaho-hadoop-shims-common-base ---
+[WARNING] No license file found!
+
+  You may want to use the generate goal to create license file(s): 
+  $ mvn org.pentaho.maven.plugins:license-helper-maven-plugin:generate
+
+[INFO] 
+[INFO] --- resources:3.0.2:resources (default-resources) @ pentaho-hadoop-shims-common-base ---
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[INFO] Copying 21 resources
+[INFO] 
+[INFO] --- compiler:3.14.0:compile (default-compile) @ pentaho-hadoop-shims-common-base ---
+[INFO] Nothing to compile - all classes are up to date.
+[INFO] 
+[INFO] --- resources:3.0.2:testResources (default-testResources) @ pentaho-hadoop-shims-common-base ---
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[INFO] Copying 11 resources
+[INFO] 
+[INFO] --- compiler:3.14.0:testCompile (default-testCompile) @ pentaho-hadoop-shims-common-base ---
+[INFO] Recompiling the module because of changed source code.
+[INFO] Compiling 95 source files with javac [debug release 17] to target/test-classes
+[INFO] Annotation processing is enabled because one or more processors were found
+  on the class path. A future release of javac may disable annotation processing
+  unless at least one processor is specified by name (-processor), or a search
+  path is specified (--processor-path, --processor-module-path), or annotation
+  processing is enabled explicitly (-proc:only, -proc:full).
+  Use -Xlint:-options to suppress this message.
+  Use -proc:none to disable annotation processing.
+[WARNING] /Users/ramaizmansoor/Developer/pentaho-hadoop-shims/common-base/src/test/java/org/pentaho/di/job/entries/hadoopjobexecutor/NoExitSecurityManagerTest.java:[26,67] getSecurityManager() in java.lang.System has been deprecated and marked for removal
+[WARNING] /Users/ramaizmansoor/Developer/pentaho-hadoop-shims/common-base/src/test/java/org/pentaho/di/job/entries/hadoopjobexecutor/NoExitSecurityManagerTest.java:[40,67] getSecurityManager() in java.lang.System has been deprecated and marked for removal
+[WARNING] /Users/ramaizmansoor/Developer/pentaho-hadoop-shims/common-base/src/test/java/org/pentaho/di/job/entries/hadoopjobexecutor/SecurityManagerStackTest.java:[53,5] java.lang.SecurityManager in java.lang has been deprecated and marked for removal
+[WARNING] /Users/ramaizmansoor/Developer/pentaho-hadoop-shims/common-base/src/test/java/org/pentaho/di/job/entries/hadoopjobexecutor/SecurityManagerStackTest.java:[53,38] getSecurityManager() in java.lang.System has been deprecated and marked for removal
+[WARNING] /Users/ramaizmansoor/Developer/pentaho-hadoop-shims/common-base/src/test/java/org/pentaho/di/job/entries/hadoopjobexecutor/SecurityManagerStackTest.java:[58,29] getSecurityManager() in java.lang.System has been deprecated and marked for removal
+[WARNING] /Users/ramaizmansoor/Developer/pentaho-hadoop-shims/common-base/src/test/java/org/pentaho/di/job/entries/hadoopjobexecutor/SecurityManagerStackTest.java:[60,35] getSecurityManager() in java.lang.System has been deprecated and marked for removal
+[WARNING] /Users/ramaizmansoor/Developer/pentaho-hadoop-shims/common-base/src/test/java/org/pentaho/di/job/entries/hadoopjobexecutor/SecurityManagerStackTest.java:[65,5] java.lang.SecurityManager in java.lang has been deprecated and marked for removal
+[WARNING] /Users/ramaizmansoor/Developer/pentaho-hadoop-shims/common-base/src/test/java/org/pentaho/di/job/entries/hadoopjobexecutor/SecurityManagerStackTest.java:[65,38] getSecurityManager() in java.lang.System has been deprecated and marked for removal
+[WARNING] /Users/ramaizmansoor/Developer/pentaho-hadoop-shims/common-base/src/test/java/org/pentaho/di/job/entries/hadoopjobexecutor/SecurityManagerStackTest.java:[72,30] getSecurityManager() in java.lang.System has been deprecated and marked for removal
+[WARNING] /Users/ramaizmansoor/Developer/pentaho-hadoop-shims/common-base/src/test/java/org/pentaho/di/job/entries/hadoopjobexecutor/SecurityManagerStackTest.java:[74,30] getSecurityManager() in java.lang.System has been deprecated and marked for removal
+[WARNING] /Users/ramaizmansoor/Developer/pentaho-hadoop-shims/common-base/src/test/java/org/pentaho/di/job/entries/hadoopjobexecutor/SecurityManagerStackTest.java:[76,35] getSecurityManager() in java.lang.System has been deprecated and marked for removal
+[WARNING] /Users/ramaizmansoor/Developer/pentaho-hadoop-shims/common-base/src/test/java/org/pentaho/di/job/entries/hadoopjobexecutor/SecurityManagerStackTest.java:[81,5] java.lang.SecurityManager in java.lang has been deprecated and marked for removal
+[WARNING] /Users/ramaizmansoor/Developer/pentaho-hadoop-shims/common-base/src/test/java/org/pentaho/di/job/entries/hadoopjobexecutor/SecurityManagerStackTest.java:[81,38] getSecurityManager() in java.lang.System has been deprecated and marked for removal
+[WARNING] /Users/ramaizmansoor/Developer/pentaho-hadoop-shims/common-base/src/test/java/org/pentaho/di/job/entries/hadoopjobexecutor/SecurityManagerStackTest.java:[88,30] getSecurityManager() in java.lang.System has been deprecated and marked for removal
+[WARNING] /Users/ramaizmansoor/Developer/pentaho-hadoop-shims/common-base/src/test/java/org/pentaho/di/job/entries/hadoopjobexecutor/SecurityManagerStackTest.java:[90,30] getSecurityManager() in java.lang.System has been deprecated and marked for removal
+[WARNING] /Users/ramaizmansoor/Developer/pentaho-hadoop-shims/common-base/src/test/java/org/pentaho/di/job/entries/hadoopjobexecutor/SecurityManagerStackTest.java:[92,35] getSecurityManager() in java.lang.System has been deprecated and marked for removal
+[WARNING] /Users/ramaizmansoor/Developer/pentaho-hadoop-shims/common-base/src/test/java/org/pentaho/di/job/entries/hadoopjobexecutor/SecurityManagerStackTest.java:[102,5] java.lang.SecurityManager in java.lang has been deprecated and marked for removal
+[WARNING] /Users/ramaizmansoor/Developer/pentaho-hadoop-shims/common-base/src/test/java/org/pentaho/di/job/entries/hadoopjobexecutor/SecurityManagerStackTest.java:[102,38] getSecurityManager() in java.lang.System has been deprecated and marked for removal
+[WARNING] /Users/ramaizmansoor/Developer/pentaho-hadoop-shims/common-base/src/test/java/org/pentaho/di/job/entries/hadoopjobexecutor/SecurityManagerStackTest.java:[129,31] getSecurityManager() in java.lang.System has been deprecated and marked for removal
+[WARNING] /Users/ramaizmansoor/Developer/pentaho-hadoop-shims/common-base/src/test/java/org/pentaho/di/job/entries/hadoopjobexecutor/SecurityManagerStackTest.java:[131,35] getSecurityManager() in java.lang.System has been deprecated and marked for removal
+[WARNING] /Users/ramaizmansoor/Developer/pentaho-hadoop-shims/common-base/src/test/java/org/pentaho/hadoop/shim/common/ConfigurationProxyTest.java:[104,39] non-varargs call of varargs method with inexact argument type for last parameter;
+  cast to org.pentaho.hadoop.shim.api.internal.fs.Path for a varargs call
+  cast to org.pentaho.hadoop.shim.api.internal.fs.Path[] for a non-varargs call and to suppress this warning
+[INFO] /Users/ramaizmansoor/Developer/pentaho-hadoop-shims/common-base/src/test/java/com/pentaho/big/data/bundles/impl/shim/hbase/meta/HBaseValueMetaInterfaceImplTest.java: Some input files use or override a deprecated API.
+[INFO] /Users/ramaizmansoor/Developer/pentaho-hadoop-shims/common-base/src/test/java/com/pentaho/big/data/bundles/impl/shim/hbase/meta/HBaseValueMetaInterfaceImplTest.java: Recompile with -Xlint:deprecation for details.
+[INFO] /Users/ramaizmansoor/Developer/pentaho-hadoop-shims/common-base/src/test/java/com/pentaho/big/data/bundles/impl/shim/hbase/HBaseConnectionWrapperTest.java: Some input files use unchecked or unsafe operations.
+[INFO] /Users/ramaizmansoor/Developer/pentaho-hadoop-shims/common-base/src/test/java/com/pentaho/big/data/bundles/impl/shim/hbase/HBaseConnectionWrapperTest.java: Recompile with -Xlint:unchecked for details.
+[INFO] 
+[INFO] --- surefire:2.21.0:test (default-test) @ pentaho-hadoop-shims-common-base ---
+[INFO] 
+[INFO] -------------------------------------------------------
+[INFO]  T E S T S
+[INFO] -------------------------------------------------------
+[INFO] Running org.pentaho.di.job.entries.hadoopjobexecutor.NoExitSecurityManagerTest
+SLF4J(W): No SLF4J providers were found.
+SLF4J(W): Defaulting to no-operation (NOP) logger implementation
+SLF4J(W): See https://www.slf4j.org/codes.html#noProviders for further details.
+SLF4J(W): Class path contains SLF4J bindings targeting slf4j-api versions 1.7.x or earlier.
+SLF4J(W): Ignoring binding found at [jar:file:/Users/ramaizmansoor/.m2/repository/org/slf4j/slf4j-log4j12/1.6.6/slf4j-log4j12-1.6.6.jar!/org/slf4j/impl/StaticLoggerBinder.class]
+SLF4J(W): Ignoring binding found at [jar:file:/Users/ramaizmansoor/.m2/repository/org/slf4j/slf4j-simple/1.6.6/slf4j-simple-1.6.6.jar!/org/slf4j/impl/StaticLoggerBinder.class]
+SLF4J(W): Ignoring binding found at [jar:file:/Users/ramaizmansoor/.m2/repository/org/slf4j/slf4j-reload4j/1.7.36/slf4j-reload4j-1.7.36.jar!/org/slf4j/impl/StaticLoggerBinder.class]
+SLF4J(W): See https://www.slf4j.org/codes.html#ignoredBindings for an explanation.
+[INFO] Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.152 s - in org.pentaho.di.job.entries.hadoopjobexecutor.NoExitSecurityManagerTest
+[INFO] Running org.pentaho.di.job.entries.hadoopjobexecutor.SecurityManagerStackTest
+[ERROR] Tests run: 7, Failures: 0, Errors: 4, Skipped: 0, Time elapsed: 0.001 s <<< FAILURE! - in org.pentaho.di.job.entries.hadoopjobexecutor.SecurityManagerStackTest
+[ERROR] randomized_executions(org.pentaho.di.job.entries.hadoopjobexecutor.SecurityManagerStackTest)  Time elapsed: 0 s  <<< ERROR!
+java.lang.UnsupportedOperationException: The Security Manager is deprecated and will be removed in a future release
+	at org.pentaho.di.job.entries.hadoopjobexecutor.SecurityManagerStackTest.randomized_executions(SecurityManagerStackTest.java:103)
+
+[ERROR] sequential_executions(org.pentaho.di.job.entries.hadoopjobexecutor.SecurityManagerStackTest)  Time elapsed: 0 s  <<< ERROR!
+java.lang.UnsupportedOperationException: The Security Manager is deprecated and will be removed in a future release
+	at org.pentaho.di.job.entries.hadoopjobexecutor.SecurityManagerStackTest.sequential_executions(SecurityManagerStackTest.java:86)
+
+[ERROR] simple_replace_in_isolation(org.pentaho.di.job.entries.hadoopjobexecutor.SecurityManagerStackTest)  Time elapsed: 0 s  <<< ERROR!
+java.lang.UnsupportedOperationException: The Security Manager is deprecated and will be removed in a future release
+	at org.pentaho.di.job.entries.hadoopjobexecutor.SecurityManagerStackTest.simple_replace_in_isolation(SecurityManagerStackTest.java:57)
+
+[ERROR] interweaved_executions(org.pentaho.di.job.entries.hadoopjobexecutor.SecurityManagerStackTest)  Time elapsed: 0.001 s  <<< ERROR!
+java.lang.UnsupportedOperationException: The Security Manager is deprecated and will be removed in a future release
+	at org.pentaho.di.job.entries.hadoopjobexecutor.SecurityManagerStackTest.interweaved_executions(SecurityManagerStackTest.java:70)
+
+[INFO] Running org.pentaho.big.data.impl.shim.pig.PigResultImplTest
+Mockito is currently self-attaching to enable the inline-mock-maker. This will no longer work in future releases of the JDK. Please add Mockito as an agent to your build as described in Mockito's documentation: https://javadoc.io/doc/org.mockito/mockito-core/latest/org.mockito/org/mockito/Mockito.html#0.3
+WARNING: A Java agent has been loaded dynamically (/Users/ramaizmansoor/.m2/repository/net/bytebuddy/byte-buddy-agent/1.15.11/byte-buddy-agent-1.15.11.jar)
+WARNING: If a serviceability tool is in use, please run with -XX:+EnableDynamicAgentLoading to hide this warning
+WARNING: If a serviceability tool is not in use, please run with -Djdk.instrument.traceUsage for more information
+WARNING: Dynamic loading of agents will be disallowed by default in a future release
+[INFO] Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 4.102 s - in org.pentaho.big.data.impl.shim.pig.PigResultImplTest
+[INFO] Running org.pentaho.big.data.impl.shim.pig.WriterAppenderManagerTest
+[INFO] Tests run: 3, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 1.139 s - in org.pentaho.big.data.impl.shim.pig.WriterAppenderManagerTest
+[INFO] Running org.pentaho.big.data.impl.shim.pig.KettleLoggingPrintWriterTest
+[INFO] Tests run: 7, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.086 s - in org.pentaho.big.data.impl.shim.pig.KettleLoggingPrintWriterTest
+[INFO] Running org.pentaho.big.data.impl.shim.oozie.OozieJobInfoImplTest
+[INFO] Tests run: 6, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.153 s - in org.pentaho.big.data.impl.shim.oozie.OozieJobInfoImplTest
+[INFO] Running org.pentaho.big.data.impl.shim.oozie.OozieJobInfoDelegateTest
+[INFO] Tests run: 6, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0 s - in org.pentaho.big.data.impl.shim.oozie.OozieJobInfoDelegateTest
+[INFO] Running org.pentaho.big.data.impl.shim.mapreduce.MapReduceJobBuilderImplTest
+[INFO] Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.591 s - in org.pentaho.big.data.impl.shim.mapreduce.MapReduceJobBuilderImplTest
+[INFO] Running org.pentaho.big.data.impl.shim.mapreduce.RunningJobMapReduceJobAdvancedImplTest
+[INFO] Tests run: 12, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.018 s - in org.pentaho.big.data.impl.shim.mapreduce.RunningJobMapReduceJobAdvancedImplTest
+[INFO] Running org.pentaho.big.data.impl.shim.mapreduce.TaskCompletionEventImplTest
+[INFO] Tests run: 3, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0 s - in org.pentaho.big.data.impl.shim.mapreduce.TaskCompletionEventImplTest
+[INFO] Running org.pentaho.big.data.impl.shim.mapreduce.FutureMapReduceJobSimpleImplTest
+[INFO] Tests run: 9, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0 s - in org.pentaho.big.data.impl.shim.mapreduce.FutureMapReduceJobSimpleImplTest
+[INFO] Running org.pentaho.big.data.impl.shim.mapreduce.FutureMapReduceJobSimpleRunnableTest
+[ERROR] Tests run: 10, Failures: 1, Errors: 1, Skipped: 0, Time elapsed: 0.001 s <<< FAILURE! - in org.pentaho.big.data.impl.shim.mapreduce.FutureMapReduceJobSimpleRunnableTest
+[ERROR] testBadMain(org.pentaho.big.data.impl.shim.mapreduce.FutureMapReduceJobSimpleRunnableTest)  Time elapsed: 0 s  <<< ERROR!
+java.lang.Exception: Unexpected exception, expected<java.lang.NoSuchMethodException> but was<java.lang.AssertionError>
+	at org.pentaho.big.data.impl.shim.mapreduce.FutureMapReduceJobSimpleRunnableTest.testBadMain(FutureMapReduceJobSimpleRunnableTest.java:164)
+
+[ERROR] testRunThrow(org.pentaho.big.data.impl.shim.mapreduce.FutureMapReduceJobSimpleRunnableTest)  Time elapsed: 0 s  <<< FAILURE!
+java.lang.AssertionError: expected:<java.lang.RuntimeException> but was:<java.lang.reflect.InvocationTargetException>
+	at org.pentaho.big.data.impl.shim.mapreduce.FutureMapReduceJobSimpleRunnableTest.testRunThrow(FutureMapReduceJobSimpleRunnableTest.java:156)
+
+[INFO] Running org.pentaho.big.data.impl.shim.mapreduce.PentahoMapReduceJobBuilderImplTest
+[Fatal Error] :1:1: Content is not allowed in prolog.
+[INFO] Tests run: 34, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 4.723 s - in org.pentaho.big.data.impl.shim.mapreduce.PentahoMapReduceJobBuilderImplTest
+[INFO] Running org.pentaho.big.data.api.jdbc.impl.JdbcUrlImplTest
+[INFO] Tests run: 7, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.03 s - in org.pentaho.big.data.api.jdbc.impl.JdbcUrlImplTest
+[INFO] Running org.pentaho.big.data.api.jdbc.impl.JdbcUrlParserImplTest
+[INFO] Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0 s - in org.pentaho.big.data.api.jdbc.impl.JdbcUrlParserImplTest
+[INFO] Running org.pentaho.big.data.api.jdbc.impl.LazyDelegatingDriverTest
+[INFO] Tests run: 12, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0 s - in org.pentaho.big.data.api.jdbc.impl.LazyDelegatingDriverTest
+[INFO] Running org.pentaho.hadoop.shim.HadoopConfigurationClassLoaderTest
+[INFO] Tests run: 5, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0 s - in org.pentaho.hadoop.shim.HadoopConfigurationClassLoaderTest
+[INFO] Running org.pentaho.hadoop.shim.common.DistributedCacheUtilImplTest
+[INFO] Tests run: 18, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 26.173 s - in org.pentaho.hadoop.shim.common.DistributedCacheUtilImplTest
+[INFO] Running org.pentaho.hadoop.shim.common.HiveSQLUtilsTest
+[INFO] Tests run: 8, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.001 s - in org.pentaho.hadoop.shim.common.HiveSQLUtilsTest
+[INFO] Running org.pentaho.hadoop.shim.common.ConfigurationProxyV2Test
+2025/10/30 20:16:54 - org.pentaho.hadoop.shim.common.ConfigurationProxyV2Test - Configuration: core-default.xml, core-site.xml, mapred-default.xml, mapred-site.xml, yarn-default.xml, yarn-site.xml, hdfs-default.xml, hdfs-rbf-default.xml, hdfs-site.xml, hdfs-rbf-site.xml, hdfs-site.xml, core-site.xml, mapred-site.xml, yarn-site.xml, hbase-site.xml, hive-site.xml
+2025/10/30 20:16:54 - org.pentaho.hadoop.shim.common.ConfigurationProxyV2Test - Configuration: core-default.xml, core-site.xml, mapred-default.xml, mapred-site.xml, yarn-default.xml, yarn-site.xml, hdfs-default.xml, hdfs-rbf-default.xml, hdfs-site.xml, hdfs-rbf-site.xml, hdfs-site.xml, core-site.xml, mapred-site.xml, yarn-site.xml, hbase-site.xml, hive-site.xml
+2025/10/30 20:16:54 - org.pentaho.hadoop.shim.common.ConfigurationProxyV2Test - Configuration: core-default.xml, core-site.xml, mapred-default.xml, mapred-site.xml, yarn-default.xml, yarn-site.xml, hdfs-default.xml, hdfs-rbf-default.xml, hdfs-site.xml, hdfs-rbf-site.xml, hdfs-site.xml, core-site.xml, mapred-site.xml, yarn-site.xml, hbase-site.xml, hive-site.xml
+[WARNING] Tests run: 5, Failures: 0, Errors: 0, Skipped: 2, Time elapsed: 0.105 s - in org.pentaho.hadoop.shim.common.ConfigurationProxyV2Test
+[INFO] Running org.pentaho.hadoop.shim.common.CommonFormatShimTest
+2025/10/30 20:17:00 - General - We are initializing parquet input format
+2025/10/30 20:17:01 - General - We are initializing parquet input format
+2025/10/30 20:17:03 - General - We are initializing parquet input format
+[INFO] Tests run: 4, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 10.555 s - in org.pentaho.hadoop.shim.common.CommonFormatShimTest
+[INFO] Running org.pentaho.hadoop.shim.common.DistributedCacheUtilImplOSDependentTest
+[INFO] Tests run: 8, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 30.93 s - in org.pentaho.hadoop.shim.common.DistributedCacheUtilImplOSDependentTest
+[INFO] Running org.pentaho.hadoop.shim.common.mapred.RunningJobProxyTest
+[INFO] Tests run: 3, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.056 s - in org.pentaho.hadoop.shim.common.mapred.RunningJobProxyTest
+[INFO] Running org.pentaho.hadoop.shim.common.mapred.TaskCompletionEventProxyTest
+[INFO] Tests run: 4, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0 s - in org.pentaho.hadoop.shim.common.mapred.TaskCompletionEventProxyTest
+[INFO] Running org.pentaho.hadoop.shim.common.ShellPrevalidatorTest
+[INFO] Tests run: 4, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.014 s - in org.pentaho.hadoop.shim.common.ShellPrevalidatorTest
+[INFO] Running org.pentaho.hadoop.shim.common.DriverProxyInvocationChainTest
+[INFO] Tests run: 6, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.638 s - in org.pentaho.hadoop.shim.common.DriverProxyInvocationChainTest
+[INFO] Running org.pentaho.hadoop.shim.common.format.orc.PentahoOrcReadWriteTest
+2025/10/30 20:17:38 - org.pentaho.hadoop.shim.common.format.orc.PentahoOrcReadWriteTest - Writing file /var/folders/5b/5_k7zcld6wqg4mx_gpmwczb40000gn/T/junit4275126229811228861/orcOutputNone.orc
+2025/10/30 20:17:39 - org.pentaho.hadoop.shim.common.format.orc.PentahoOrcReadWriteTest - reading Schema /var/folders/5b/5_k7zcld6wqg4mx_gpmwczb40000gn/T/junit4275126229811228861/orcOutputNone.orc
+2025/10/30 20:17:39 - org.pentaho.hadoop.shim.common.format.orc.PentahoOrcReadWriteTest - Reading file /var/folders/5b/5_k7zcld6wqg4mx_gpmwczb40000gn/T/junit4275126229811228861/orcOutputNone.orc
+2025/10/30 20:17:42 - org.pentaho.hadoop.shim.common.format.orc.PentahoOrcReadWriteTest - Writing file /var/folders/5b/5_k7zcld6wqg4mx_gpmwczb40000gn/T/junit4275126229811228861/orcOutputNone.orc
+2025/10/30 20:17:42 - org.pentaho.hadoop.shim.common.format.orc.PentahoOrcReadWriteTest - reading Schema /var/folders/5b/5_k7zcld6wqg4mx_gpmwczb40000gn/T/junit4275126229811228861/orcOutputNone.orc
+2025/10/30 20:17:42 - org.pentaho.hadoop.shim.common.format.orc.PentahoOrcReadWriteTest - Reading file /var/folders/5b/5_k7zcld6wqg4mx_gpmwczb40000gn/T/junit4275126229811228861/orcOutputNone.orc
+2025/10/30 20:17:42 - org.pentaho.hadoop.shim.common.format.orc.PentahoOrcReadWriteTest - Writing file /var/folders/5b/5_k7zcld6wqg4mx_gpmwczb40000gn/T/junit2606278808233014384/orcOutputNone.orc
+2025/10/30 20:17:42 - org.pentaho.hadoop.shim.common.format.orc.PentahoOrcReadWriteTest - reading Schema /var/folders/5b/5_k7zcld6wqg4mx_gpmwczb40000gn/T/junit2606278808233014384/orcOutputNone.orc
+2025/10/30 20:17:42 - org.pentaho.hadoop.shim.common.format.orc.PentahoOrcReadWriteTest - Reading file /var/folders/5b/5_k7zcld6wqg4mx_gpmwczb40000gn/T/junit2606278808233014384/orcOutputNone.orc
+2025/10/30 20:17:43 - org.pentaho.hadoop.shim.common.format.orc.PentahoOrcReadWriteTest - Writing file /var/folders/5b/5_k7zcld6wqg4mx_gpmwczb40000gn/T/junit2606278808233014384/orcOutputSnappy.orc
+2025/10/30 20:17:43 - org.pentaho.hadoop.shim.common.format.orc.PentahoOrcReadWriteTest - reading Schema /var/folders/5b/5_k7zcld6wqg4mx_gpmwczb40000gn/T/junit2606278808233014384/orcOutputSnappy.orc
+2025/10/30 20:17:43 - org.pentaho.hadoop.shim.common.format.orc.PentahoOrcReadWriteTest - Reading file /var/folders/5b/5_k7zcld6wqg4mx_gpmwczb40000gn/T/junit2606278808233014384/orcOutputSnappy.orc
+2025/10/30 20:17:43 - org.pentaho.hadoop.shim.common.format.orc.PentahoOrcReadWriteTest - Writing file /var/folders/5b/5_k7zcld6wqg4mx_gpmwczb40000gn/T/junit2606278808233014384/orcOutputZlib.orc
+2025/10/30 20:17:43 - org.pentaho.hadoop.shim.common.format.orc.PentahoOrcReadWriteTest - reading Schema /var/folders/5b/5_k7zcld6wqg4mx_gpmwczb40000gn/T/junit2606278808233014384/orcOutputZlib.orc
+2025/10/30 20:17:43 - org.pentaho.hadoop.shim.common.format.orc.PentahoOrcReadWriteTest - Reading file /var/folders/5b/5_k7zcld6wqg4mx_gpmwczb40000gn/T/junit2606278808233014384/orcOutputZlib.orc
+2025/10/30 20:17:43 - org.pentaho.hadoop.shim.common.format.orc.PentahoOrcReadWriteTest - Writing file /var/folders/5b/5_k7zcld6wqg4mx_gpmwczb40000gn/T/junit4665483814135947078/orcOutputNone.orc
+2025/10/30 20:17:44 - org.pentaho.hadoop.shim.common.format.orc.PentahoOrcReadWriteTest - reading Schema /var/folders/5b/5_k7zcld6wqg4mx_gpmwczb40000gn/T/junit4665483814135947078/orcOutputNone.orc
+2025/10/30 20:17:44 - org.pentaho.hadoop.shim.common.format.orc.PentahoOrcReadWriteTest - Reading file /var/folders/5b/5_k7zcld6wqg4mx_gpmwczb40000gn/T/junit4665483814135947078/orcOutputNone.orc
+[INFO] Tests run: 3, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 6.372 s - in org.pentaho.hadoop.shim.common.format.orc.PentahoOrcReadWriteTest
+[INFO] Running org.pentaho.hadoop.shim.common.format.orc.PentahoOrcInputFormatTest
+[INFO] Tests run: 3, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0 s - in org.pentaho.hadoop.shim.common.format.orc.PentahoOrcInputFormatTest
+[INFO] Running org.pentaho.hadoop.shim.common.format.parquet.PentahoParquetRecordReaderTest
+[INFO] Tests run: 4, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.043 s - in org.pentaho.hadoop.shim.common.format.parquet.PentahoParquetRecordReaderTest
+[INFO] Running org.pentaho.hadoop.shim.common.format.parquet.PentahoParquetWriteSupportTest
+[INFO] Tests run: 4, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.001 s - in org.pentaho.hadoop.shim.common.format.parquet.PentahoParquetWriteSupportTest
+[INFO] Running org.pentaho.hadoop.shim.common.format.parquet.PentahoParquetRecordWriterTest
+2025/10/30 20:17:45 - General - We are initializing parquet input format
+[INFO] Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 2.144 s - in org.pentaho.hadoop.shim.common.format.parquet.PentahoParquetRecordWriterTest
+[INFO] Running org.pentaho.hadoop.shim.common.format.parquet.ParquetConverterTest
+[INFO] Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0 s - in org.pentaho.hadoop.shim.common.format.parquet.ParquetConverterTest
+[INFO] Running org.pentaho.hadoop.shim.common.format.parquet.PentahoParquetInputFormatTest
+2025/10/30 20:17:46 - General - We are initializing parquet input format
+2025/10/30 20:17:46 - org.pentaho.hadoop.shim.common.format.parquet.PentahoParquetInputFormatTest - Read 'parquet/1_uncompressed_nodict.par' as schema: [org.pentaho.hadoop.shim.common.format.parquet.ParquetInputField@393d64d2]
+2025/10/30 20:17:47 - org.pentaho.hadoop.shim.common.format.parquet.PentahoParquetInputFormatTest - Read 'parquet/1_uncompressed_nodict.par' as schema: [org.pentaho.hadoop.shim.common.format.parquet.ParquetInputField@2b58ca9c]
+2025/10/30 20:17:49 - org.pentaho.hadoop.shim.common.format.parquet.PentahoParquetInputFormatTest - Read 'parquet/1_uncompressed_nodict.par' as schema: [org.pentaho.hadoop.shim.common.format.parquet.ParquetInputField@59f91ee8]
+2025/10/30 20:17:50 - org.pentaho.hadoop.shim.common.format.parquet.PentahoParquetInputFormatTest - Read 'parquet/1_uncompressed_nodict.par' as schema: [org.pentaho.hadoop.shim.common.format.parquet.ParquetInputField@4e04779b]
+2025/10/30 20:17:50 - org.pentaho.hadoop.shim.common.format.parquet.PentahoParquetInputFormatTest - Read 'parquet/1_uncompressed_nodict.par' as schema: [org.pentaho.hadoop.shim.common.format.parquet.ParquetInputField@501ccde9]
+2025/10/30 20:17:52 - org.pentaho.hadoop.shim.common.format.parquet.PentahoParquetInputFormatTest - Read 'parquet/1_uncompressed_nodict.par' as schema: [org.pentaho.hadoop.shim.common.format.parquet.ParquetInputField@fc56cf9]
+2025/10/30 20:17:53 - org.pentaho.hadoop.shim.common.format.parquet.PentahoParquetInputFormatTest - Read 'parquet/1_uncompressed_nodict.par' as schema: [org.pentaho.hadoop.shim.common.format.parquet.ParquetInputField@3701ad6f]
+2025/10/30 20:17:53 - org.pentaho.hadoop.shim.common.format.parquet.PentahoParquetInputFormatTest - Read 'parquet/1_uncompressed_nodict.par' as schema: [org.pentaho.hadoop.shim.common.format.parquet.ParquetInputField@3701ad6f, org.pentaho.hadoop.shim.common.format.parquet.ParquetInputField@59f91ee8, org.pentaho.hadoop.shim.common.format.parquet.ParquetInputField@fc56cf9]
+2025/10/30 20:17:54 - org.pentaho.hadoop.shim.common.format.parquet.PentahoParquetInputFormatTest - Read 'parquet/1_uncompressed_nodict.par' as schema: [org.pentaho.hadoop.shim.common.format.parquet.ParquetInputField@2b58ca9c, org.pentaho.hadoop.shim.common.format.parquet.ParquetInputField@fc56cf9, org.pentaho.hadoop.shim.common.format.parquet.ParquetInputField@4e04779b]
+2025/10/30 20:17:55 - org.pentaho.hadoop.shim.common.format.parquet.PentahoParquetInputFormatTest - Read 'parquet/1_uncompressed_nodict.par' as schema: [org.pentaho.hadoop.shim.common.format.parquet.ParquetInputField@4e04779b, org.pentaho.hadoop.shim.common.format.parquet.ParquetInputField@501ccde9, org.pentaho.hadoop.shim.common.format.parquet.ParquetInputField@fc56cf9, org.pentaho.hadoop.shim.common.format.parquet.ParquetInputField@59f91ee8, org.pentaho.hadoop.shim.common.format.parquet.ParquetInputField@3701ad6f]
+2025/10/30 20:17:55 - org.pentaho.hadoop.shim.common.format.parquet.PentahoParquetInputFormatTest - Read 'parquet/1_uncompressed_nodict.par' as schema: [org.pentaho.hadoop.shim.common.format.parquet.ParquetInputField@501ccde9, org.pentaho.hadoop.shim.common.format.parquet.ParquetInputField@393d64d2, org.pentaho.hadoop.shim.common.format.parquet.ParquetInputField@2b58ca9c, org.pentaho.hadoop.shim.common.format.parquet.ParquetInputField@3701ad6f]
+2025/10/30 20:17:56 - org.pentaho.hadoop.shim.common.format.parquet.PentahoParquetInputFormatTest - Read 'parquet/1_uncompressed_nodict.par' as schema: [org.pentaho.hadoop.shim.common.format.parquet.ParquetInputField@fc56cf9, org.pentaho.hadoop.shim.common.format.parquet.ParquetInputField@393d64d2, org.pentaho.hadoop.shim.common.format.parquet.ParquetInputField@501ccde9, org.pentaho.hadoop.shim.common.format.parquet.ParquetInputField@2b58ca9c, org.pentaho.hadoop.shim.common.format.parquet.ParquetInputField@3701ad6f]
+2025/10/30 20:17:57 - org.pentaho.hadoop.shim.common.format.parquet.PentahoParquetInputFormatTest - Read 'parquet/1_gzip_nodict.par' as schema: [org.pentaho.hadoop.shim.common.format.parquet.ParquetInputField@2b05798b]
+2025/10/30 20:17:57 - org.pentaho.hadoop.shim.common.format.parquet.PentahoParquetInputFormatTest - Read 'parquet/1_gzip_nodict.par' as schema: [org.pentaho.hadoop.shim.common.format.parquet.ParquetInputField@221095b1]
+2025/10/30 20:17:58 - org.pentaho.hadoop.shim.common.format.parquet.PentahoParquetInputFormatTest - Read 'parquet/1_gzip_nodict.par' as schema: [org.pentaho.hadoop.shim.common.format.parquet.ParquetInputField@4e8b84f]
+2025/10/30 20:17:58 - org.pentaho.hadoop.shim.common.format.parquet.PentahoParquetInputFormatTest - Read 'parquet/1_gzip_nodict.par' as schema: [org.pentaho.hadoop.shim.common.format.parquet.ParquetInputField@16210825]
+2025/10/30 20:18:00 - org.pentaho.hadoop.shim.common.format.parquet.PentahoParquetInputFormatTest - Read 'parquet/1_gzip_nodict.par' as schema: [org.pentaho.hadoop.shim.common.format.parquet.ParquetInputField@57b7287c]
+2025/10/30 20:18:00 - org.pentaho.hadoop.shim.common.format.parquet.PentahoParquetInputFormatTest - Read 'parquet/1_gzip_nodict.par' as schema: [org.pentaho.hadoop.shim.common.format.parquet.ParquetInputField@1d87e100]
+2025/10/30 20:18:01 - org.pentaho.hadoop.shim.common.format.parquet.PentahoParquetInputFormatTest - Read 'parquet/1_gzip_nodict.par' as schema: [org.pentaho.hadoop.shim.common.format.parquet.ParquetInputField@2f50381f]
+2025/10/30 20:18:01 - org.pentaho.hadoop.shim.common.format.parquet.PentahoParquetInputFormatTest - Read 'parquet/1_gzip_nodict.par' as schema: [org.pentaho.hadoop.shim.common.format.parquet.ParquetInputField@2b05798b, org.pentaho.hadoop.shim.common.format.parquet.ParquetInputField@57b7287c, org.pentaho.hadoop.shim.common.format.parquet.ParquetInputField@16210825, org.pentaho.hadoop.shim.common.format.parquet.ParquetInputField@221095b1, org.pentaho.hadoop.shim.common.format.parquet.ParquetInputField@1d87e100]
+2025/10/30 20:18:02 - org.pentaho.hadoop.shim.common.format.parquet.PentahoParquetInputFormatTest - Read 'parquet/1_gzip_nodict.par' as schema: [org.pentaho.hadoop.shim.common.format.parquet.ParquetInputField@1d87e100, org.pentaho.hadoop.shim.common.format.parquet.ParquetInputField@221095b1, org.pentaho.hadoop.shim.common.format.parquet.ParquetInputField@16210825, org.pentaho.hadoop.shim.common.format.parquet.ParquetInputField@4e8b84f]
+2025/10/30 20:18:03 - org.pentaho.hadoop.shim.common.format.parquet.PentahoParquetInputFormatTest - Read 'parquet/1_gzip_nodict.par' as schema: [org.pentaho.hadoop.shim.common.format.parquet.ParquetInputField@57b7287c, org.pentaho.hadoop.shim.common.format.parquet.ParquetInputField@2b05798b, org.pentaho.hadoop.shim.common.format.parquet.ParquetInputField@16210825, org.pentaho.hadoop.shim.common.format.parquet.ParquetInputField@4e8b84f, org.pentaho.hadoop.shim.common.format.parquet.ParquetInputField@221095b1]
+2025/10/30 20:18:03 - org.pentaho.hadoop.shim.common.format.parquet.PentahoParquetInputFormatTest - Read 'parquet/1_gzip_nodict.par' as schema: [org.pentaho.hadoop.shim.common.format.parquet.ParquetInputField@16210825, org.pentaho.hadoop.shim.common.format.parquet.ParquetInputField@1d87e100, org.pentaho.hadoop.shim.common.format.parquet.ParquetInputField@57b7287c, org.pentaho.hadoop.shim.common.format.parquet.ParquetInputField@2f50381f, org.pentaho.hadoop.shim.common.format.parquet.ParquetInputField@4e8b84f, org.pentaho.hadoop.shim.common.format.parquet.ParquetInputField@2b05798b]
+2025/10/30 20:18:04 - org.pentaho.hadoop.shim.common.format.parquet.PentahoParquetInputFormatTest - Read 'parquet/1_gzip_nodict.par' as schema: [org.pentaho.hadoop.shim.common.format.parquet.ParquetInputField@4e8b84f, org.pentaho.hadoop.shim.common.format.parquet.ParquetInputField@2f50381f, org.pentaho.hadoop.shim.common.format.parquet.ParquetInputField@221095b1, org.pentaho.hadoop.shim.common.format.parquet.ParquetInputField@57b7287c, org.pentaho.hadoop.shim.common.format.parquet.ParquetInputField@1d87e100]
+2025/10/30 20:18:05 - org.pentaho.hadoop.shim.common.format.parquet.PentahoParquetInputFormatTest - Read 'parquet/1_snappy_nodict.par' as schema: [org.pentaho.hadoop.shim.common.format.parquet.ParquetInputField@349953cd]
+2025/10/30 20:18:05 - org.pentaho.hadoop.shim.common.format.parquet.PentahoParquetInputFormatTest - Read 'parquet/1_snappy_nodict.par' as schema: [org.pentaho.hadoop.shim.common.format.parquet.ParquetInputField@5b14b79e]
+2025/10/30 20:18:06 - org.pentaho.hadoop.shim.common.format.parquet.PentahoParquetInputFormatTest - Read 'parquet/1_snappy_nodict.par' as schema: [org.pentaho.hadoop.shim.common.format.parquet.ParquetInputField@1f6e0bcf]
+2025/10/30 20:18:07 - org.pentaho.hadoop.shim.common.format.parquet.PentahoParquetInputFormatTest - Read 'parquet/1_snappy_nodict.par' as schema: [org.pentaho.hadoop.shim.common.format.parquet.ParquetInputField@80ee766]
+2025/10/30 20:18:08 - org.pentaho.hadoop.shim.common.format.parquet.PentahoParquetInputFormatTest - Read 'parquet/1_snappy_nodict.par' as schema: [org.pentaho.hadoop.shim.common.format.parquet.ParquetInputField@48fbdad6]
+2025/10/30 20:18:08 - org.pentaho.hadoop.shim.common.format.parquet.PentahoParquetInputFormatTest - Read 'parquet/1_snappy_nodict.par' as schema: [org.pentaho.hadoop.shim.common.format.parquet.ParquetInputField@6c0eeeaf]
+2025/10/30 20:18:09 - org.pentaho.hadoop.shim.common.format.parquet.PentahoParquetInputFormatTest - Read 'parquet/1_snappy_nodict.par' as schema: [org.pentaho.hadoop.shim.common.format.parquet.ParquetInputField@7826e8c2]
+2025/10/30 20:18:10 - org.pentaho.hadoop.shim.common.format.parquet.PentahoParquetInputFormatTest - Read 'parquet/1_snappy_nodict.par' as schema: [org.pentaho.hadoop.shim.common.format.parquet.ParquetInputField@7826e8c2, org.pentaho.hadoop.shim.common.format.parquet.ParquetInputField@5b14b79e, org.pentaho.hadoop.shim.common.format.parquet.ParquetInputField@80ee766, org.pentaho.hadoop.shim.common.format.parquet.ParquetInputField@349953cd, org.pentaho.hadoop.shim.common.format.parquet.ParquetInputField@48fbdad6]
+2025/10/30 20:18:10 - org.pentaho.hadoop.shim.common.format.parquet.PentahoParquetInputFormatTest - Read 'parquet/1_snappy_nodict.par' as schema: [org.pentaho.hadoop.shim.common.format.parquet.ParquetInputField@6c0eeeaf, org.pentaho.hadoop.shim.common.format.parquet.ParquetInputField@80ee766, org.pentaho.hadoop.shim.common.format.parquet.ParquetInputField@48fbdad6, org.pentaho.hadoop.shim.common.format.parquet.ParquetInputField@5b14b79e, org.pentaho.hadoop.shim.common.format.parquet.ParquetInputField@7826e8c2]
+2025/10/30 20:18:11 - org.pentaho.hadoop.shim.common.format.parquet.PentahoParquetInputFormatTest - Read 'parquet/1_snappy_nodict.par' as schema: [org.pentaho.hadoop.shim.common.format.parquet.ParquetInputField@80ee766, org.pentaho.hadoop.shim.common.format.parquet.ParquetInputField@48fbdad6, org.pentaho.hadoop.shim.common.format.parquet.ParquetInputField@6c0eeeaf, org.pentaho.hadoop.shim.common.format.parquet.ParquetInputField@5b14b79e]
+2025/10/30 20:18:12 - org.pentaho.hadoop.shim.common.format.parquet.PentahoParquetInputFormatTest - Read 'parquet/1_snappy_nodict.par' as schema: [org.pentaho.hadoop.shim.common.format.parquet.ParquetInputField@349953cd, org.pentaho.hadoop.shim.common.format.parquet.ParquetInputField@7826e8c2, org.pentaho.hadoop.shim.common.format.parquet.ParquetInputField@5b14b79e, org.pentaho.hadoop.shim.common.format.parquet.ParquetInputField@80ee766, org.pentaho.hadoop.shim.common.format.parquet.ParquetInputField@1f6e0bcf, org.pentaho.hadoop.shim.common.format.parquet.ParquetInputField@48fbdad6]
+2025/10/30 20:18:13 - org.pentaho.hadoop.shim.common.format.parquet.PentahoParquetInputFormatTest - Read 'parquet/1_snappy_nodict.par' as schema: [org.pentaho.hadoop.shim.common.format.parquet.ParquetInputField@1f6e0bcf, org.pentaho.hadoop.shim.common.format.parquet.ParquetInputField@349953cd, org.pentaho.hadoop.shim.common.format.parquet.ParquetInputField@48fbdad6, org.pentaho.hadoop.shim.common.format.parquet.ParquetInputField@6c0eeeaf]
+2025/10/30 20:18:14 - org.pentaho.hadoop.shim.common.format.parquet.PentahoParquetInputFormatTest - Read 'parquet/1_uncompressed_dict.par' as schema: [org.pentaho.hadoop.shim.common.format.parquet.ParquetInputField@5eba1893]
+2025/10/30 20:18:14 - org.pentaho.hadoop.shim.common.format.parquet.PentahoParquetInputFormatTest - Read 'parquet/1_uncompressed_dict.par' as schema: [org.pentaho.hadoop.shim.common.format.parquet.ParquetInputField@7ce3092e]
+2025/10/30 20:18:15 - org.pentaho.hadoop.shim.common.format.parquet.PentahoParquetInputFormatTest - Read 'parquet/1_uncompressed_dict.par' as schema: [org.pentaho.hadoop.shim.common.format.parquet.ParquetInputField@6d4c611d]
+2025/10/30 20:18:16 - org.pentaho.hadoop.shim.common.format.parquet.PentahoParquetInputFormatTest - Read 'parquet/1_uncompressed_dict.par' as schema: [org.pentaho.hadoop.shim.common.format.parquet.ParquetInputField@399f33be]
+2025/10/30 20:18:17 - org.pentaho.hadoop.shim.common.format.parquet.PentahoParquetInputFormatTest - Read 'parquet/1_uncompressed_dict.par' as schema: [org.pentaho.hadoop.shim.common.format.parquet.ParquetInputField@4490b985]
+2025/10/30 20:18:17 - org.pentaho.hadoop.shim.common.format.parquet.PentahoParquetInputFormatTest - Read 'parquet/1_uncompressed_dict.par' as schema: [org.pentaho.hadoop.shim.common.format.parquet.ParquetInputField@1346d3ae]
+2025/10/30 20:18:18 - org.pentaho.hadoop.shim.common.format.parquet.PentahoParquetInputFormatTest - Read 'parquet/1_uncompressed_dict.par' as schema: [org.pentaho.hadoop.shim.common.format.parquet.ParquetInputField@585bc128]
+2025/10/30 20:18:19 - org.pentaho.hadoop.shim.common.format.parquet.PentahoParquetInputFormatTest - Read 'parquet/1_uncompressed_dict.par' as schema: [org.pentaho.hadoop.shim.common.format.parquet.ParquetInputField@7ce3092e, org.pentaho.hadoop.shim.common.format.parquet.ParquetInputField@6d4c611d, org.pentaho.hadoop.shim.common.format.parquet.ParquetInputField@399f33be, org.pentaho.hadoop.shim.common.format.parquet.ParquetInputField@4490b985]
+2025/10/30 20:18:19 - org.pentaho.hadoop.shim.common.format.parquet.PentahoParquetInputFormatTest - Read 'parquet/1_uncompressed_dict.par' as schema: [org.pentaho.hadoop.shim.common.format.parquet.ParquetInputField@399f33be, org.pentaho.hadoop.shim.common.format.parquet.ParquetInputField@585bc128, org.pentaho.hadoop.shim.common.format.parquet.ParquetInputField@6d4c611d, org.pentaho.hadoop.shim.common.format.parquet.ParquetInputField@7ce3092e]
+2025/10/30 20:18:20 - org.pentaho.hadoop.shim.common.format.parquet.PentahoParquetInputFormatTest - Read 'parquet/1_uncompressed_dict.par' as schema: [org.pentaho.hadoop.shim.common.format.parquet.ParquetInputField@585bc128, org.pentaho.hadoop.shim.common.format.parquet.ParquetInputField@5eba1893, org.pentaho.hadoop.shim.common.format.parquet.ParquetInputField@7ce3092e, org.pentaho.hadoop.shim.common.format.parquet.ParquetInputField@399f33be]
+2025/10/30 20:18:21 - org.pentaho.hadoop.shim.common.format.parquet.PentahoParquetInputFormatTest - Read 'parquet/1_uncompressed_dict.par' as schema: [org.pentaho.hadoop.shim.common.format.parquet.ParquetInputField@5eba1893, org.pentaho.hadoop.shim.common.format.parquet.ParquetInputField@7ce3092e, org.pentaho.hadoop.shim.common.format.parquet.ParquetInputField@585bc128, org.pentaho.hadoop.shim.common.format.parquet.ParquetInputField@399f33be]
+2025/10/30 20:18:22 - org.pentaho.hadoop.shim.common.format.parquet.PentahoParquetInputFormatTest - Read 'parquet/1_uncompressed_dict.par' as schema: [org.pentaho.hadoop.shim.common.format.parquet.ParquetInputField@6d4c611d, org.pentaho.hadoop.shim.common.format.parquet.ParquetInputField@7ce3092e, org.pentaho.hadoop.shim.common.format.parquet.ParquetInputField@1346d3ae, org.pentaho.hadoop.shim.common.format.parquet.ParquetInputField@4490b985, org.pentaho.hadoop.shim.common.format.parquet.ParquetInputField@5eba1893]
+2025/10/30 20:18:24 - org.pentaho.hadoop.shim.common.format.parquet.PentahoParquetInputFormatTest - Read 'parquet/2_uncompressed_nodict.par' as schema: [org.pentaho.hadoop.shim.common.format.parquet.ParquetInputField@1b42baf8]
+2025/10/30 20:18:24 - org.pentaho.hadoop.shim.common.format.parquet.PentahoParquetInputFormatTest - Read 'parquet/2_uncompressed_nodict.par' as schema: [org.pentaho.hadoop.shim.common.format.parquet.ParquetInputField@73bbf337]
+2025/10/30 20:18:25 - org.pentaho.hadoop.shim.common.format.parquet.PentahoParquetInputFormatTest - Read 'parquet/2_uncompressed_nodict.par' as schema: [org.pentaho.hadoop.shim.common.format.parquet.ParquetInputField@359f4427]
+2025/10/30 20:18:26 - org.pentaho.hadoop.shim.common.format.parquet.PentahoParquetInputFormatTest - Read 'parquet/2_uncompressed_nodict.par' as schema: [org.pentaho.hadoop.shim.common.format.parquet.ParquetInputField@10777bee]
+2025/10/30 20:18:27 - org.pentaho.hadoop.shim.common.format.parquet.PentahoParquetInputFormatTest - Read 'parquet/2_uncompressed_nodict.par' as schema: [org.pentaho.hadoop.shim.common.format.parquet.ParquetInputField@51dd6ef7]
+2025/10/30 20:18:28 - org.pentaho.hadoop.shim.common.format.parquet.PentahoParquetInputFormatTest - Read 'parquet/2_uncompressed_nodict.par' as schema: [org.pentaho.hadoop.shim.common.format.parquet.ParquetInputField@6395aed6]
+2025/10/30 20:18:29 - org.pentaho.hadoop.shim.common.format.parquet.PentahoParquetInputFormatTest - Read 'parquet/2_uncompressed_nodict.par' as schema: [org.pentaho.hadoop.shim.common.format.parquet.ParquetInputField@7ffce6ff]
+2025/10/30 20:18:30 - org.pentaho.hadoop.shim.common.format.parquet.PentahoParquetInputFormatTest - Read 'parquet/2_uncompressed_nodict.par' as schema: [org.pentaho.hadoop.shim.common.format.parquet.ParquetInputField@73bbf337, org.pentaho.hadoop.shim.common.format.parquet.ParquetInputField@1b42baf8, org.pentaho.hadoop.shim.common.format.parquet.ParquetInputField@51dd6ef7, org.pentaho.hadoop.shim.common.format.parquet.ParquetInputField@7ffce6ff]
+2025/10/30 20:18:31 - org.pentaho.hadoop.shim.common.format.parquet.PentahoParquetInputFormatTest - Read 'parquet/2_uncompressed_nodict.par' as schema: [org.pentaho.hadoop.shim.common.format.parquet.ParquetInputField@6395aed6, org.pentaho.hadoop.shim.common.format.parquet.ParquetInputField@73bbf337, org.pentaho.hadoop.shim.common.format.parquet.ParquetInputField@51dd6ef7, org.pentaho.hadoop.shim.common.format.parquet.ParquetInputField@7ffce6ff, org.pentaho.hadoop.shim.common.format.parquet.ParquetInputField@10777bee, org.pentaho.hadoop.shim.common.format.parquet.ParquetInputField@359f4427]
+2025/10/30 20:18:32 - org.pentaho.hadoop.shim.common.format.parquet.PentahoParquetInputFormatTest - Read 'parquet/2_uncompressed_nodict.par' as schema: [org.pentaho.hadoop.shim.common.format.parquet.ParquetInputField@359f4427, org.pentaho.hadoop.shim.common.format.parquet.ParquetInputField@10777bee, org.pentaho.hadoop.shim.common.format.parquet.ParquetInputField@6395aed6]
+2025/10/30 20:18:33 - org.pentaho.hadoop.shim.common.format.parquet.PentahoParquetInputFormatTest - Read 'parquet/2_uncompressed_nodict.par' as schema: [org.pentaho.hadoop.shim.common.format.parquet.ParquetInputField@73bbf337, org.pentaho.hadoop.shim.common.format.parquet.ParquetInputField@10777bee, org.pentaho.hadoop.shim.common.format.parquet.ParquetInputField@1b42baf8, org.pentaho.hadoop.shim.common.format.parquet.ParquetInputField@7ffce6ff]
+2025/10/30 20:18:34 - org.pentaho.hadoop.shim.common.format.parquet.PentahoParquetInputFormatTest - Read 'parquet/2_uncompressed_nodict.par' as schema: [org.pentaho.hadoop.shim.common.format.parquet.ParquetInputField@1b42baf8, org.pentaho.hadoop.shim.common.format.parquet.ParquetInputField@73bbf337, org.pentaho.hadoop.shim.common.format.parquet.ParquetInputField@359f4427, org.pentaho.hadoop.shim.common.format.parquet.ParquetInputField@51dd6ef7]
+2025/10/30 20:18:35 - org.pentaho.hadoop.shim.common.format.parquet.PentahoParquetInputFormatTest - Read 'parquet/2_gzip_nodict.par' as schema: [org.pentaho.hadoop.shim.common.format.parquet.ParquetInputField@4ac08f7c]
+2025/10/30 20:18:36 - org.pentaho.hadoop.shim.common.format.parquet.PentahoParquetInputFormatTest - Read 'parquet/2_gzip_nodict.par' as schema: [org.pentaho.hadoop.shim.common.format.parquet.ParquetInputField@3b308104]
+2025/10/30 20:18:36 - org.pentaho.hadoop.shim.common.format.parquet.PentahoParquetInputFormatTest - Read 'parquet/2_gzip_nodict.par' as schema: [org.pentaho.hadoop.shim.common.format.parquet.ParquetInputField@7b6a4052]
+2025/10/30 20:18:37 - org.pentaho.hadoop.shim.common.format.parquet.PentahoParquetInputFormatTest - Read 'parquet/2_gzip_nodict.par' as schema: [org.pentaho.hadoop.shim.common.format.parquet.ParquetInputField@4f7e7ef8]
+2025/10/30 20:18:38 - org.pentaho.hadoop.shim.common.format.parquet.PentahoParquetInputFormatTest - Read 'parquet/2_gzip_nodict.par' as schema: [org.pentaho.hadoop.shim.common.format.parquet.ParquetInputField@2effd300]
+2025/10/30 20:18:39 - org.pentaho.hadoop.shim.common.format.parquet.PentahoParquetInputFormatTest - Read 'parquet/2_gzip_nodict.par' as schema: [org.pentaho.hadoop.shim.common.format.parquet.ParquetInputField@1da91851]
+2025/10/30 20:18:39 - org.pentaho.hadoop.shim.common.format.parquet.PentahoParquetInputFormatTest - Read 'parquet/2_gzip_nodict.par' as schema: [org.pentaho.hadoop.shim.common.format.parquet.ParquetInputField@4220fef7]
+2025/10/30 20:18:40 - org.pentaho.hadoop.shim.common.format.parquet.PentahoParquetInputFormatTest - Read 'parquet/2_gzip_nodict.par' as schema: [org.pentaho.hadoop.shim.common.format.parquet.ParquetInputField@4f7e7ef8, org.pentaho.hadoop.shim.common.format.parquet.ParquetInputField@1da91851, org.pentaho.hadoop.shim.common.format.parquet.ParquetInputField@3b308104]
+2025/10/30 20:18:42 - org.pentaho.hadoop.shim.common.format.parquet.PentahoParquetInputFormatTest - Read 'parquet/2_gzip_nodict.par' as schema: [org.pentaho.hadoop.shim.common.format.parquet.ParquetInputField@1da91851, org.pentaho.hadoop.shim.common.format.parquet.ParquetInputField@3b308104, org.pentaho.hadoop.shim.common.format.parquet.ParquetInputField@2effd300, org.pentaho.hadoop.shim.common.format.parquet.ParquetInputField@4220fef7, org.pentaho.hadoop.shim.common.format.parquet.ParquetInputField@4ac08f7c]
+2025/10/30 20:18:42 - org.pentaho.hadoop.shim.common.format.parquet.PentahoParquetInputFormatTest - Read 'parquet/2_gzip_nodict.par' as schema: [org.pentaho.hadoop.shim.common.format.parquet.ParquetInputField@4220fef7, org.pentaho.hadoop.shim.common.format.parquet.ParquetInputField@2effd300, org.pentaho.hadoop.shim.common.format.parquet.ParquetInputField@7b6a4052, org.pentaho.hadoop.shim.common.format.parquet.ParquetInputField@1da91851]
+2025/10/30 20:18:43 - org.pentaho.hadoop.shim.common.format.parquet.PentahoParquetInputFormatTest - Read 'parquet/2_gzip_nodict.par' as schema: [org.pentaho.hadoop.shim.common.format.parquet.ParquetInputField@1da91851, org.pentaho.hadoop.shim.common.format.parquet.ParquetInputField@7b6a4052, org.pentaho.hadoop.shim.common.format.parquet.ParquetInputField@4ac08f7c, org.pentaho.hadoop.shim.common.format.parquet.ParquetInputField@2effd300, org.pentaho.hadoop.shim.common.format.parquet.ParquetInputField@3b308104]
+2025/10/30 20:18:43 - org.pentaho.hadoop.shim.common.format.parquet.PentahoParquetInputFormatTest - Read 'parquet/2_gzip_nodict.par' as schema: [org.pentaho.hadoop.shim.common.format.parquet.ParquetInputField@4f7e7ef8, org.pentaho.hadoop.shim.common.format.parquet.ParquetInputField@3b308104, org.pentaho.hadoop.shim.common.format.parquet.ParquetInputField@1da91851, org.pentaho.hadoop.shim.common.format.parquet.ParquetInputField@4ac08f7c, org.pentaho.hadoop.shim.common.format.parquet.ParquetInputField@7b6a4052]
+2025/10/30 20:18:44 - org.pentaho.hadoop.shim.common.format.parquet.PentahoParquetInputFormatTest - Read 'parquet/2_snappy_nodict.par' as schema: [org.pentaho.hadoop.shim.common.format.parquet.ParquetInputField@6f4dd65d]
+2025/10/30 20:18:46 - org.pentaho.hadoop.shim.common.format.parquet.PentahoParquetInputFormatTest - Read 'parquet/2_snappy_nodict.par' as schema: [org.pentaho.hadoop.shim.common.format.parquet.ParquetInputField@31c2f1e0]
+2025/10/30 20:18:47 - org.pentaho.hadoop.shim.common.format.parquet.PentahoParquetInputFormatTest - Read 'parquet/2_snappy_nodict.par' as schema: [org.pentaho.hadoop.shim.common.format.parquet.ParquetInputField@73270956]
+2025/10/30 20:18:47 - org.pentaho.hadoop.shim.common.format.parquet.PentahoParquetInputFormatTest - Read 'parquet/2_snappy_nodict.par' as schema: [org.pentaho.hadoop.shim.common.format.parquet.ParquetInputField@54878611]
+2025/10/30 20:18:49 - org.pentaho.hadoop.shim.common.format.parquet.PentahoParquetInputFormatTest - Read 'parquet/2_snappy_nodict.par' as schema: [org.pentaho.hadoop.shim.common.format.parquet.ParquetInputField@25b2d465]
+2025/10/30 20:18:50 - org.pentaho.hadoop.shim.common.format.parquet.PentahoParquetInputFormatTest - Read 'parquet/2_snappy_nodict.par' as schema: [org.pentaho.hadoop.shim.common.format.parquet.ParquetInputField@936c949]
+2025/10/30 20:18:51 - org.pentaho.hadoop.shim.common.format.parquet.PentahoParquetInputFormatTest - Read 'parquet/2_snappy_nodict.par' as schema: [org.pentaho.hadoop.shim.common.format.parquet.ParquetInputField@635f73e5]
+2025/10/30 20:18:51 - org.pentaho.hadoop.shim.common.format.parquet.PentahoParquetInputFormatTest - Read 'parquet/2_snappy_nodict.par' as schema: [org.pentaho.hadoop.shim.common.format.parquet.ParquetInputField@936c949, org.pentaho.hadoop.shim.common.format.parquet.ParquetInputField@31c2f1e0, org.pentaho.hadoop.shim.common.format.parquet.ParquetInputField@635f73e5, org.pentaho.hadoop.shim.common.format.parquet.ParquetInputField@25b2d465]
+2025/10/30 20:18:52 - org.pentaho.hadoop.shim.common.format.parquet.PentahoParquetInputFormatTest - Read 'parquet/2_snappy_nodict.par' as schema: [org.pentaho.hadoop.shim.common.format.parquet.ParquetInputField@73270956, org.pentaho.hadoop.shim.common.format.parquet.ParquetInputField@31c2f1e0, org.pentaho.hadoop.shim.common.format.parquet.ParquetInputField@54878611, org.pentaho.hadoop.shim.common.format.parquet.ParquetInputField@635f73e5]
+2025/10/30 20:18:53 - org.pentaho.hadoop.shim.common.format.parquet.PentahoParquetInputFormatTest - Read 'parquet/2_snappy_nodict.par' as schema: [org.pentaho.hadoop.shim.common.format.parquet.ParquetInputField@6f4dd65d, org.pentaho.hadoop.shim.common.format.parquet.ParquetInputField@73270956, org.pentaho.hadoop.shim.common.format.parquet.ParquetInputField@635f73e5, org.pentaho.hadoop.shim.common.format.parquet.ParquetInputField@54878611, org.pentaho.hadoop.shim.common.format.parquet.ParquetInputField@25b2d465]
+2025/10/30 20:18:54 - org.pentaho.hadoop.shim.common.format.parquet.PentahoParquetInputFormatTest - Read 'parquet/2_snappy_nodict.par' as schema: [org.pentaho.hadoop.shim.common.format.parquet.ParquetInputField@73270956, org.pentaho.hadoop.shim.common.format.parquet.ParquetInputField@635f73e5, org.pentaho.hadoop.shim.common.format.parquet.ParquetInputField@54878611, org.pentaho.hadoop.shim.common.format.parquet.ParquetInputField@6f4dd65d, org.pentaho.hadoop.shim.common.format.parquet.ParquetInputField@31c2f1e0]
+2025/10/30 20:18:55 - org.pentaho.hadoop.shim.common.format.parquet.PentahoParquetInputFormatTest - Read 'parquet/2_snappy_nodict.par' as schema: [org.pentaho.hadoop.shim.common.format.parquet.ParquetInputField@6f4dd65d, org.pentaho.hadoop.shim.common.format.parquet.ParquetInputField@936c949, org.pentaho.hadoop.shim.common.format.parquet.ParquetInputField@635f73e5, org.pentaho.hadoop.shim.common.format.parquet.ParquetInputField@54878611, org.pentaho.hadoop.shim.common.format.parquet.ParquetInputField@73270956]
+2025/10/30 20:18:55 - org.pentaho.hadoop.shim.common.format.parquet.PentahoParquetInputFormatTest - Read 'parquet/2_uncompressed_dict.par' as schema: [org.pentaho.hadoop.shim.common.format.parquet.ParquetInputField@7ad8c23d]
+2025/10/30 20:18:56 - org.pentaho.hadoop.shim.common.format.parquet.PentahoParquetInputFormatTest - Read 'parquet/2_uncompressed_dict.par' as schema: [org.pentaho.hadoop.shim.common.format.parquet.ParquetInputField@5ac87594]
+2025/10/30 20:18:57 - org.pentaho.hadoop.shim.common.format.parquet.PentahoParquetInputFormatTest - Read 'parquet/2_uncompressed_dict.par' as schema: [org.pentaho.hadoop.shim.common.format.parquet.ParquetInputField@522e238c]
+2025/10/30 20:18:58 - org.pentaho.hadoop.shim.common.format.parquet.PentahoParquetInputFormatTest - Read 'parquet/2_uncompressed_dict.par' as schema: [org.pentaho.hadoop.shim.common.format.parquet.ParquetInputField@79eaabdc]
+2025/10/30 20:18:59 - org.pentaho.hadoop.shim.common.format.parquet.PentahoParquetInputFormatTest - Read 'parquet/2_uncompressed_dict.par' as schema: [org.pentaho.hadoop.shim.common.format.parquet.ParquetInputField@2b15284d]
+2025/10/30 20:18:59 - org.pentaho.hadoop.shim.common.format.parquet.PentahoParquetInputFormatTest - Read 'parquet/2_uncompressed_dict.par' as schema: [org.pentaho.hadoop.shim.common.format.parquet.ParquetInputField@d8c2de8]
+2025/10/30 20:19:00 - org.pentaho.hadoop.shim.common.format.parquet.PentahoParquetInputFormatTest - Read 'parquet/2_uncompressed_dict.par' as schema: [org.pentaho.hadoop.shim.common.format.parquet.ParquetInputField@5e57748b]
+2025/10/30 20:19:01 - org.pentaho.hadoop.shim.common.format.parquet.PentahoParquetInputFormatTest - Read 'parquet/2_uncompressed_dict.par' as schema: [org.pentaho.hadoop.shim.common.format.parquet.ParquetInputField@522e238c, org.pentaho.hadoop.shim.common.format.parquet.ParquetInputField@2b15284d, org.pentaho.hadoop.shim.common.format.parquet.ParquetInputField@5ac87594, org.pentaho.hadoop.shim.common.format.parquet.ParquetInputField@d8c2de8, org.pentaho.hadoop.shim.common.format.parquet.ParquetInputField@5e57748b]
+2025/10/30 20:19:01 - org.pentaho.hadoop.shim.common.format.parquet.PentahoParquetInputFormatTest - Read 'parquet/2_uncompressed_dict.par' as schema: [org.pentaho.hadoop.shim.common.format.parquet.ParquetInputField@522e238c, org.pentaho.hadoop.shim.common.format.parquet.ParquetInputField@d8c2de8, org.pentaho.hadoop.shim.common.format.parquet.ParquetInputField@5ac87594, org.pentaho.hadoop.shim.common.format.parquet.ParquetInputField@7ad8c23d, org.pentaho.hadoop.shim.common.format.parquet.ParquetInputField@2b15284d]
+2025/10/30 20:19:02 - org.pentaho.hadoop.shim.common.format.parquet.PentahoParquetInputFormatTest - Read 'parquet/2_uncompressed_dict.par' as schema: [org.pentaho.hadoop.shim.common.format.parquet.ParquetInputField@79eaabdc, org.pentaho.hadoop.shim.common.format.parquet.ParquetInputField@d8c2de8, org.pentaho.hadoop.shim.common.format.parquet.ParquetInputField@5ac87594, org.pentaho.hadoop.shim.common.format.parquet.ParquetInputField@7ad8c23d]
+2025/10/30 20:19:03 - org.pentaho.hadoop.shim.common.format.parquet.PentahoParquetInputFormatTest - Read 'parquet/2_uncompressed_dict.par' as schema: [org.pentaho.hadoop.shim.common.format.parquet.ParquetInputField@d8c2de8, org.pentaho.hadoop.shim.common.format.parquet.ParquetInputField@7ad8c23d, org.pentaho.hadoop.shim.common.format.parquet.ParquetInputField@5e57748b, org.pentaho.hadoop.shim.common.format.parquet.ParquetInputField@5ac87594, org.pentaho.hadoop.shim.common.format.parquet.ParquetInputField@2b15284d]
+2025/10/30 20:19:04 - org.pentaho.hadoop.shim.common.format.parquet.PentahoParquetInputFormatTest - Read 'parquet/2_uncompressed_dict.par' as schema: [org.pentaho.hadoop.shim.common.format.parquet.ParquetInputField@7ad8c23d, org.pentaho.hadoop.shim.common.format.parquet.ParquetInputField@5ac87594, org.pentaho.hadoop.shim.common.format.parquet.ParquetInputField@2b15284d]
+2025/10/30 20:19:05 - org.pentaho.hadoop.shim.common.format.parquet.PentahoParquetInputFormatTest - Read 'parquet/1_spark.par' as schema: [org.pentaho.hadoop.shim.common.format.parquet.ParquetInputField@76e87fa0]
+2025/10/30 20:19:06 - org.pentaho.hadoop.shim.common.format.parquet.PentahoParquetInputFormatTest - Read 'parquet/1_spark.par' as schema: [org.pentaho.hadoop.shim.common.format.parquet.ParquetInputField@4550e457]
+2025/10/30 20:19:07 - org.pentaho.hadoop.shim.common.format.parquet.PentahoParquetInputFormatTest - Read 'parquet/1_spark.par' as schema: [org.pentaho.hadoop.shim.common.format.parquet.ParquetInputField@5e02ed6a]
+2025/10/30 20:19:07 - org.pentaho.hadoop.shim.common.format.parquet.PentahoParquetInputFormatTest - Read 'parquet/1_spark.par' as schema: [org.pentaho.hadoop.shim.common.format.parquet.ParquetInputField@68f58a55]
+2025/10/30 20:19:08 - org.pentaho.hadoop.shim.common.format.parquet.PentahoParquetInputFormatTest - Read 'parquet/1_spark.par' as schema: [org.pentaho.hadoop.shim.common.format.parquet.ParquetInputField@26a9a09a]
+2025/10/30 20:19:09 - org.pentaho.hadoop.shim.common.format.parquet.PentahoParquetInputFormatTest - Read 'parquet/1_spark.par' as schema: [org.pentaho.hadoop.shim.common.format.parquet.ParquetInputField@26d596b9]
+2025/10/30 20:19:09 - org.pentaho.hadoop.shim.common.format.parquet.PentahoParquetInputFormatTest - Read 'parquet/1_spark.par' as schema: [org.pentaho.hadoop.shim.common.format.parquet.ParquetInputField@1af2f794]
+2025/10/30 20:19:10 - org.pentaho.hadoop.shim.common.format.parquet.PentahoParquetInputFormatTest - Read 'parquet/1_spark.par' as schema: [org.pentaho.hadoop.shim.common.format.parquet.ParquetInputField@5e02ed6a, org.pentaho.hadoop.shim.common.format.parquet.ParquetInputField@26d596b9, org.pentaho.hadoop.shim.common.format.parquet.ParquetInputField@26a9a09a]
+2025/10/30 20:19:11 - org.pentaho.hadoop.shim.common.format.parquet.PentahoParquetInputFormatTest - Read 'parquet/1_spark.par' as schema: [org.pentaho.hadoop.shim.common.format.parquet.ParquetInputField@5e02ed6a, org.pentaho.hadoop.shim.common.format.parquet.ParquetInputField@76e87fa0, org.pentaho.hadoop.shim.common.format.parquet.ParquetInputField@26a9a09a, org.pentaho.hadoop.shim.common.format.parquet.ParquetInputField@1af2f794]
+2025/10/30 20:19:11 - org.pentaho.hadoop.shim.common.format.parquet.PentahoParquetInputFormatTest - Read 'parquet/1_spark.par' as schema: [org.pentaho.hadoop.shim.common.format.parquet.ParquetInputField@1af2f794, org.pentaho.hadoop.shim.common.format.parquet.ParquetInputField@4550e457, org.pentaho.hadoop.shim.common.format.parquet.ParquetInputField@68f58a55, org.pentaho.hadoop.shim.common.format.parquet.ParquetInputField@5e02ed6a, org.pentaho.hadoop.shim.common.format.parquet.ParquetInputField@76e87fa0]
+2025/10/30 20:19:12 - org.pentaho.hadoop.shim.common.format.parquet.PentahoParquetInputFormatTest - Read 'parquet/1_spark.par' as schema: [org.pentaho.hadoop.shim.common.format.parquet.ParquetInputField@5e02ed6a, org.pentaho.hadoop.shim.common.format.parquet.ParquetInputField@26a9a09a, org.pentaho.hadoop.shim.common.format.parquet.ParquetInputField@4550e457, org.pentaho.hadoop.shim.common.format.parquet.ParquetInputField@1af2f794]
+2025/10/30 20:19:13 - org.pentaho.hadoop.shim.common.format.parquet.PentahoParquetInputFormatTest - Read 'parquet/1_spark.par' as schema: [org.pentaho.hadoop.shim.common.format.parquet.ParquetInputField@1af2f794, org.pentaho.hadoop.shim.common.format.parquet.ParquetInputField@26d596b9, org.pentaho.hadoop.shim.common.format.parquet.ParquetInputField@4550e457, org.pentaho.hadoop.shim.common.format.parquet.ParquetInputField@5e02ed6a]
+2025/10/30 20:19:13 - General - We are initializing parquet input format
+2025/10/30 20:19:14 - General - We are initializing parquet input format
+2025/10/30 20:19:14 - org.pentaho.hadoop.shim.common.format.parquet.PentahoParquetInputFormatTest - Read 'parquet/1_uncompressed_nodict.par' as schema: [org.pentaho.hadoop.shim.common.format.parquet.ParquetInputField@65209097]
+2025/10/30 20:19:14 - org.pentaho.hadoop.shim.common.format.parquet.PentahoParquetInputFormatTest - Read 'parquet/1_uncompressed_nodict.par' as schema: [org.pentaho.hadoop.shim.common.format.parquet.ParquetInputField@4c68fd4f]
+2025/10/30 20:19:15 - org.pentaho.hadoop.shim.common.format.parquet.PentahoParquetInputFormatTest - Read 'parquet/1_uncompressed_nodict.par' as schema: [org.pentaho.hadoop.shim.common.format.parquet.ParquetInputField@76acd3f3]
+2025/10/30 20:19:15 - org.pentaho.hadoop.shim.common.format.parquet.PentahoParquetInputFormatTest - Read 'parquet/1_uncompressed_nodict.par' as schema: [org.pentaho.hadoop.shim.common.format.parquet.ParquetInputField@15446137]
+2025/10/30 20:19:17 - org.pentaho.hadoop.shim.common.format.parquet.PentahoParquetInputFormatTest - Read 'parquet/1_uncompressed_nodict.par' as schema: [org.pentaho.hadoop.shim.common.format.parquet.ParquetInputField@7e75dd3a]
+2025/10/30 20:19:18 - org.pentaho.hadoop.shim.common.format.parquet.PentahoParquetInputFormatTest - Read 'parquet/1_uncompressed_nodict.par' as schema: [org.pentaho.hadoop.shim.common.format.parquet.ParquetInputField@201d5a30]
+2025/10/30 20:19:19 - org.pentaho.hadoop.shim.common.format.parquet.PentahoParquetInputFormatTest - Read 'parquet/1_uncompressed_nodict.par' as schema: [org.pentaho.hadoop.shim.common.format.parquet.ParquetInputField@75d1477a]
+2025/10/30 20:19:20 - org.pentaho.hadoop.shim.common.format.parquet.PentahoParquetInputFormatTest - Read 'parquet/1_uncompressed_nodict.par' as schema: [org.pentaho.hadoop.shim.common.format.parquet.ParquetInputField@76acd3f3, org.pentaho.hadoop.shim.common.format.parquet.ParquetInputField@75d1477a, org.pentaho.hadoop.shim.common.format.parquet.ParquetInputField@7e75dd3a, org.pentaho.hadoop.shim.common.format.parquet.ParquetInputField@15446137]
+2025/10/30 20:19:20 - org.pentaho.hadoop.shim.common.format.parquet.PentahoParquetInputFormatTest - Read 'parquet/1_uncompressed_nodict.par' as schema: [org.pentaho.hadoop.shim.common.format.parquet.ParquetInputField@65209097, org.pentaho.hadoop.shim.common.format.parquet.ParquetInputField@75d1477a, org.pentaho.hadoop.shim.common.format.parquet.ParquetInputField@15446137, org.pentaho.hadoop.shim.common.format.parquet.ParquetInputField@7e75dd3a, org.pentaho.hadoop.shim.common.format.parquet.ParquetInputField@4c68fd4f]
+2025/10/30 20:19:21 - org.pentaho.hadoop.shim.common.format.parquet.PentahoParquetInputFormatTest - Read 'parquet/1_uncompressed_nodict.par' as schema: [org.pentaho.hadoop.shim.common.format.parquet.ParquetInputField@15446137, org.pentaho.hadoop.shim.common.format.parquet.ParquetInputField@75d1477a, org.pentaho.hadoop.shim.common.format.parquet.ParquetInputField@7e75dd3a, org.pentaho.hadoop.shim.common.format.parquet.ParquetInputField@76acd3f3, org.pentaho.hadoop.shim.common.format.parquet.ParquetInputField@4c68fd4f]
+2025/10/30 20:19:22 - org.pentaho.hadoop.shim.common.format.parquet.PentahoParquetInputFormatTest - Read 'parquet/1_uncompressed_nodict.par' as schema: [org.pentaho.hadoop.shim.common.format.parquet.ParquetInputField@201d5a30, org.pentaho.hadoop.shim.common.format.parquet.ParquetInputField@75d1477a, org.pentaho.hadoop.shim.common.format.parquet.ParquetInputField@4c68fd4f, org.pentaho.hadoop.shim.common.format.parquet.ParquetInputField@65209097, org.pentaho.hadoop.shim.common.format.parquet.ParquetInputField@7e75dd3a]
+2025/10/30 20:19:23 - org.pentaho.hadoop.shim.common.format.parquet.PentahoParquetInputFormatTest - Read 'parquet/1_uncompressed_nodict.par' as schema: [org.pentaho.hadoop.shim.common.format.parquet.ParquetInputField@75d1477a, org.pentaho.hadoop.shim.common.format.parquet.ParquetInputField@15446137, org.pentaho.hadoop.shim.common.format.parquet.ParquetInputField@65209097, org.pentaho.hadoop.shim.common.format.parquet.ParquetInputField@4c68fd4f]
+2025/10/30 20:19:24 - org.pentaho.hadoop.shim.common.format.parquet.PentahoParquetInputFormatTest - Read 'parquet/1_gzip_nodict.par' as schema: [org.pentaho.hadoop.shim.common.format.parquet.ParquetInputField@162e7803]
+2025/10/30 20:19:26 - org.pentaho.hadoop.shim.common.format.parquet.PentahoParquetInputFormatTest - Read 'parquet/1_gzip_nodict.par' as schema: [org.pentaho.hadoop.shim.common.format.parquet.ParquetInputField@2065346c]
+2025/10/30 20:19:27 - org.pentaho.hadoop.shim.common.format.parquet.PentahoParquetInputFormatTest - Read 'parquet/1_gzip_nodict.par' as schema: [org.pentaho.hadoop.shim.common.format.parquet.ParquetInputField@5747831d]
+2025/10/30 20:19:28 - org.pentaho.hadoop.shim.common.format.parquet.PentahoParquetInputFormatTest - Read 'parquet/1_gzip_nodict.par' as schema: [org.pentaho.hadoop.shim.common.format.parquet.ParquetInputField@35dfd7f4]
+2025/10/30 20:19:28 - org.pentaho.hadoop.shim.common.format.parquet.PentahoParquetInputFormatTest - Read 'parquet/1_gzip_nodict.par' as schema: [org.pentaho.hadoop.shim.common.format.parquet.ParquetInputField@3c591552]
+2025/10/30 20:19:29 - org.pentaho.hadoop.shim.common.format.parquet.PentahoParquetInputFormatTest - Read 'parquet/1_gzip_nodict.par' as schema: [org.pentaho.hadoop.shim.common.format.parquet.ParquetInputField@1473b8e3]
+2025/10/30 20:19:30 - org.pentaho.hadoop.shim.common.format.parquet.PentahoParquetInputFormatTest - Read 'parquet/1_gzip_nodict.par' as schema: [org.pentaho.hadoop.shim.common.format.parquet.ParquetInputField@2bd2edaf]
+2025/10/30 20:19:31 - org.pentaho.hadoop.shim.common.format.parquet.PentahoParquetInputFormatTest - Read 'parquet/1_gzip_nodict.par' as schema: [org.pentaho.hadoop.shim.common.format.parquet.ParquetInputField@35dfd7f4, org.pentaho.hadoop.shim.common.format.parquet.ParquetInputField@2bd2edaf, org.pentaho.hadoop.shim.common.format.parquet.ParquetInputField@1473b8e3, org.pentaho.hadoop.shim.common.format.parquet.ParquetInputField@3c591552, org.pentaho.hadoop.shim.common.format.parquet.ParquetInputField@5747831d]
+2025/10/30 20:19:32 - org.pentaho.hadoop.shim.common.format.parquet.PentahoParquetInputFormatTest - Read 'parquet/1_gzip_nodict.par' as schema: [org.pentaho.hadoop.shim.common.format.parquet.ParquetInputField@3c591552, org.pentaho.hadoop.shim.common.format.parquet.ParquetInputField@5747831d, org.pentaho.hadoop.shim.common.format.parquet.ParquetInputField@35dfd7f4, org.pentaho.hadoop.shim.common.format.parquet.ParquetInputField@162e7803, org.pentaho.hadoop.shim.common.format.parquet.ParquetInputField@2065346c]
+2025/10/30 20:19:33 - org.pentaho.hadoop.shim.common.format.parquet.PentahoParquetInputFormatTest - Read 'parquet/1_gzip_nodict.par' as schema: [org.pentaho.hadoop.shim.common.format.parquet.ParquetInputField@1473b8e3, org.pentaho.hadoop.shim.common.format.parquet.ParquetInputField@2065346c, org.pentaho.hadoop.shim.common.format.parquet.ParquetInputField@5747831d, org.pentaho.hadoop.shim.common.format.parquet.ParquetInputField@35dfd7f4, org.pentaho.hadoop.shim.common.format.parquet.ParquetInputField@3c591552, org.pentaho.hadoop.shim.common.format.parquet.ParquetInputField@162e7803]
+2025/10/30 20:19:34 - org.pentaho.hadoop.shim.common.format.parquet.PentahoParquetInputFormatTest - Read 'parquet/1_gzip_nodict.par' as schema: [org.pentaho.hadoop.shim.common.format.parquet.ParquetInputField@162e7803, org.pentaho.hadoop.shim.common.format.parquet.ParquetInputField@2065346c, org.pentaho.hadoop.shim.common.format.parquet.ParquetInputField@2bd2edaf, org.pentaho.hadoop.shim.common.format.parquet.ParquetInputField@5747831d, org.pentaho.hadoop.shim.common.format.parquet.ParquetInputField@3c591552]
+2025/10/30 20:19:34 - org.pentaho.hadoop.shim.common.format.parquet.PentahoParquetInputFormatTest - Read 'parquet/1_gzip_nodict.par' as schema: [org.pentaho.hadoop.shim.common.format.parquet.ParquetInputField@162e7803, org.pentaho.hadoop.shim.common.format.parquet.ParquetInputField@5747831d, org.pentaho.hadoop.shim.common.format.parquet.ParquetInputField@35dfd7f4, org.pentaho.hadoop.shim.common.format.parquet.ParquetInputField@3c591552, org.pentaho.hadoop.shim.common.format.parquet.ParquetInputField@2065346c]
+2025/10/30 20:19:35 - org.pentaho.hadoop.shim.common.format.parquet.PentahoParquetInputFormatTest - Read 'parquet/1_snappy_nodict.par' as schema: [org.pentaho.hadoop.shim.common.format.parquet.ParquetInputField@56563440]
+2025/10/30 20:19:36 - org.pentaho.hadoop.shim.common.format.parquet.PentahoParquetInputFormatTest - Read 'parquet/1_snappy_nodict.par' as schema: [org.pentaho.hadoop.shim.common.format.parquet.ParquetInputField@278f591a]
+2025/10/30 20:19:36 - org.pentaho.hadoop.shim.common.format.parquet.PentahoParquetInputFormatTest - Read 'parquet/1_snappy_nodict.par' as schema: [org.pentaho.hadoop.shim.common.format.parquet.ParquetInputField@775c1043]
+2025/10/30 20:19:37 - org.pentaho.hadoop.shim.common.format.parquet.PentahoParquetInputFormatTest - Read 'parquet/1_snappy_nodict.par' as schema: [org.pentaho.hadoop.shim.common.format.parquet.ParquetInputField@219981e0]
+2025/10/30 20:19:38 - org.pentaho.hadoop.shim.common.format.parquet.PentahoParquetInputFormatTest - Read 'parquet/1_snappy_nodict.par' as schema: [org.pentaho.hadoop.shim.common.format.parquet.ParquetInputField@439e67cf]
+2025/10/30 20:19:38 - org.pentaho.hadoop.shim.common.format.parquet.PentahoParquetInputFormatTest - Read 'parquet/1_snappy_nodict.par' as schema: [org.pentaho.hadoop.shim.common.format.parquet.ParquetInputField@8222183]
+2025/10/30 20:19:39 - org.pentaho.hadoop.shim.common.format.parquet.PentahoParquetInputFormatTest - Read 'parquet/1_snappy_nodict.par' as schema: [org.pentaho.hadoop.shim.common.format.parquet.ParquetInputField@79eb7803]
+2025/10/30 20:19:39 - org.pentaho.hadoop.shim.common.format.parquet.PentahoParquetInputFormatTest - Read 'parquet/1_snappy_nodict.par' as schema: [org.pentaho.hadoop.shim.common.format.parquet.ParquetInputField@8222183, org.pentaho.hadoop.shim.common.format.parquet.ParquetInputField@219981e0, org.pentaho.hadoop.shim.common.format.parquet.ParquetInputField@775c1043, org.pentaho.hadoop.shim.common.format.parquet.ParquetInputField@439e67cf, org.pentaho.hadoop.shim.common.format.parquet.ParquetInputField@79eb7803]
+2025/10/30 20:19:40 - org.pentaho.hadoop.shim.common.format.parquet.PentahoParquetInputFormatTest - Read 'parquet/1_snappy_nodict.par' as schema: [org.pentaho.hadoop.shim.common.format.parquet.ParquetInputField@439e67cf, org.pentaho.hadoop.shim.common.format.parquet.ParquetInputField@8222183, org.pentaho.hadoop.shim.common.format.parquet.ParquetInputField@775c1043, org.pentaho.hadoop.shim.common.format.parquet.ParquetInputField@219981e0, org.pentaho.hadoop.shim.common.format.parquet.ParquetInputField@56563440]
+2025/10/30 20:19:41 - org.pentaho.hadoop.shim.common.format.parquet.PentahoParquetInputFormatTest - Read 'parquet/1_snappy_nodict.par' as schema: [org.pentaho.hadoop.shim.common.format.parquet.ParquetInputField@775c1043, org.pentaho.hadoop.shim.common.format.parquet.ParquetInputField@439e67cf, org.pentaho.hadoop.shim.common.format.parquet.ParquetInputField@8222183, org.pentaho.hadoop.shim.common.format.parquet.ParquetInputField@79eb7803, org.pentaho.hadoop.shim.common.format.parquet.ParquetInputField@219981e0, org.pentaho.hadoop.shim.common.format.parquet.ParquetInputField@56563440]
+2025/10/30 20:19:42 - org.pentaho.hadoop.shim.common.format.parquet.PentahoParquetInputFormatTest - Read 'parquet/1_snappy_nodict.par' as schema: [org.pentaho.hadoop.shim.common.format.parquet.ParquetInputField@8222183, org.pentaho.hadoop.shim.common.format.parquet.ParquetInputField@79eb7803, org.pentaho.hadoop.shim.common.format.parquet.ParquetInputField@56563440, org.pentaho.hadoop.shim.common.format.parquet.ParquetInputField@439e67cf, org.pentaho.hadoop.shim.common.format.parquet.ParquetInputField@775c1043, org.pentaho.hadoop.shim.common.format.parquet.ParquetInputField@219981e0]
+2025/10/30 20:19:42 - org.pentaho.hadoop.shim.common.format.parquet.PentahoParquetInputFormatTest - Read 'parquet/1_snappy_nodict.par' as schema: [org.pentaho.hadoop.shim.common.format.parquet.ParquetInputField@775c1043, org.pentaho.hadoop.shim.common.format.parquet.ParquetInputField@439e67cf, org.pentaho.hadoop.shim.common.format.parquet.ParquetInputField@8222183, org.pentaho.hadoop.shim.common.format.parquet.ParquetInputField@79eb7803, org.pentaho.hadoop.shim.common.format.parquet.ParquetInputField@278f591a, org.pentaho.hadoop.shim.common.format.parquet.ParquetInputField@56563440]
+2025/10/30 20:19:43 - org.pentaho.hadoop.shim.common.format.parquet.PentahoParquetInputFormatTest - Read 'parquet/1_uncompressed_dict.par' as schema: [org.pentaho.hadoop.shim.common.format.parquet.ParquetInputField@11cb863b]
+2025/10/30 20:19:43 - org.pentaho.hadoop.shim.common.format.parquet.PentahoParquetInputFormatTest - Read 'parquet/1_uncompressed_dict.par' as schema: [org.pentaho.hadoop.shim.common.format.parquet.ParquetInputField@70176150]
+2025/10/30 20:19:44 - org.pentaho.hadoop.shim.common.format.parquet.PentahoParquetInputFormatTest - Read 'parquet/1_uncompressed_dict.par' as schema: [org.pentaho.hadoop.shim.common.format.parquet.ParquetInputField@638a98d7]
+2025/10/30 20:19:45 - org.pentaho.hadoop.shim.common.format.parquet.PentahoParquetInputFormatTest - Read 'parquet/1_uncompressed_dict.par' as schema: [org.pentaho.hadoop.shim.common.format.parquet.ParquetInputField@d304447]
+2025/10/30 20:19:46 - org.pentaho.hadoop.shim.common.format.parquet.PentahoParquetInputFormatTest - Read 'parquet/1_uncompressed_dict.par' as schema: [org.pentaho.hadoop.shim.common.format.parquet.ParquetInputField@7a5dff85]
+2025/10/30 20:19:47 - org.pentaho.hadoop.shim.common.format.parquet.PentahoParquetInputFormatTest - Read 'parquet/1_uncompressed_dict.par' as schema: [org.pentaho.hadoop.shim.common.format.parquet.ParquetInputField@52c15901]
+2025/10/30 20:19:47 - org.pentaho.hadoop.shim.common.format.parquet.PentahoParquetInputFormatTest - Read 'parquet/1_uncompressed_dict.par' as schema: [org.pentaho.hadoop.shim.common.format.parquet.ParquetInputField@4090f46c]
+2025/10/30 20:19:49 - org.pentaho.hadoop.shim.common.format.parquet.PentahoParquetInputFormatTest - Read 'parquet/1_uncompressed_dict.par' as schema: [org.pentaho.hadoop.shim.common.format.parquet.ParquetInputField@11cb863b, org.pentaho.hadoop.shim.common.format.parquet.ParquetInputField@70176150, org.pentaho.hadoop.shim.common.format.parquet.ParquetInputField@d304447, org.pentaho.hadoop.shim.common.format.parquet.ParquetInputField@4090f46c, org.pentaho.hadoop.shim.common.format.parquet.ParquetInputField@638a98d7]
+2025/10/30 20:19:50 - org.pentaho.hadoop.shim.common.format.parquet.PentahoParquetInputFormatTest - Read 'parquet/1_uncompressed_dict.par' as schema: [org.pentaho.hadoop.shim.common.format.parquet.ParquetInputField@70176150, org.pentaho.hadoop.shim.common.format.parquet.ParquetInputField@7a5dff85, org.pentaho.hadoop.shim.common.format.parquet.ParquetInputField@4090f46c, org.pentaho.hadoop.shim.common.format.parquet.ParquetInputField@11cb863b]
+2025/10/30 20:19:51 - org.pentaho.hadoop.shim.common.format.parquet.PentahoParquetInputFormatTest - Read 'parquet/1_uncompressed_dict.par' as schema: [org.pentaho.hadoop.shim.common.format.parquet.ParquetInputField@11cb863b, org.pentaho.hadoop.shim.common.format.parquet.ParquetInputField@70176150, org.pentaho.hadoop.shim.common.format.parquet.ParquetInputField@d304447, org.pentaho.hadoop.shim.common.format.parquet.ParquetInputField@52c15901]
+2025/10/30 20:19:52 - org.pentaho.hadoop.shim.common.format.parquet.PentahoParquetInputFormatTest - Read 'parquet/1_uncompressed_dict.par' as schema: [org.pentaho.hadoop.shim.common.format.parquet.ParquetInputField@70176150, org.pentaho.hadoop.shim.common.format.parquet.ParquetInputField@7a5dff85, org.pentaho.hadoop.shim.common.format.parquet.ParquetInputField@52c15901, org.pentaho.hadoop.shim.common.format.parquet.ParquetInputField@d304447, org.pentaho.hadoop.shim.common.format.parquet.ParquetInputField@4090f46c]
+2025/10/30 20:19:52 - org.pentaho.hadoop.shim.common.format.parquet.PentahoParquetInputFormatTest - Read 'parquet/1_uncompressed_dict.par' as schema: [org.pentaho.hadoop.shim.common.format.parquet.ParquetInputField@638a98d7, org.pentaho.hadoop.shim.common.format.parquet.ParquetInputField@7a5dff85, org.pentaho.hadoop.shim.common.format.parquet.ParquetInputField@70176150, org.pentaho.hadoop.shim.common.format.parquet.ParquetInputField@11cb863b, org.pentaho.hadoop.shim.common.format.parquet.ParquetInputField@52c15901, org.pentaho.hadoop.shim.common.format.parquet.ParquetInputField@4090f46c]
+2025/10/30 20:19:53 - org.pentaho.hadoop.shim.common.format.parquet.PentahoParquetInputFormatTest - Read 'parquet/2_uncompressed_nodict.par' as schema: [org.pentaho.hadoop.shim.common.format.parquet.ParquetInputField@5d8ffe07]
+2025/10/30 20:19:54 - org.pentaho.hadoop.shim.common.format.parquet.PentahoParquetInputFormatTest - Read 'parquet/2_uncompressed_nodict.par' as schema: [org.pentaho.hadoop.shim.common.format.parquet.ParquetInputField@301576db]
+2025/10/30 20:19:56 - org.pentaho.hadoop.shim.common.format.parquet.PentahoParquetInputFormatTest - Read 'parquet/2_uncompressed_nodict.par' as schema: [org.pentaho.hadoop.shim.common.format.parquet.ParquetInputField@2d2689dc]
+2025/10/30 20:19:57 - org.pentaho.hadoop.shim.common.format.parquet.PentahoParquetInputFormatTest - Read 'parquet/2_uncompressed_nodict.par' as schema: [org.pentaho.hadoop.shim.common.format.parquet.ParquetInputField@347d91af]
+2025/10/30 20:19:58 - org.pentaho.hadoop.shim.common.format.parquet.PentahoParquetInputFormatTest - Read 'parquet/2_uncompressed_nodict.par' as schema: [org.pentaho.hadoop.shim.common.format.parquet.ParquetInputField@57b6b828]
+2025/10/30 20:19:58 - org.pentaho.hadoop.shim.common.format.parquet.PentahoParquetInputFormatTest - Read 'parquet/2_uncompressed_nodict.par' as schema: [org.pentaho.hadoop.shim.common.format.parquet.ParquetInputField@4756971e]
+2025/10/30 20:19:59 - org.pentaho.hadoop.shim.common.format.parquet.PentahoParquetInputFormatTest - Read 'parquet/2_uncompressed_nodict.par' as schema: [org.pentaho.hadoop.shim.common.format.parquet.ParquetInputField@78fb43aa]
+2025/10/30 20:20:00 - org.pentaho.hadoop.shim.common.format.parquet.PentahoParquetInputFormatTest - Read 'parquet/2_uncompressed_nodict.par' as schema: [org.pentaho.hadoop.shim.common.format.parquet.ParquetInputField@347d91af, org.pentaho.hadoop.shim.common.format.parquet.ParquetInputField@4756971e, org.pentaho.hadoop.shim.common.format.parquet.ParquetInputField@301576db, org.pentaho.hadoop.shim.common.format.parquet.ParquetInputField@2d2689dc]
+2025/10/30 20:20:00 - org.pentaho.hadoop.shim.common.format.parquet.PentahoParquetInputFormatTest - Read 'parquet/2_uncompressed_nodict.par' as schema: [org.pentaho.hadoop.shim.common.format.parquet.ParquetInputField@57b6b828, org.pentaho.hadoop.shim.common.format.parquet.ParquetInputField@5d8ffe07, org.pentaho.hadoop.shim.common.format.parquet.ParquetInputField@2d2689dc, org.pentaho.hadoop.shim.common.format.parquet.ParquetInputField@301576db]
+2025/10/30 20:20:02 - org.pentaho.hadoop.shim.common.format.parquet.PentahoParquetInputFormatTest - Read 'parquet/2_uncompressed_nodict.par' as schema: [org.pentaho.hadoop.shim.common.format.parquet.ParquetInputField@347d91af, org.pentaho.hadoop.shim.common.format.parquet.ParquetInputField@5d8ffe07, org.pentaho.hadoop.shim.common.format.parquet.ParquetInputField@2d2689dc]
+2025/10/30 20:20:03 - org.pentaho.hadoop.shim.common.format.parquet.PentahoParquetInputFormatTest - Read 'parquet/2_uncompressed_nodict.par' as schema: [org.pentaho.hadoop.shim.common.format.parquet.ParquetInputField@301576db, org.pentaho.hadoop.shim.common.format.parquet.ParquetInputField@4756971e, org.pentaho.hadoop.shim.common.format.parquet.ParquetInputField@2d2689dc, org.pentaho.hadoop.shim.common.format.parquet.ParquetInputField@57b6b828]
+2025/10/30 20:20:04 - org.pentaho.hadoop.shim.common.format.parquet.PentahoParquetInputFormatTest - Read 'parquet/2_uncompressed_nodict.par' as schema: [org.pentaho.hadoop.shim.common.format.parquet.ParquetInputField@78fb43aa, org.pentaho.hadoop.shim.common.format.parquet.ParquetInputField@4756971e, org.pentaho.hadoop.shim.common.format.parquet.ParquetInputField@347d91af, org.pentaho.hadoop.shim.common.format.parquet.ParquetInputField@2d2689dc]
+2025/10/30 20:20:04 - org.pentaho.hadoop.shim.common.format.parquet.PentahoParquetInputFormatTest - Read 'parquet/2_gzip_nodict.par' as schema: [org.pentaho.hadoop.shim.common.format.parquet.ParquetInputField@6a280ef2]
+2025/10/30 20:20:05 - org.pentaho.hadoop.shim.common.format.parquet.PentahoParquetInputFormatTest - Read 'parquet/2_gzip_nodict.par' as schema: [org.pentaho.hadoop.shim.common.format.parquet.ParquetInputField@e5a570]
+2025/10/30 20:20:06 - org.pentaho.hadoop.shim.common.format.parquet.PentahoParquetInputFormatTest - Read 'parquet/2_gzip_nodict.par' as schema: [org.pentaho.hadoop.shim.common.format.parquet.ParquetInputField@12cad0bf]
+2025/10/30 20:20:07 - org.pentaho.hadoop.shim.common.format.parquet.PentahoParquetInputFormatTest - Read 'parquet/2_gzip_nodict.par' as schema: [org.pentaho.hadoop.shim.common.format.parquet.ParquetInputField@5953cdd5]
+2025/10/30 20:20:07 - org.pentaho.hadoop.shim.common.format.parquet.PentahoParquetInputFormatTest - Read 'parquet/2_gzip_nodict.par' as schema: [org.pentaho.hadoop.shim.common.format.parquet.ParquetInputField@2b102cdf]
+2025/10/30 20:20:08 - org.pentaho.hadoop.shim.common.format.parquet.PentahoParquetInputFormatTest - Read 'parquet/2_gzip_nodict.par' as schema: [org.pentaho.hadoop.shim.common.format.parquet.ParquetInputField@585b81c1]
+2025/10/30 20:20:09 - org.pentaho.hadoop.shim.common.format.parquet.PentahoParquetInputFormatTest - Read 'parquet/2_gzip_nodict.par' as schema: [org.pentaho.hadoop.shim.common.format.parquet.ParquetInputField@36a99435]
+2025/10/30 20:20:10 - org.pentaho.hadoop.shim.common.format.parquet.PentahoParquetInputFormatTest - Read 'parquet/2_gzip_nodict.par' as schema: [org.pentaho.hadoop.shim.common.format.parquet.ParquetInputField@12cad0bf, org.pentaho.hadoop.shim.common.format.parquet.ParquetInputField@5953cdd5, org.pentaho.hadoop.shim.common.format.parquet.ParquetInputField@585b81c1, org.pentaho.hadoop.shim.common.format.parquet.ParquetInputField@e5a570]
+2025/10/30 20:20:11 - org.pentaho.hadoop.shim.common.format.parquet.PentahoParquetInputFormatTest - Read 'parquet/2_gzip_nodict.par' as schema: [org.pentaho.hadoop.shim.common.format.parquet.ParquetInputField@36a99435, org.pentaho.hadoop.shim.common.format.parquet.ParquetInputField@e5a570, org.pentaho.hadoop.shim.common.format.parquet.ParquetInputField@5953cdd5, org.pentaho.hadoop.shim.common.format.parquet.ParquetInputField@12cad0bf]
+2025/10/30 20:20:11 - org.pentaho.hadoop.shim.common.format.parquet.PentahoParquetInputFormatTest - Read 'parquet/2_gzip_nodict.par' as schema: [org.pentaho.hadoop.shim.common.format.parquet.ParquetInputField@2b102cdf, org.pentaho.hadoop.shim.common.format.parquet.ParquetInputField@6a280ef2, org.pentaho.hadoop.shim.common.format.parquet.ParquetInputField@36a99435, org.pentaho.hadoop.shim.common.format.parquet.ParquetInputField@585b81c1]
+2025/10/30 20:20:12 - org.pentaho.hadoop.shim.common.format.parquet.PentahoParquetInputFormatTest - Read 'parquet/2_gzip_nodict.par' as schema: [org.pentaho.hadoop.shim.common.format.parquet.ParquetInputField@5953cdd5, org.pentaho.hadoop.shim.common.format.parquet.ParquetInputField@12cad0bf, org.pentaho.hadoop.shim.common.format.parquet.ParquetInputField@e5a570, org.pentaho.hadoop.shim.common.format.parquet.ParquetInputField@2b102cdf, org.pentaho.hadoop.shim.common.format.parquet.ParquetInputField@6a280ef2]
+2025/10/30 20:20:12 - org.pentaho.hadoop.shim.common.format.parquet.PentahoParquetInputFormatTest - Read 'parquet/2_gzip_nodict.par' as schema: [org.pentaho.hadoop.shim.common.format.parquet.ParquetInputField@12cad0bf, org.pentaho.hadoop.shim.common.format.parquet.ParquetInputField@5953cdd5, org.pentaho.hadoop.shim.common.format.parquet.ParquetInputField@36a99435, org.pentaho.hadoop.shim.common.format.parquet.ParquetInputField@6a280ef2]
+2025/10/30 20:20:14 - org.pentaho.hadoop.shim.common.format.parquet.PentahoParquetInputFormatTest - Read 'parquet/2_snappy_nodict.par' as schema: [org.pentaho.hadoop.shim.common.format.parquet.ParquetInputField@37b8aab2]
+2025/10/30 20:20:15 - org.pentaho.hadoop.shim.common.format.parquet.PentahoParquetInputFormatTest - Read 'parquet/2_snappy_nodict.par' as schema: [org.pentaho.hadoop.shim.common.format.parquet.ParquetInputField@1ab63c78]
+2025/10/30 20:20:16 - org.pentaho.hadoop.shim.common.format.parquet.PentahoParquetInputFormatTest - Read 'parquet/2_snappy_nodict.par' as schema: [org.pentaho.hadoop.shim.common.format.parquet.ParquetInputField@3155bf62]
+2025/10/30 20:20:17 - org.pentaho.hadoop.shim.common.format.parquet.PentahoParquetInputFormatTest - Read 'parquet/2_snappy_nodict.par' as schema: [org.pentaho.hadoop.shim.common.format.parquet.ParquetInputField@68b2c3aa]
+2025/10/30 20:20:17 - org.pentaho.hadoop.shim.common.format.parquet.PentahoParquetInputFormatTest - Read 'parquet/2_snappy_nodict.par' as schema: [org.pentaho.hadoop.shim.common.format.parquet.ParquetInputField@470dd6a4]
+2025/10/30 20:20:18 - org.pentaho.hadoop.shim.common.format.parquet.PentahoParquetInputFormatTest - Read 'parquet/2_snappy_nodict.par' as schema: [org.pentaho.hadoop.shim.common.format.parquet.ParquetInputField@378397cf]
+2025/10/30 20:20:19 - org.pentaho.hadoop.shim.common.format.parquet.PentahoParquetInputFormatTest - Read 'parquet/2_snappy_nodict.par' as schema: [org.pentaho.hadoop.shim.common.format.parquet.ParquetInputField@22116fe6]
+2025/10/30 20:20:21 - org.pentaho.hadoop.shim.common.format.parquet.PentahoParquetInputFormatTest - Read 'parquet/2_snappy_nodict.par' as schema: [org.pentaho.hadoop.shim.common.format.parquet.ParquetInputField@22116fe6, org.pentaho.hadoop.shim.common.format.parquet.ParquetInputField@1ab63c78, org.pentaho.hadoop.shim.common.format.parquet.ParquetInputField@68b2c3aa, org.pentaho.hadoop.shim.common.format.parquet.ParquetInputField@3155bf62, org.pentaho.hadoop.shim.common.format.parquet.ParquetInputField@378397cf]
+2025/10/30 20:20:22 - org.pentaho.hadoop.shim.common.format.parquet.PentahoParquetInputFormatTest - Read 'parquet/2_snappy_nodict.par' as schema: [org.pentaho.hadoop.shim.common.format.parquet.ParquetInputField@378397cf, org.pentaho.hadoop.shim.common.format.parquet.ParquetInputField@37b8aab2, org.pentaho.hadoop.shim.common.format.parquet.ParquetInputField@3155bf62, org.pentaho.hadoop.shim.common.format.parquet.ParquetInputField@22116fe6]
+2025/10/30 20:20:23 - org.pentaho.hadoop.shim.common.format.parquet.PentahoParquetInputFormatTest - Read 'parquet/2_snappy_nodict.par' as schema: [org.pentaho.hadoop.shim.common.format.parquet.ParquetInputField@470dd6a4, org.pentaho.hadoop.shim.common.format.parquet.ParquetInputField@68b2c3aa, org.pentaho.hadoop.shim.common.format.parquet.ParquetInputField@37b8aab2]
+2025/10/30 20:20:23 - org.pentaho.hadoop.shim.common.format.parquet.PentahoParquetInputFormatTest - Read 'parquet/2_snappy_nodict.par' as schema: [org.pentaho.hadoop.shim.common.format.parquet.ParquetInputField@3155bf62, org.pentaho.hadoop.shim.common.format.parquet.ParquetInputField@470dd6a4, org.pentaho.hadoop.shim.common.format.parquet.ParquetInputField@378397cf, org.pentaho.hadoop.shim.common.format.parquet.ParquetInputField@68b2c3aa, org.pentaho.hadoop.shim.common.format.parquet.ParquetInputField@22116fe6]
+2025/10/30 20:20:24 - org.pentaho.hadoop.shim.common.format.parquet.PentahoParquetInputFormatTest - Read 'parquet/2_snappy_nodict.par' as schema: [org.pentaho.hadoop.shim.common.format.parquet.ParquetInputField@3155bf62, org.pentaho.hadoop.shim.common.format.parquet.ParquetInputField@378397cf, org.pentaho.hadoop.shim.common.format.parquet.ParquetInputField@22116fe6, org.pentaho.hadoop.shim.common.format.parquet.ParquetInputField@1ab63c78, org.pentaho.hadoop.shim.common.format.parquet.ParquetInputField@37b8aab2]
+2025/10/30 20:20:24 - org.pentaho.hadoop.shim.common.format.parquet.PentahoParquetInputFormatTest - Read 'parquet/2_uncompressed_dict.par' as schema: [org.pentaho.hadoop.shim.common.format.parquet.ParquetInputField@44411fba]
+2025/10/30 20:20:25 - org.pentaho.hadoop.shim.common.format.parquet.PentahoParquetInputFormatTest - Read 'parquet/2_uncompressed_dict.par' as schema: [org.pentaho.hadoop.shim.common.format.parquet.ParquetInputField@60fc372c]
+2025/10/30 20:20:26 - org.pentaho.hadoop.shim.common.format.parquet.PentahoParquetInputFormatTest - Read 'parquet/2_uncompressed_dict.par' as schema: [org.pentaho.hadoop.shim.common.format.parquet.ParquetInputField@1b755f10]
+2025/10/30 20:20:27 - org.pentaho.hadoop.shim.common.format.parquet.PentahoParquetInputFormatTest - Read 'parquet/2_uncompressed_dict.par' as schema: [org.pentaho.hadoop.shim.common.format.parquet.ParquetInputField@5b40c2a3]
+2025/10/30 20:20:27 - org.pentaho.hadoop.shim.common.format.parquet.PentahoParquetInputFormatTest - Read 'parquet/2_uncompressed_dict.par' as schema: [org.pentaho.hadoop.shim.common.format.parquet.ParquetInputField@120d45a9]
+2025/10/30 20:20:28 - org.pentaho.hadoop.shim.common.format.parquet.PentahoParquetInputFormatTest - Read 'parquet/2_uncompressed_dict.par' as schema: [org.pentaho.hadoop.shim.common.format.parquet.ParquetInputField@1f7c18e5]
+2025/10/30 20:20:29 - org.pentaho.hadoop.shim.common.format.parquet.PentahoParquetInputFormatTest - Read 'parquet/2_uncompressed_dict.par' as schema: [org.pentaho.hadoop.shim.common.format.parquet.ParquetInputField@5fcf0a35]
+2025/10/30 20:20:29 - org.pentaho.hadoop.shim.common.format.parquet.PentahoParquetInputFormatTest - Read 'parquet/2_uncompressed_dict.par' as schema: [org.pentaho.hadoop.shim.common.format.parquet.ParquetInputField@120d45a9, org.pentaho.hadoop.shim.common.format.parquet.ParquetInputField@1f7c18e5, org.pentaho.hadoop.shim.common.format.parquet.ParquetInputField@1b755f10, org.pentaho.hadoop.shim.common.format.parquet.ParquetInputField@60fc372c, org.pentaho.hadoop.shim.common.format.parquet.ParquetInputField@5b40c2a3]
+2025/10/30 20:20:30 - org.pentaho.hadoop.shim.common.format.parquet.PentahoParquetInputFormatTest - Read 'parquet/2_uncompressed_dict.par' as schema: [org.pentaho.hadoop.shim.common.format.parquet.ParquetInputField@44411fba, org.pentaho.hadoop.shim.common.format.parquet.ParquetInputField@5fcf0a35, org.pentaho.hadoop.shim.common.format.parquet.ParquetInputField@1f7c18e5, org.pentaho.hadoop.shim.common.format.parquet.ParquetInputField@1b755f10, org.pentaho.hadoop.shim.common.format.parquet.ParquetInputField@120d45a9]
+2025/10/30 20:20:31 - org.pentaho.hadoop.shim.common.format.parquet.PentahoParquetInputFormatTest - Read 'parquet/2_uncompressed_dict.par' as schema: [org.pentaho.hadoop.shim.common.format.parquet.ParquetInputField@44411fba, org.pentaho.hadoop.shim.common.format.parquet.ParquetInputField@5b40c2a3, org.pentaho.hadoop.shim.common.format.parquet.ParquetInputField@60fc372c]
+2025/10/30 20:20:31 - org.pentaho.hadoop.shim.common.format.parquet.PentahoParquetInputFormatTest - Read 'parquet/2_uncompressed_dict.par' as schema: [org.pentaho.hadoop.shim.common.format.parquet.ParquetInputField@1b755f10, org.pentaho.hadoop.shim.common.format.parquet.ParquetInputField@120d45a9, org.pentaho.hadoop.shim.common.format.parquet.ParquetInputField@5b40c2a3, org.pentaho.hadoop.shim.common.format.parquet.ParquetInputField@60fc372c]
+2025/10/30 20:20:32 - org.pentaho.hadoop.shim.common.format.parquet.PentahoParquetInputFormatTest - Read 'parquet/2_uncompressed_dict.par' as schema: [org.pentaho.hadoop.shim.common.format.parquet.ParquetInputField@44411fba, org.pentaho.hadoop.shim.common.format.parquet.ParquetInputField@60fc372c, org.pentaho.hadoop.shim.common.format.parquet.ParquetInputField@5b40c2a3, org.pentaho.hadoop.shim.common.format.parquet.ParquetInputField@1b755f10, org.pentaho.hadoop.shim.common.format.parquet.ParquetInputField@1f7c18e5, org.pentaho.hadoop.shim.common.format.parquet.ParquetInputField@120d45a9]
+2025/10/30 20:20:33 - org.pentaho.hadoop.shim.common.format.parquet.PentahoParquetInputFormatTest - Read 'parquet/1_spark.par' as schema: [org.pentaho.hadoop.shim.common.format.parquet.ParquetInputField@d2527b5]
+2025/10/30 20:20:34 - org.pentaho.hadoop.shim.common.format.parquet.PentahoParquetInputFormatTest - Read 'parquet/1_spark.par' as schema: [org.pentaho.hadoop.shim.common.format.parquet.ParquetInputField@3e1fd35]
+2025/10/30 20:20:34 - org.pentaho.hadoop.shim.common.format.parquet.PentahoParquetInputFormatTest - Read 'parquet/1_spark.par' as schema: [org.pentaho.hadoop.shim.common.format.parquet.ParquetInputField@2c5037b]
+2025/10/30 20:20:35 - org.pentaho.hadoop.shim.common.format.parquet.PentahoParquetInputFormatTest - Read 'parquet/1_spark.par' as schema: [org.pentaho.hadoop.shim.common.format.parquet.ParquetInputField@4b05a635]
+2025/10/30 20:20:36 - org.pentaho.hadoop.shim.common.format.parquet.PentahoParquetInputFormatTest - Read 'parquet/1_spark.par' as schema: [org.pentaho.hadoop.shim.common.format.parquet.ParquetInputField@a6c816a]
+2025/10/30 20:20:36 - org.pentaho.hadoop.shim.common.format.parquet.PentahoParquetInputFormatTest - Read 'parquet/1_spark.par' as schema: [org.pentaho.hadoop.shim.common.format.parquet.ParquetInputField@399eb2ed]
+2025/10/30 20:20:37 - org.pentaho.hadoop.shim.common.format.parquet.PentahoParquetInputFormatTest - Read 'parquet/1_spark.par' as schema: [org.pentaho.hadoop.shim.common.format.parquet.ParquetInputField@1e3215f7]
+2025/10/30 20:20:38 - org.pentaho.hadoop.shim.common.format.parquet.PentahoParquetInputFormatTest - Read 'parquet/1_spark.par' as schema: [org.pentaho.hadoop.shim.common.format.parquet.ParquetInputField@d2527b5, org.pentaho.hadoop.shim.common.format.parquet.ParquetInputField@1e3215f7, org.pentaho.hadoop.shim.common.format.parquet.ParquetInputField@a6c816a, org.pentaho.hadoop.shim.common.format.parquet.ParquetInputField@3e1fd35, org.pentaho.hadoop.shim.common.format.parquet.ParquetInputField@4b05a635, org.pentaho.hadoop.shim.common.format.parquet.ParquetInputField@2c5037b]
+2025/10/30 20:20:39 - org.pentaho.hadoop.shim.common.format.parquet.PentahoParquetInputFormatTest - Read 'parquet/1_spark.par' as schema: [org.pentaho.hadoop.shim.common.format.parquet.ParquetInputField@1e3215f7, org.pentaho.hadoop.shim.common.format.parquet.ParquetInputField@4b05a635, org.pentaho.hadoop.shim.common.format.parquet.ParquetInputField@399eb2ed, org.pentaho.hadoop.shim.common.format.parquet.ParquetInputField@3e1fd35, org.pentaho.hadoop.shim.common.format.parquet.ParquetInputField@a6c816a]
+2025/10/30 20:20:39 - org.pentaho.hadoop.shim.common.format.parquet.PentahoParquetInputFormatTest - Read 'parquet/1_spark.par' as schema: [org.pentaho.hadoop.shim.common.format.parquet.ParquetInputField@1e3215f7, org.pentaho.hadoop.shim.common.format.parquet.ParquetInputField@3e1fd35, org.pentaho.hadoop.shim.common.format.parquet.ParquetInputField@a6c816a, org.pentaho.hadoop.shim.common.format.parquet.ParquetInputField@399eb2ed]
+2025/10/30 20:20:40 - org.pentaho.hadoop.shim.common.format.parquet.PentahoParquetInputFormatTest - Read 'parquet/1_spark.par' as schema: [org.pentaho.hadoop.shim.common.format.parquet.ParquetInputField@2c5037b, org.pentaho.hadoop.shim.common.format.parquet.ParquetInputField@3e1fd35, org.pentaho.hadoop.shim.common.format.parquet.ParquetInputField@1e3215f7]
+2025/10/30 20:20:40 - org.pentaho.hadoop.shim.common.format.parquet.PentahoParquetInputFormatTest - Read 'parquet/1_spark.par' as schema: [org.pentaho.hadoop.shim.common.format.parquet.ParquetInputField@2c5037b, org.pentaho.hadoop.shim.common.format.parquet.ParquetInputField@d2527b5, org.pentaho.hadoop.shim.common.format.parquet.ParquetInputField@4b05a635, org.pentaho.hadoop.shim.common.format.parquet.ParquetInputField@1e3215f7]
+[INFO] Tests run: 6, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 174.746 s - in org.pentaho.hadoop.shim.common.format.parquet.PentahoParquetInputFormatTest
+[INFO] Running org.pentaho.hadoop.shim.common.format.parquet.PentahoParquetOutputFormatTest
+[INFO] Tests run: 10, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 2.342 s - in org.pentaho.hadoop.shim.common.format.parquet.PentahoParquetOutputFormatTest
+[INFO] Running org.pentaho.hadoop.shim.common.ConfigurationProxyTest
+[INFO] Tests run: 12, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.44 s - in org.pentaho.hadoop.shim.common.ConfigurationProxyTest
+[INFO] Running org.pentaho.hadoop.shim.common.CommonHadoopShimTest
+[INFO] Tests run: 14, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.244 s - in org.pentaho.hadoop.shim.common.CommonHadoopShimTest
+[INFO] Running org.pentaho.hadoop.shim.common.fs.FileSystemProxyTest
+[INFO] Tests run: 7, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.045 s - in org.pentaho.hadoop.shim.common.fs.FileSystemProxyTest
+[INFO] Running org.pentaho.hadoop.shim.common.authentication.PropertyAuthenticationProviderParserTest
+[INFO] Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.18 s - in org.pentaho.hadoop.shim.common.authentication.PropertyAuthenticationProviderParserTest
+[INFO] Running org.pentaho.hadoop.shim.spi.HBaseConnectionTest
+[INFO] Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0 s - in org.pentaho.hadoop.shim.spi.HBaseConnectionTest
+[INFO] Running org.pentaho.hadoop.shim.ShimVersionTest
+[INFO] Tests run: 10, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0 s - in org.pentaho.hadoop.shim.ShimVersionTest
+[INFO] Running org.pentaho.hadoop.shim.api.internal.ShimPropertiesTest
+[INFO] Tests run: 29, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0 s - in org.pentaho.hadoop.shim.api.internal.ShimPropertiesTest
+[INFO] Running org.pentaho.hadoop.shim.api.internal.hbase.HBaseValueMetaTest
+java.io.EOFException
+	at java.base/java.io.ObjectInputStream$PeekInputStream.readFully(ObjectInputStream.java:2933)
+	at java.base/java.io.ObjectInputStream$BlockDataInputStream.readShort(ObjectInputStream.java:3428)
+	at java.base/java.io.ObjectInputStream.readStreamHeader(ObjectInputStream.java:985)
+	at java.base/java.io.ObjectInputStream.<init>(ObjectInputStream.java:416)
+	at org.pentaho.hadoop.shim.api.internal.hbase.HBaseValueMeta.decodeObject(HBaseValueMeta.java:771)
+	at org.pentaho.hadoop.shim.api.internal.hbase.HBaseValueMetaTest.testDecodeObject(HBaseValueMetaTest.java:536)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:47)
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
+	at org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:44)
+	at org.junit.internal.runners.statements.InvokeMethod.evaluate(InvokeMethod.java:17)
+	at org.junit.internal.runners.statements.RunAfters.evaluate(RunAfters.java:27)
+	at org.junit.rules.ExpectedException$ExpectedExceptionStatement.evaluate(ExpectedException.java:168)
+	at org.junit.rules.RunRules.evaluate(RunRules.java:20)
+	at org.junit.runners.ParentRunner.runLeaf(ParentRunner.java:271)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:70)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:50)
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:238)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:63)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:236)
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:53)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:229)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:309)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.execute(JUnit4Provider.java:365)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.executeWithRerun(JUnit4Provider.java:273)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.executeTestSet(JUnit4Provider.java:238)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.invoke(JUnit4Provider.java:159)
+	at org.apache.maven.surefire.booter.ForkedBooter.invokeProviderInSameClassLoader(ForkedBooter.java:379)
+	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:340)
+	at org.apache.maven.surefire.booter.ForkedBooter.execute(ForkedBooter.java:125)
+	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:413)
+[INFO] Tests run: 48, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.034 s - in org.pentaho.hadoop.shim.api.internal.hbase.HBaseValueMetaTest
+[INFO] Running org.pentaho.hadoop.shim.api.internal.hbase.ColumnFilterTest
+[INFO] Tests run: 20, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.081 s - in org.pentaho.hadoop.shim.api.internal.hbase.ColumnFilterTest
+[INFO] Running org.pentaho.hadoop.shim.api.internal.hbase.MappingTest
+[INFO] Tests run: 22, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.003 s - in org.pentaho.hadoop.shim.api.internal.hbase.MappingTest
+[INFO] Running org.pentaho.hadoop.mapreduce.YarnQueueAclsVerifierTest
+[INFO] Tests run: 3, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0 s - in org.pentaho.hadoop.mapreduce.YarnQueueAclsVerifierTest
+[INFO] Running org.pentaho.hbase.shim.common.CommonHBaseConnectionTest
+[INFO] Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0 s - in org.pentaho.hbase.shim.common.CommonHBaseConnectionTest
+[INFO] Running org.pentaho.hbase.shim.common.CommonHBaseBytesUtilTest
+[INFO] Tests run: 19, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0 s - in org.pentaho.hbase.shim.common.CommonHBaseBytesUtilTest
+[INFO] Running org.pentaho.bigdata.api.mapreduce.TaskCompletionEventStatusTest
+[INFO] Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0 s - in org.pentaho.bigdata.api.mapreduce.TaskCompletionEventStatusTest
+[INFO] Running org.pentaho.bigdata.api.mapreduce.MapReduceExecutionExceptionTest
+[INFO] Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0 s - in org.pentaho.bigdata.api.mapreduce.MapReduceExecutionExceptionTest
+[INFO] Running com.pentaho.big.data.bundles.impl.shim.hdfs.HadoopFileSystemImplTest
+[INFO] Tests run: 24, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.566 s - in com.pentaho.big.data.bundles.impl.shim.hdfs.HadoopFileSystemImplTest
+[INFO] Running com.pentaho.big.data.bundles.impl.shim.hdfs.HadoopFileSystemFactoryImplTest
+[INFO] Tests run: 5, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.014 s - in com.pentaho.big.data.bundles.impl.shim.hdfs.HadoopFileSystemFactoryImplTest
+[INFO] Running com.pentaho.big.data.bundles.impl.shim.hdfs.HadoopFileStatusImplTest
+[INFO] Tests run: 4, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0 s - in com.pentaho.big.data.bundles.impl.shim.hdfs.HadoopFileStatusImplTest
+[INFO] Running com.pentaho.big.data.bundles.impl.shim.hdfs.HadoopFileSystemPathImplTest
+[INFO] Tests run: 8, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.001 s - in com.pentaho.big.data.bundles.impl.shim.hdfs.HadoopFileSystemPathImplTest
+[INFO] Running com.pentaho.big.data.bundles.impl.shim.hbase.mapping.MappingImplTest
+[INFO] Tests run: 26, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.328 s - in com.pentaho.big.data.bundles.impl.shim.hbase.mapping.MappingImplTest
+[INFO] Running com.pentaho.big.data.bundles.impl.shim.hbase.mapping.ColumnFilterImplTest
+[INFO] Tests run: 14, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.018 s - in com.pentaho.big.data.bundles.impl.shim.hbase.mapping.ColumnFilterImplTest
+[INFO] Running com.pentaho.big.data.bundles.impl.shim.hbase.mapping.MappingFactoryImplTest
+[INFO] Tests run: 3, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0 s - in com.pentaho.big.data.bundles.impl.shim.hbase.mapping.MappingFactoryImplTest
+[INFO] Running com.pentaho.big.data.bundles.impl.shim.hbase.mapping.MappingTest
+[INFO] Tests run: 4, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0 s - in com.pentaho.big.data.bundles.impl.shim.hbase.mapping.MappingTest
+[INFO] Running com.pentaho.big.data.bundles.impl.shim.hbase.mapping.ColumnFilterFactoryImplTest
+[INFO] Tests run: 3, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0 s - in com.pentaho.big.data.bundles.impl.shim.hbase.mapping.ColumnFilterFactoryImplTest
+[INFO] Running com.pentaho.big.data.bundles.impl.shim.hbase.HBaseConnectionImplTest
+[INFO] Tests run: 8, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0 s - in com.pentaho.big.data.bundles.impl.shim.hbase.HBaseConnectionImplTest
+[INFO] Running com.pentaho.big.data.bundles.impl.shim.hbase.meta.HBaseValueMetaInterfaceFactoryImplTest
+[INFO] Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.001 s - in com.pentaho.big.data.bundles.impl.shim.hbase.meta.HBaseValueMetaInterfaceFactoryImplTest
+[INFO] Running com.pentaho.big.data.bundles.impl.shim.hbase.meta.HBaseValueMetaInterfaceImplTest
+[INFO] Tests run: 6, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0 s - in com.pentaho.big.data.bundles.impl.shim.hbase.meta.HBaseValueMetaInterfaceImplTest
+[INFO] Running com.pentaho.big.data.bundles.impl.shim.hbase.ByteConversionUtilImplTest
+[INFO] Tests run: 27, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0 s - in com.pentaho.big.data.bundles.impl.shim.hbase.ByteConversionUtilImplTest
+[INFO] Running com.pentaho.big.data.bundles.impl.shim.hbase.ResultFactoryImplTest
+[INFO] Tests run: 4, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.001 s - in com.pentaho.big.data.bundles.impl.shim.hbase.ResultFactoryImplTest
+[INFO] Running com.pentaho.big.data.bundles.impl.shim.hbase.HBaseConnectionWrapperTest
+[INFO] Tests run: 48, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0 s - in com.pentaho.big.data.bundles.impl.shim.hbase.HBaseConnectionWrapperTest
+[INFO] Running com.pentaho.big.data.bundles.impl.shim.hbase.table.HBasePutImplTest
+[INFO] Tests run: 7, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.006 s - in com.pentaho.big.data.bundles.impl.shim.hbase.table.HBasePutImplTest
+[INFO] Running com.pentaho.big.data.bundles.impl.shim.hbase.table.HBaseTableImplTest
+[INFO] Tests run: 41, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.378 s - in com.pentaho.big.data.bundles.impl.shim.hbase.table.HBaseTableImplTest
+[INFO] Running com.pentaho.big.data.bundles.impl.shim.hbase.table.ResultScannerBuilderImplTest
+[INFO] Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.001 s - in com.pentaho.big.data.bundles.impl.shim.hbase.table.ResultScannerBuilderImplTest
+[INFO] Running com.pentaho.big.data.bundles.impl.shim.hbase.table.ResultScannerImplTest
+[INFO] Tests run: 3, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0 s - in com.pentaho.big.data.bundles.impl.shim.hbase.table.ResultScannerImplTest
+[INFO] Running com.pentaho.big.data.bundles.impl.shim.hbase.table.HBaseDeleteImplTest
+[INFO] Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0 s - in com.pentaho.big.data.bundles.impl.shim.hbase.table.HBaseDeleteImplTest
+[INFO] Running com.pentaho.big.data.bundles.impl.shim.hbase.table.HBaseTableWriteOperationManagerImplTest
+[INFO] Tests run: 6, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0 s - in com.pentaho.big.data.bundles.impl.shim.hbase.table.HBaseTableWriteOperationManagerImplTest
+[INFO] Running com.pentaho.big.data.bundles.impl.shim.hbase.HBaseServiceFactoryTest
+[INFO] Tests run: 4, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0 s - in com.pentaho.big.data.bundles.impl.shim.hbase.HBaseServiceFactoryTest
+[INFO] Running com.pentaho.big.data.bundles.impl.shim.hbase.connectionPool.HBaseConnectionPoolTest
+[INFO] Tests run: 20, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0 s - in com.pentaho.big.data.bundles.impl.shim.hbase.connectionPool.HBaseConnectionPoolTest
+[INFO] Running com.pentaho.big.data.bundles.impl.shim.hbase.connectionPool.HBaseConnectionPoolConnectionTest
+[INFO] Tests run: 8, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0 s - in com.pentaho.big.data.bundles.impl.shim.hbase.connectionPool.HBaseConnectionPoolConnectionTest
+[INFO] Running com.pentaho.big.data.bundles.impl.shim.hbase.connectionPool.HBaseConnectionHandleImplTest
+[INFO] Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0 s - in com.pentaho.big.data.bundles.impl.shim.hbase.connectionPool.HBaseConnectionHandleImplTest
+[INFO] Running com.pentaho.big.data.bundles.impl.shim.hbase.HBaseServiceImplTest
+[INFO] Tests run: 8, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0 s - in com.pentaho.big.data.bundles.impl.shim.hbase.HBaseServiceImplTest
+[INFO] Running com.pentaho.big.data.bundles.impl.shim.hbase.ResultImplTest
+[INFO] Tests run: 6, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0 s - in com.pentaho.big.data.bundles.impl.shim.hbase.ResultImplTest
+[INFO] Running com.pentaho.big.data.bundles.impl.shim.hbase.BatchHBaseConnectionOperationTest
+[INFO] Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0 s - in com.pentaho.big.data.bundles.impl.shim.hbase.BatchHBaseConnectionOperationTest
+[INFO] Running com.pentaho.big.data.bundles.impl.shim.hive.HiveDriverTest
+[INFO] Tests run: 27, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.001 s - in com.pentaho.big.data.bundles.impl.shim.hive.HiveDriverTest
+[INFO] Running com.pentaho.big.data.bundles.impl.shim.hive.HiveSimbaDriverTest
+[INFO] Tests run: 3, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0 s - in com.pentaho.big.data.bundles.impl.shim.hive.HiveSimbaDriverTest
+[INFO] Running com.pentaho.big.data.bundles.impl.shim.hive.ImpalaSimbaDriverTest
+[INFO] Tests run: 3, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0 s - in com.pentaho.big.data.bundles.impl.shim.hive.ImpalaSimbaDriverTest
+[INFO] Running com.pentaho.big.data.bundles.impl.shim.hive.ImpalaDriverTest
+[INFO] Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0 s - in com.pentaho.big.data.bundles.impl.shim.hive.ImpalaDriverTest
+[INFO] 
+[INFO] Results:
+[INFO] 
+[ERROR] Failures: 
+[ERROR]   FutureMapReduceJobSimpleRunnableTest.testRunThrow:156 expected:<java.lang.RuntimeException> but was:<java.lang.reflect.InvocationTargetException>
+[ERROR] Errors: 
+[ERROR]   FutureMapReduceJobSimpleRunnableTest.testBadMain »  Unexpected exception, expe...
+[ERROR]   SecurityManagerStackTest.interweaved_executions:70 » UnsupportedOperation The ...
+[ERROR]   SecurityManagerStackTest.randomized_executions:103 » UnsupportedOperation The ...
+[ERROR]   SecurityManagerStackTest.sequential_executions:86 » UnsupportedOperation The S...
+[ERROR]   SecurityManagerStackTest.simple_replace_in_isolation:57 » UnsupportedOperation
+[INFO] 
+[ERROR] Tests run: 742, Failures: 1, Errors: 5, Skipped: 2
+[INFO] 
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD FAILURE
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time:  07:03 min
+[INFO] Finished at: 2025-10-30T20:20:53-04:00
+[INFO] ------------------------------------------------------------------------
+[ERROR] Failed to execute goal org.apache.maven.plugins:maven-surefire-plugin:2.21.0:test (default-test) on project pentaho-hadoop-shims-common-base: There are test failures.
+[ERROR] 
+[ERROR] Please refer to /Users/ramaizmansoor/Developer/pentaho-hadoop-shims/common-base/target/surefire-reports for the individual test results.
+[ERROR] Please refer to dump files (if any exist) [date]-jvmRun[N].dump, [date].dumpstream and [date]-jvmRun[N].dumpstream.
+[ERROR] -> [Help 1]
+[ERROR] 
+[ERROR] To see the full stack trace of the errors, re-run Maven with the -e switch.
+[ERROR] Re-run Maven using the -X switch to enable full debug logging.
+[ERROR] 
+[ERROR] For more information about the errors and possible solutions, please read the following articles:
+[ERROR] [Help 1] http://cwiki.apache.org/confluence/display/MAVEN/MojoFailureException

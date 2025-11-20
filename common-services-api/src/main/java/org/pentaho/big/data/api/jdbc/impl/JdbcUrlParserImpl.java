@@ -20,8 +20,8 @@ import org.pentaho.hadoop.shim.api.jdbc.JdbcUrlParser;
 import org.pentaho.metastore.locator.api.MetastoreLocator;
 import org.pentaho.big.data.impl.cluster.NamedClusterManager;
 
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
+import org.apache.logging.log4j.Logger;
+import org.apache.logging.log4j.LogManager;
 
 import java.net.URISyntaxException;
 import java.util.Collection;
@@ -32,7 +32,7 @@ import java.util.Collection;
 public class JdbcUrlParserImpl implements JdbcUrlParser {
   private NamedClusterService namedClusterService;
   private MetastoreLocator metastoreLocator;
-  private final Logger logger = LoggerFactory.getLogger( JdbcUrlParserImpl.class );
+  private final Logger logger = LogManager.getLogger( JdbcUrlParserImpl.class );
   private static final JdbcUrlParserImpl instance = new JdbcUrlParserImpl( NamedClusterManager.getInstance() );
 
   public JdbcUrlParserImpl( NamedClusterService namedClusterService ) {

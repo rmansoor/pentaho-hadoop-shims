@@ -22,8 +22,8 @@ import org.pentaho.hadoop.shim.api.hdfs.HadoopFileSystem;
 import org.pentaho.hadoop.shim.api.hdfs.HadoopFileSystemFactory;
 import org.pentaho.hadoop.shim.spi.HadoopShim;
 import org.pentaho.hadoop.shim.api.core.ShimIdentifierInterface;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
+import org.apache.logging.log4j.Logger;
+import org.apache.logging.log4j.LogManager;
 
 import java.io.IOException;
 import java.net.URI;
@@ -34,7 +34,7 @@ import java.net.URI;
 public class HadoopFileSystemFactoryImpl implements HadoopFileSystemFactory {
   public static final String SHIM_IDENTIFIER = "shim.identifier";
   public static final String HDFS = "hdfs";
-  protected static final Logger LOGGER = LoggerFactory.getLogger( HadoopFileSystemFactoryImpl.class );
+  protected static final Logger LOGGER = LogManager.getLogger( HadoopFileSystemFactoryImpl.class );
   protected final boolean isActiveConfiguration;
   protected final HadoopShim hadoopShim;
   protected final ShimIdentifierInterface shimIdentifier;

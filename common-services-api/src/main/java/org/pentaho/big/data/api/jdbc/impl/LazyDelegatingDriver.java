@@ -15,7 +15,7 @@ package org.pentaho.big.data.api.jdbc.impl;
 
 import org.osgi.framework.ServiceReference;
 import org.pentaho.di.core.database.DelegatingDriver;
-import org.slf4j.LoggerFactory;
+import org.apache.logging.log4j.LogManager;
 
 import java.sql.Connection;
 import java.sql.Driver;
@@ -42,7 +42,7 @@ public class LazyDelegatingDriver implements Driver {
   DelegatingDriver delegatingDriver;
   LazyDelegatingDriver lazyDelegatingDriver;
 
-  protected static org.slf4j.Logger logger = LoggerFactory.getLogger( LazyDelegatingDriver.class );
+  protected static org.apache.logging.log4j.Logger logger = LogManager.getLogger( LazyDelegatingDriver.class );
 
   public LazyDelegatingDriver( DriverLocatorImpl driverLocator ) throws SQLException {
     this( driverLocator, DriverManager::registerDriver, DriverManager::deregisterDriver );

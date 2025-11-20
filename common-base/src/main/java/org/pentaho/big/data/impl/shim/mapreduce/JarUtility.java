@@ -29,15 +29,15 @@ import java.util.jar.JarFile;
 import java.util.jar.JarInputStream;
 import java.util.jar.Manifest;
 
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
+import org.apache.logging.log4j.Logger;
+import org.apache.logging.log4j.LogManager;
 
 /**
  * Utility class for working with Jar files in the context of configuring MapReduce jobs.
  */
 public class JarUtility {
 
-  private static final Logger logger = LoggerFactory.getLogger( JarUtility.class );
+  private static final Logger logger = LogManager.getLogger( JarUtility.class );
 
   /**
    * Get the Main-Class declaration from a Jar's manifest.
