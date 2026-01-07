@@ -5,7 +5,7 @@
   <parent>
     <groupId>org.pentaho.hadoop.shims</groupId>
     <artifactId>pentaho-hadoop-shims-apachevanilla-reactor</artifactId>
-    <version>11.0.0.0-SNAPSHOT</version>
+    <version>11.0.0.0-237</version>
   </parent>
 
   <artifactId>pentaho-hadoop-shims-apachevanilla</artifactId>
@@ -16,7 +16,6 @@
     <shim.id>apachevanilla</shim.id>
     <commons-lang.version>2.6</commons-lang.version>
     <failureaccess.version>1.0.1</failureaccess.version>
-    <pentaho-osgi-bundles.version>11.0.0.0-SNAPSHOT</pentaho-osgi-bundles.version>
     <org.apache.avro.version>1.12.0</org.apache.avro.version>
     <!-- settting v1.14.4 so shaded jackson-databind inside parquet-hadoop-bundle's  version approximately matches jackson-databind in driver.jar -->
     <parquet.version>1.14.4</parquet.version>
@@ -27,7 +26,6 @@
     <parquet-pig.version>1.14.4</parquet-pig.version>
     <sqoop.version>1.4.7</sqoop.version>
     <vendor-driver.version>3.4.0</vendor-driver.version>
-    <pentaho-code.version>11.0.0.0</pentaho-code.version>
     <joda-time.version>2.10</joda-time.version>
     <jython.version>2.5.3</jython.version>
     <gcs-connector.version>hadoop2-1.9.17</gcs-connector.version>
